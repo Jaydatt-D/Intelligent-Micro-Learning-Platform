@@ -1,3 +1,4 @@
+import Quiz from "../Pages/Quiz";
 import Videos from "../Pages/Videos";
 import Navbar from "../components/Navbar";
 import React from "react";
@@ -10,6 +11,8 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path='/videos' element={<Videos/>}/>
+        <Route path='/quiz' element={<Quiz/>}/>
+
       </Routes>
     </div>
   );
