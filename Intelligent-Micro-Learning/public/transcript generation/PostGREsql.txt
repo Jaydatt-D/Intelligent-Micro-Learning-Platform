@@ -1,0 +1,498 @@
+So you want to learn Postgres, huh? Well, I know a thing or two about Postgres.
+In fact, I would say that learning Postgres and SQL has been one of the most beneficial skills
+I've learned throughout my entire career. Not only has it been helpful on the job,
+it's also been a really impressive skill to be able to flex in interviews with potential employers,
+and I've landed multiple contract jobs just because I know Postgres well enough
+to be able to do things that other developers simply can't.
+Today, in this video, I'm going to give you some initial skills to help you on your journey to Postgres Mastery.
+We're just going to be talking about a lot of the basics. Perhaps in future videos,
+we'll dive a little bit deeper and talk about some more advanced concepts,
+but this should lay the foundation for your journey to Postgres Mastery.
+So without further ado, let's dive right in.
+Well, the first question is, what is Postgres? What is SQL, really?
+Well, Postgres is a relational database. You're going to hear a lot about relational and non-relational databases out there,
+and an initial assumption a lot of developers might have, in fact, when I used to teach,
+I would ask students a lot, what's your assumption? What do you think relational means versus non-relational?
+And oftentimes, they would say, well, I would just assume that a relational database allows you to relate data together.
+And while that's true, you can do that in a relational database.
+What's also true is that you can do that in a non-relational database.
+What it actually is talking about is the math under the hood, what makes the database tick.
+In relational databases, it's leveraging relational algebra, and that's the reason for the name.
+So that's just a common misconception that I wanted to clear up before we dove right into Postgres.
+So SQL stands for Structured Query Language.
+It's a language that allows us to communicate with our database and make changes by using a series of keywords.
+We're going to dive into it a little bit more, but just setting the stage for the rest of our talk today.
+So let's go ahead and talk about the core building block for essentially all SQL databases, which is tables.
+Tables are essentially containers for data. They're made up of columns and rows.
+You can think much like an Excel spreadsheet or a Google Sheets spreadsheet.
+You're going to have a series of columns, and then you're going to have multiple rows.
+Oftentimes, we'll talk about entries into a table as entities.
+So if you ever hear me talk about an entity, I'm just talking about one object in the database.
+So for example here, what I would say is maybe this first user here, he's an entity in the database.
+What we can see is this is actually a screenshot from the editor that we'll be in soon.
+We have a series of these columns here. So we've got an ID column, email column, name column, age column, and password column.
+What you'll also see is that we have these rows. We have these entries into that table, and those rows have specific entries for each column.
+So for example, for the email column, we're going to see troy at fake email dot com is this user's email address.
+And then same for name, same for age, and password here. These are actually hashed.
+You're never really going to store raw text passwords in a database. It's a huge security concern.
+We're not going to talk about that much in this video. Maybe that's a great topic for future ones,
+but I just wanted to explain why you're seeing that nonsense in the password column.
+Okay, so let's jump over to an editor now, and let's create our first table together.
+All right. So welcome to Postico. Postico is just an interface for interacting with Postgres.
+I'll have some links for setting up Postgres on your local machine as well as Postico down below in the description.
+But all you need to know for now is it's an editor that allows us to write SQL and interact with our database.
+It also gives us a nice UI so that we can see things. It's fantastic for beginners.
+So let's jump right in. So here, this is where we're going to write our SQL.
+So, you know, we can type away as normal. But SQL, like I said, is made up of a series of keywords.
+So what do I say when I mean keyword? Well, a keyword is just a word that tells SQL to do a very specific operation.
+And in this example, what we want to do is tell SQL or tell Postgres, I should say, to create a table.
+Okay, so what table are we creating today? Well, I think it's best to go through anything new that we're learning with a actual realistic example.
+So we're going to build a little bit of a schema here that would represent an application that allows us to have users and posts eventually.
+And when I say schema, all a schema is, is it's just the database itself. The way that data is laid out is the schema.
+Okay, fantastic. So let's jump into it. First, we're going to create a table. I'm going to call the table profile for now.
+I'm going to revisit that, but we'll come back to it. And then the syntax for this is after we say create table profile,
+we open up these parentheses here. And then inside of here, each line, we're going to define a new column for that table.
+Troy from the future here. Sorry for the interruption. I just want to note that SQL statements need to end in a semicolon.
+I didn't specifically say that, which is my bad. But you'll notice that every statement that I write throughout this entire video ends in a semicolon.
+It's how we tell SQL that the statement is done. So we always, whenever you're working with the database,
+you need to make sure that you have an ID column. That column is going to be what we call a serial column.
+And we're going to go ahead and also tell it that this is the primary key. The user might also have a name.
+The name we're going to say is Varchar 255. And don't worry, I'm going to come back and talk through all of this.
+What does this stuff mean? You might not know, but I think it's helpful to write it all out first so that you can see it together.
+We're going to have an email. That's also going to be Varchar 255. We're going to have a password.
+I'm going to make the password text. And then finally, we're going to have an age, which is an integer.
+Okay, great. So what does all of this mean? And why are there these different capitalizations for certain words and some not?
+Okay, so first things first, let's address capitalization. In programming languages, you're going to have a series of conventions oftentimes.
+In languages like JavaScript, you're going to see a lot of camel cases. In Python, you're going to see a lot of snake casing.
+In SQL, the convention is that you uppercase all keywords and anything that relates to your table itself should be lowercase snake case.
+So all lowercase characters snake case. The reason that is, is SQL does not care about casing.
+So this is the same thing. It's going to do the same operation. Me lowercase and create had no effect on it.
+But you write code for other people, and it's important to structure things in a way that makes it easy to read.
+So here, by uppercasing everything that's a keyword, it becomes very, very clear what is baked into Postgres itself and what is something that I'm naming.
+What is something that I have control over? So here, this this profile name, this is a name I'm giving.
+It could be anything I want virtually. I could call this person. I could call this user.
+But for now, we may call it profile. I want to come back to that user point.
+But that's the idea is that you're uppercasing all of the keywords and anything that is lowercase is something you're naming yourself.
+So let's follow that to the next line. In fact, I'm going to skip over ID for a second because it's the most complex column we have.
+We're going to talk about name next. So name here, that's, well, the name of the column.
+I'm creating a column and I'm calling it name. And this is something to look out for the entirety of this video.
+Anytime you see something that's lowercase, you should assume that is something that I'm naming.
+It's not something that's built into Postgres itself. Next, we have this, which is a data type.
+The data type is what constraints we're placing on this column itself.
+And for me, this is what makes using relational databases so powerful.
+You can add constraints to your columns. Data does not just exist in containers that have rules that are made up.
+They are enforced by the database itself. I could not insert just a raw number into the name column if I wanted to.
+And the reason is I'm telling Postgres here that this column is varchar 255. What is varchar?
+That's a great question you might ask. This is the syntax for a comment. So I'm just, you know, I can write anything in here.
+It doesn't matter. The editor ignores it. I'm just commenting on the column and it's good for taking notes.
+So what I'm going to say here is varchar, and I'll uppercase it, is a text column that has a constraint on size.
+And I know it's overflowing a little bit to the next line, but this is the same line.
+So the idea here is that varchar is a text-based column, but critically it has a constraint on how long that text can be.
+And the upper bounds for that is 255 characters. So the max we can do is varchar 255, but varchar 50 is valid as well.
+And I think it's probably fine for me. It's pretty rare to have a name that's greater than 50 characters.
+Maybe for covering all of our bases we'll do a 100 character name column.
+So what this means is that this column is only going to take up enough space to show 100 characters.
+And it's a great way to optimize your database so that you're not consuming more data than you need.
+So here again we're saying that this name column is a text column and it can only max out at 100 characters.
+For email it's the same thing. I'll leave 255. You can have some long emails. We'll leave 255.
+And then password is just plain text. And the reason you would do that is that at least for applications I've worked on
+in pretty much any app that you're ever going to touch actually, you're going to be hashing passwords in the database.
+And password hashes can get pretty long depending on what hashing library you're using and what hashing algorithm you're using.
+Whether you're using SHA or MD5. Anyways, that's not important for this talk.
+The point is I'm making password text because placing constraints on something that's going to be hashed, it's kind of silly.
+Next up we have age which is an integer. An integer is straightforward. It's a number itself.
+So you're going to see numbers in here like 20 etc.
+I want to note that there's a lot of different types for your columns.
+And if you want an exhausted list of them, you can google Postgres column types and you'll get an extremely large list of all the different types.
+One of those such types is serial. Serial is a special type because it sets up some additional stuff for us.
+Some additional stuff that I'll dive into more in a future advanced Postgres tutorial.
+But for now, the way I want you to think of this column is this column is an integer that automatically adds one for us.
+Every new entity. So every single time we insert into this table, it will automatically add one to the ID column.
+And what I mean by that is our first profile that we insert, the ID will be one. It starts at one with a serial column.
+Then the next one, we don't have to do anything. It'll just automatically get the ID of two.
+The ID column is something you never want to edit yourself. You want to let the database handle this.
+When you're inserting profiles later, and we'll talk about this a bit more when we're actually inserting data momentarily,
+but we want to avoid touching this column. This column is something we want the database to control.
+The next part is the primary key. So primary key is just telling the database that this is the key that we're using to represent each row in the table.
+And critically, that also means that it's going to be unique. We shouldn't have multiple profiles that have the same ID.
+It's a unique identifier that we can then use later on to reference for specific rows. It's incredibly useful.
+And we'll show that more as we get later into the crash course.
+So again, serial is a data type. It's an integer that automatically does plus one every time.
+So without further ado, let's go ahead and execute this statement.
+So it worked. That's what this create table is. And I can show you it worked because Postico is awesome.
+And if we come back here to the lecture DB and we hit this refresh icon at the top, you'll notice that there is this profile table here.
+And if we click into it, we're seeing ID, name, email, password and age. Sorry if that's a bit small.
+I tried to increase the font up there, but I couldn't. But that's our table. It's there. It does exist.
+But you might be saying, Troy, in it seems kind of weird to call it a profile.
+This seems like this table should probably be called user. Well, if we run this, it's going to fail.
+And we're getting syntax error at or near user. That's a bit strange.
+Think for a minute why that might happen. And you might get a bit hint, a bit of a hint by the coloring here.
+So pause the video if you want a second to just think about why that could happen. All right.
+Here's why. This is a keyword. So creating a table that's called table wouldn't work, because like I said at the start.
+SQL doesn't care about casing. So when it sees this lowercase table, it's treating it the same as the uppercase one.
+And it thinks that it's a keyword. So it's seeing some syntax error. It's like, hey, you're using a keyword here.
+We're expecting a name. There's an easy way to omit this.
+Whenever you're trying to name something in SQL or reference something that is not a keyword,
+but happens to share the same name as one, you can wrap it in very specifically double quotes so we can say user.
+Now this works and we get a user table. So if we refresh, we'll see the user table.
+One last note on tables before we move on. You'll notice I'm calling it the user table, not users.
+The reason for this is that the convention that you'll often see in Postgres is that you name tables as singular items.
+And the thought behind that is that you think about tables as this bag that you put things in.
+And because of that, when you're talking about it, it's really useful to think of it as a user table.
+It's a bag to contain things. So you wouldn't say you have a bag of candy, not you have bags of candy, unless you have multiple.
+So that's the thought process. And I've seen it broken. I've worked at companies before that pluralized tables.
+It doesn't really matter. It's not going to make a big difference on your software itself.
+But there are times when you'll have tools that automatically generate things for you based off of your table names.
+Rails and Ruby are a great example of that. Rails will automatically generate a lot of code for you as long as you follow good conventions.
+And the other thing is it's a convention. It's what other developers will be expecting from your work.
+So I think it's important to keep them singular whenever possible.
+And if you ever work with or for me, you know, and I see a pluralized table in your code, I'm going to come at you a little bit.
+You're going to have to be prepared for me to shoot down your code review and tell you you need to go change that.
+OK, great. So we've got our user and profile in place. We're going to go ahead and drop the profile table.
+This is really, really easy in post. You can just right click and delete.
+And delete. And it's gone. In order to do that in SQL, you can just say drop table and then the table name.
+But we have an editor. I would recommend using an editor, especially as you're getting started with SQL.
+And I think Postico is a great option. OK, we've got our table in place.
+We're very excited about that. Now we just need to get data inside.
+We're going to learn some new ones here. We're going to say insert into our table name, which is user.
+And remember, user here happens to also be a keyword. So we're going to wrap it in double quotes.
+Then in parentheses, we specify what columns we want to insert.
+Well, those columns are email, name, age and password.
+You might be asking yourself or thinking, why is it ID here? We surely want an ID for each user.
+Well, if you remember back to when we were talking about creating a table, the ID is of data type serial.
+What that means is it's going to automatically generate an integer ID for us every new row.
+So we don't have to insert it ourselves. In fact, it would be a mistake to.
+This user that we insert will automatically have the ID of one for us because of Postgres's serial data type.
+Let's go ahead and move on with the query. So we've got insert into user.
+The columns were inserting email, name, age and password. And then we say the values, which is a keyword.
+And now we can start to enter those values and how this works.
+Is within these parentheses, we go in the same order that the columns are listed in these.
+So the order here doesn't matter. We can order this however we want.
+We just need to make sure we follow the order order after the values keyword.
+So within here. So what that means is email needs to come first here when we're entering the value.
+Name second, age third and password fourth.
+So for email, I'm going to go ahead and enter Troy at fake email.
+For name, I'm going to enter Troy. For age, I'll enter 26. And for password, I'll enter some nonsense.
+OK, this is great. We've got our values in place. And if we run this, it should work.
+But you might have a question. What are these single quotes doing here?
+Well, single quotes are how we tell SQL that we're entering some text.
+So this is just looked at by SQL as text. It's not read as if it was part of the code itself.
+So if we put some SQL in here, this would get inserted as the actual email.
+Sorry, let me use something you're familiar with. We haven't gotten to create statements or to select statements yet.
+I'm getting ahead of myself. If we put like create table in here, this will get inserted as the email, right?
+It's not going to look at this as code. It looks at it as text. And in fact, without it, it will look at it as code.
+So if I omit those single quotes, it will read this and we'll get a syntax error because it doesn't know what Troy at fake email is.
+We need the single quotes to tell it that this is a string value.
+It's also important to call out if you've done other programming languages before, which if you're looking at in this course, you probably have.
+Single quotes and double quotes are not the same here, which they are in a lot of programming languages like JavaScript, for example.
+And double quotes here are specifically for referencing columns and tables.
+And whenever you use them, SQL will expect you to be referencing one as such.
+And the same with single quotes. If we swap these two and it's double quotes here and single quotes here, we're going to get a syntax error.
+It's important to recognize the difference between those two.
+Ages and integer. Integers are not text based data. They're not a string.
+So we can just put it, you know, in line here. We don't need to wrap it in anything.
+OK, fantastic. Let's execute that statement.
+We say we've inserted and if we come back and look at our table here and refresh, you will notice.
+And I know it's a bit hard to see. I'm sorry about that. But the tables there and all of our information is in there correctly.
+This is great. I'm really, really happy that that worked.
+And in fact, let's go ahead and insert another user just for practice sake.
+OK, I'm going to insert another user. We're going to make it Chris at another dot example.
+The person's name is going to be you're never going to believe it is Chris.
+He's a notorious 98 year old man who's using our application and his password is.
+Wow, I love SQL 28. And we'll go ahead and insert Chris.
+It does work. And we can come back and look at our user table. And sure enough, he's along with Troy now.
+All right. That's great news. We've got two rows in there now.
+You might be thinking about something and I hope you are.
+What do you do if you don't have a nice editor like this?
+How do you get information out? And in fact, what is this editor maybe doing under the hood to show us this data?
+Well, friends, that's what we're going to talk about next. And it leads us to some more keywords.
+The next keyword that we unlock in our journey to SQL mastery is going to be select.
+Select is a keyword that allows us to fetch information from existing tables.
+It's what Postico is using under the hood to show us our entries when we go and we click on the user table here.
+This is how it's grabbing information.
+And remember, you're not always going to have access to a nice editor like this.
+And also select gives us additional tools that make it even better sometimes than just viewing the data in an editor.
+And we'll show you that more later on in the video.
+But let's cover the basics for now, which, of course, starts with the select keyword.
+So I'm going to go ahead and write out a basic select statement and then we'll break it down.
+All right. Fantastic. Select star from user and let's run it.
+And we can see here in the bottom, this is our SQL output that those rows show up in the user table.
+The user table is there. I want you to think for a moment.
+What does this star probably mean? You can probably easily infer what from means.
+Select is clearly a keyword that's initiating the statement.
+What do you think this star means? Pause the video here and contemplate with yourself.
+So when I taught, most students would assume that it meant all rows.
+It doesn't. It means all columns.
+So this star is referring to what columns you want from user and star means all.
+I can say I just want the name. And when we run this, we're only going to see Troy and Chris here.
+It's only giving me the name back. I can say I just want the email and it's only going to give me the email.
+Or I can do some combination. Give me the ID, the email and the name.
+And there you go. Fantastic.
+That brings up a question. We'll go back to select star so we can see everything.
+How do we say that we only want specific entries? And it's a good question.
+The way we do this is with the where keyword.
+We can say select all columns from the user table where and then some condition.
+So my condition might be where the name is Troy.
+And if we run this, we're only going to see that single Troy row.
+We can do this with any combination of different conditions.
+So I could also say maybe get me all the users where the age is greater than 20.
+We'll see both of our users in that case.
+But if we change this to 27, we're only going to see Chris.
+There's a lot of different conditions that you can use with a where statement.
+I would encourage you to look up a more exhaustive list than I'm able to go through here.
+But it's extremely powerful and it's our way where we can specify specifically what rows we want to see.
+And then later on when we're talking about update and delete statements, where statements become critical.
+Because it allows us to specify what rows we want to specifically affect from our queries.
+All right. So we've got data in. We're able to select it.
+We're able to say, you know, give me the user with the ID of one. Give me the user with the ID of two.
+We have that power now. The next thing we need to learn is how do we change data?
+We've got these users in place. What happens when we made a mistake?
+Troy is not 26. He's 30. And we need to update that user. How do we do that?
+All right. So we've just unlocked our ability to select information. Now we need to be able to change it.
+So like I mentioned, we want to be able to change this row from age 26 to age 30.
+How do we do that? Well, in order to do it, we're yet again going to need some new keywords.
+Those keywords are update and set. So the way we construct an update statement is we initiate it off with the update keyword.
+And then we tell it what table we're going to be updating. In our case, that's the user table.
+Then we say what we would like to change. I'm going to say set the age equal to 30.
+OK, so we're saying update user set age equal to 30 where and then we use that where statement again.
+Remember it from select. This is how we drill down into it without this.
+If I was to just say set age to 30, it would update every user.
+Any time you're writing an update statement and then later on, I'll reiterate for deletes.
+We need to make sure that we're specifying a condition or we're going to make that update to everything.
+It's a really, really good way to have some embarrassing conversations in your first engineering job.
+So let's make sure we're using our where condition. We'll say where the ID is one.
+So this is our condition. We're saying update the user table, set the age to be 30, where the ID is currently one.
+And then the update went through. Let's use our new skill and let's select star from user where ID is one.
+And again, we have to wrap this in double quotes.
+And then we'll go ahead and we'll remove this statement for now. We'll come back and revisit it.
+But let's just see if we've got the update going through and we did. His age is now 30. That's awesome.
+It worked. All right, great. So that's the basics for update statements.
+I want to make one additional note, and it's about this equal operator, the equal operator, as well as a lot of operators in SQL.
+They change based off of the context in which you use them. This one here is being used to construct a condition because it's prefaced by a where statement.
+This one here is being used to assign a value, and that's because it's prefaced by a set.
+It's important to distinct or to separate those two in your mind.
+And remember that the equal sign operator changes based off of the context in which it's being used.
+OK, great. That's the basics of update statements. We could use this to update any of the columns, really.
+But again, we want to avoid updating the ID.
+But maybe just for the sake of another example, maybe we go ahead and we update the email of that same user to be Troy at test dot fake.
+And these are obviously fake emails, but we go ahead and update that and then, you know, select.
+Maybe I just want to see the email from user where.
+ID is one. And there you go. The email has been updated.
+That's fantastic. So we've learned how to do almost all of the basic operations.
+There's just one more left, and that's removing information. What happens when we have a user that we want to delete?
+Right. This is an applications database. We might want to remove users, allow them to delete their account entirely.
+How would we do that in SQL? Well, the way we do that is with the lead statements and they start with a new keyword.
+You say delete and we say what table it's from. We'll specify user.
+And then another call out here. Don't run this query. The old table is gone.
+If we run this query, we need a where condition, just like we needed with the update query.
+We're going to delete from user where the ID equals two.
+Maybe our 98 year old friend Chris is done using the application. We got to get rid of them.
+So we'll go ahead and delete them again. Don't run. Just delete from user in isolation.
+Make sure you're specifying the condition so it knows what to delete.
+So we've gone ahead and deleted that user. And if we go and we select all from user.
+So we'll get all the users. We're going to see. Sure enough, there's only one user left.
+And that's Troy. All right. That's the basic operations with that.
+You can do full crud, create, read, update, delete operations on any table of your choosing.
+That's the basics, the building blocks of SQL. But now we need to talk about something just a shred more advanced.
+And that's that data does not live alone. Data is related to one another, right?
+You don't just have users in your application. And for our application, we're going to also have posts.
+Let's talk about how to relate information together in SQL. I brought you back to everyone's favorite realm.
+It's the PowerPoint realm. And we're going to talk about table relationships.
+So tables can have relationships with other tables. And I'm not talking about the bachelor type.
+I'm talking about data relating to another piece of data.
+So information in our applications does not live alone. Things have relationships with one another.
+If you think about the site you're on right now, YouTube, each of these videos have comments.
+How does that relationship work? How do we relate those things together?
+Well, the way we relate those together is through foreign keys.
+And those foreign keys allow us to reference specific entities in another table from a table.
+So I'll show you exactly what I mean with one of these examples here.
+Let's go ahead and look at our user post example. That one is actually a bit covered up by me.
+OK, let's look at the Avodart example here.
+So the user table here, and this is just real quick, I want to touch on what this is.
+This is what we would call an entity relationship diagram.
+So it's showcasing from a high level how our tables are laid out and related.
+So here we have that user table that we made, but you'll notice we've added something new.
+It's the avatar ID. That avatar ID is referencing a row, an entity in the avatar table.
+It's a new table. And then the avatar itself has a user ID that's referencing back to this user's ID.
+So it's related in that manner. Basically, what that means is that each new user might have an avatar ID.
+So say we have that user one. It's Troy. We all know and love him.
+He's got the avatar ID three. What that tells SQL is that if you go over to that avatar table
+and you look for the avatar where the ID is equal to three, you will find Troy's avatar.
+That kind of relationship where a user has one avatar and each avatar belongs to one user,
+that's called a one to one relationship.
+There's three different relationship types when we're using relational databases.
+There's a one to one like this user and avatar relationship where one user has one avatar and one avatar belongs to one user.
+Then there's one to many. And this is the most common type.
+And it's the example we'll be using in our code. One to many is when one entity has multiple of another entity.
+A great example is users and posts. Another good example is the YouTube video we have and comments.
+A YouTube video has multiple comments. So you might imagine that in YouTube's internal system,
+they have a video table and then that video table, you know, exists with no foreign key.
+And then there's this other separate comments table that has video IDs on each one.
+We'll break those down more in further slides. Let's jump in and talk about each one of the three relationship types in depth.
+The final ones, many to many, we'll get there. We'll get there. I know it's on the bullet point.
+I don't want to make anyone nervous. I just don't have a photo for it.
+Let's talk about one to one. One to one is the easiest type of relationship to wrap your head around.
+A user here has an avatar ID, an avatar has a user ID.
+So each row in the user table will have an ID referencing a very specific entity in the avatar table.
+We talked about this on the last slide, but let's reiterate again. Say you have Troy.
+He's got the idea of one we all know and love. We made him ourself.
+He's now got an avatar ID. That avatar ID references the row in the avatar table in which you will find Troy's avatar.
+So if Troy has the avatar ID three, we would go to the avatar table and look for, you know, maybe you write a select statement,
+select for the avatar where the avatar ID is three, and then you'll see Troy's avatar is sitting there.
+And just the same in reverse. That's the critical part here is that the avatar also has the user ID, right?
+That user ID is referencing back to Troy. That's what makes it a one to one.
+I want to note that although this example is one of the easiest to go through,
+one to one relationships are an easy thing to wrap your head around.
+They're actually the least useful and it's something you won't see a ton.
+Oftentimes they're used to just avoid column bloat, which is when a table gets out of hand,
+because over time you're continuously adding more and more things to an application.
+So oftentimes you'll see it to just avoid bloating the size of your tables by spreading out information across multiple.
+The next type of relationship is a one to many. One to many relationships are the most common one you're going to see.
+And in fact, the next relationship we look at, which is a many to many, is just actually two one to minis.
+But we're getting ahead of ourselves. Let's talk about one to many.
+So one to many is when one entity has many of another entities, or they can potentially have many of another entities.
+And let's talk about that example a bit more in the context of YouTube in this video.
+This video has multiple comments, right? But it doesn't need to have multiple comments.
+In fact, when you're watching this right now, it might not have any comments. And that's the case.
+You could be the first one, please. But anyways, the point is the entity, which is the video in YouTube's case,
+has the potential to have multiple comments, even if it doesn't yet.
+And the way that we set that up is through a one to many relationship.
+Let's jump back to thinking about our specific example, which is a user and a post.
+A user has multiple posts. And the way we set that up is we keep our user table as is.
+You'll notice it's the same. It's unchanged. But now we've created this post table and the post table has the user ID.
+In a one to many relationship, it's up to the many to say who owns it.
+Right. Each entity of that post will tell us who owns that user.
+And the reason is we can't put a post ID on a user because that would mean that each user can only have one post,
+which isn't the case. The user cannot reference posts. The post needs to reference the user.
+When we dive into actually making this post table, I'll reiterate that and elaborate just a hair more to make sure you wrap your head around it.
+But in relationships, the many references the one, not the other way around.
+And again, the reason is that would constrain the user to only being able to have one thing.
+Because if you think about it, each of these posts has a user ID. That user ID can only exist once per post.
+So the post belongs to the user. If we invert that and the user has a post ID,
+that would mean the user could only have one post just like they can only have one name.
+But they don't. They don't have a post ID here.
+And that that omitting of that column allows the user to have multiple posts through this post table.
+Let's talk about the final relationship, which is a many to many.
+This one is a bit more complex and in complicated schemas, you'll see it a lot.
+But don't freak out. Don't freak out that we have three tables now.
+All we want to focus on here is that if you look at these tables in isolation, they're actually just two one to manys, which you're comfortable with.
+So all a many to many is it relates two separate tables to each other through one center table.
+And we typically call that table a join table.
+So we've got a one to many over here and another one to many over here.
+Those are related together through a join table.
+The best example I could think of for this was a school set up.
+So you have in a school students or users that are taking classes from instructors.
+An instructor has multiple students and the student will have multiple instructors.
+So how do we relate that stuff together? Well, we relate them together through the class.
+Right. So we have a user.
+A user has a class here. This class, as such, has the user ID.
+Remember, the user has nothing about the class because it owns the class.
+The class is the one who references the owner.
+Now, that instructor is also teaching the class. So as such, they have their instructor ID on the class.
+And you'll notice that these are two separate one to many relationships.
+But through them, we have the ability for a user to have multiple classes.
+And then each of those classes could have different instructors.
+And because of that, you could say that a user has many instructors through this class table.
+And that's true in inverse as well.
+OK, we're back in post to go world and we're ready to create our post table.
+So let's go ahead and start with create table. You guys know this now.
+We're going to create the post table.
+Think about why I don't have to wrap this in quotes. Remember back to past in the lecture?
+Why don't I have to wrap that in quotes? Make sure you know. Make sure you know why.
+I'm going to create the table post. It's going to need, just like every table, an ID, which is a serial primary key.
+And then we're going to give it a name, a name for the post itself. Maybe this is a varchar 255.
+You're maxing out at 255 characters for the name.
+Then content, which we can go ahead and make text.
+And finally, that foreign key. What relates the post to the user is a user ID.
+Each post will have the ID associated with the user that made said post.
+And we'll go ahead and just make it an integer.
+Next, what we need to do is we need to tell Postgres that this user ID is not just a normal integer.
+It's a special integer. It's a foreign key. And the way we do that is by creating a constraint.
+We can come and say constraint. Constraint. I can type. I can text.
+Constraint. And then we give the constraint a name. I'll call it FK user, which is just a convention.
+It means foreign key for the user. Then we can say it's a foreign key.
+Then we tell it what column the foreign key belongs to, which in our case is the user ID.
+Next, we tell it what that column is referencing. Well, it references the user ID column.
+And now this here is referencing the table. So we'll say user and ID.
+So again, at the end of our create table, we're creating a constraint.
+The constraint is that we have a foreign key. The foreign key here is what column we're talking about.
+The user ID. And then we tell it what that foreign key is for. It's referencing the user table ID column.
+So we're saying this user ID column in the post table is referencing the ID column in the user table.
+We'll go ahead and execute that statement and our table is made.
+If we go ahead and refresh post to go here, we'll see now that that post table is there.
+And if we look, it has this nice structure tab for us just for us to confirm that it worked.
+We'll see user ID and I know it might be a bit small, but here it has a constraint where it's referencing.
+It's got this arrow to user ID. It's a foreign key. We've got it separate or we've got it set up properly.
+OK, we made our table with the foreign key. Let's go ahead and insert into this table.
+So we could just write an insert. But remember, we have a constraint. Each post needs to belong to a user.
+So let's just quickly review what users we have in our table.
+And excuse me, I have to wrap that in double quotes. And there we go.
+We have just the one and they've got the ID of one. So let's remember that we're inserting for ID one.
+So we'll go ahead and construct our post insert now. We'll do insert into post.
+And again, we don't have to wrap this in double quotes. You guys know that.
+The values we'll insert are the name and the content and the user ID.
+And we say the values. Maybe this post is why I love corgis.
+The content is, oh my God, I love them. And the user who made them was user one.
+He's a big corgi fan. We can go ahead and insert them.
+And then if we look at the post table, we're going to see, sure enough, the corgi post is there.
+Now, let's go ahead and insert some more. So we'll bring back.
+I just undid a bit to get back to the insert post. Excuse me there.
+So we're inserting the post. Why I love corgis. OMG, I love them.
+Let's just say why I love dogs in general. So much.
+And it was also made by user one. What did I do wrong here?
+Content, user ID. OMG, why I love them so much.
+I don't see. I don't see it. Do you guys see it?
+Do you guys see where I made my mistake?
+I love them in general. Oh, oh, oh, oh my goodness. Something good.
+This is a good call out. Something good to know about Postico.
+Is that if you highlight something and hit execute selection, it's just going to execute that.
+We want to execute the whole statement. I'm not going insane. This is correct.
+Okay, we inserted the post now. So if we go back and we say select star from post.
+And end it with a semicolon. There we go. We've got these two posts in place.
+Okay, perfect. So we've got our two posts in place. That's great.
+And we can see that those both belong to user one.
+And that's how we get that one to many, right? This user one has many posts.
+Because we've got two separate posts with the user ID one. It works.
+Now the question is, how do we say I want the user along with their posts?
+That seems like an interesting piece of data to retrieve.
+The way that we select data from multiple tables is by leveraging a join.
+Now there's multiple types of joins. There's an inner join, an outer join, a left join, and a right join.
+But diving into them super thoroughly is probably a good topic for a future Postgres video.
+Because we're just trying to talk about the basics. And for now, let's just talk about inner joins.
+So what we can do is we can start from the user table.
+So we'll go from the user table. Select from user.
+There we go. There's our user data.
+And then what we can do is we can tell this table that it needs to also join to the posts table.
+So I'm saying select from users table. Join it to the posts table.
+So we're going to combine those two tables together. And then we need to tell it on what place does it join.
+Well, it joins on where the posts table user ID is the same as the user ID.
+So we've got these big tables. And what we're saying is wherever the posts table has a user ID,
+that lines up with one of the IDs of a user, we're going to match those things together.
+So what we'll see here is we'll see two rows because there's two separate posts.
+But for each one, they've lined up with the user ID one.
+Because we're joining wherever the posts user ID is, you know, the user ID.
+So give me for a post like this first post. Let's talk about the second one.
+Like the second post. Give me the user information where the user's ID, in this case one,
+lines up with our post user ID column. And there we go. It lines up.
+So there's our join. But you might notice something here.
+We have two name columns, which is fine for us viewing it here.
+But what if we're using this in an application and these become variables in some other programming language?
+Well, you can't have variables with the same name in most languages.
+So it's probably useful to know how we can reference these things differently.
+Well, remember the star means select everything. And we can change it up a little bit.
+We can say select everything from the user table.
+So we'll say user star. But then maybe from the post table, we'll get the post ID, the post name.
+But then we'll tell it to not call it post name. We'll say call it title as title.
+Then we can say, get me the post content and get me the post user ID.
+Now, what you'll notice is when we run this, it's the same data, but it's gone ahead and it's changed.
+And it might be hard to see. But now the title of the poster,
+I should say the name of the post is now called title. And that doesn't change anything in the table itself.
+It's just changing the results we get back with our select statement.
+So that covers the basics of joins. In future videos, we'll be talking about more complex joins,
+more complex schema design, as well as triggers, Postgres functions and more complex constraints.
+Thank you so much for watching this video. If you found it helpful, please consider giving it a like.
+And if you have any feedback, it would be great to hear about it in the comments down below.
+I hope that this video was useful for you and helps you get started in Postgres.
+Please consider subscribing so that in the future, any additional content I release, you're able to get notified for,
+whether that's additional Postgres tutorials or just general software engineering advice and tutorials.
+You'll see it all on this channel. So subscribing is probably a good idea.

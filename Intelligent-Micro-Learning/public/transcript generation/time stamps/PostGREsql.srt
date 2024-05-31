@@ -1,0 +1,1992 @@
+1
+00:00:00,000 --> 00:00:05,000
+So you want to learn Postgres, huh? Well, I know a thing or two about Postgres.
+
+2
+00:00:05,000 --> 00:00:11,000
+In fact, I would say that learning Postgres and SQL has been one of the most beneficial skills
+
+3
+00:00:11,000 --> 00:00:15,000
+I've learned throughout my entire career. Not only has it been helpful on the job,
+
+4
+00:00:15,000 --> 00:00:21,000
+it's also been a really impressive skill to be able to flex in interviews with potential employers,
+
+5
+00:00:21,000 --> 00:00:27,000
+and I've landed multiple contract jobs just because I know Postgres well enough
+
+6
+00:00:27,000 --> 00:00:30,000
+to be able to do things that other developers simply can't.
+
+7
+00:00:30,000 --> 00:00:37,000
+Today, in this video, I'm going to give you some initial skills to help you on your journey to Postgres Mastery.
+
+8
+00:00:37,000 --> 00:00:41,000
+We're just going to be talking about a lot of the basics. Perhaps in future videos,
+
+9
+00:00:41,000 --> 00:00:44,000
+we'll dive a little bit deeper and talk about some more advanced concepts,
+
+10
+00:00:44,000 --> 00:00:49,000
+but this should lay the foundation for your journey to Postgres Mastery.
+
+11
+00:00:49,000 --> 00:00:52,000
+So without further ado, let's dive right in.
+
+12
+00:00:52,000 --> 00:00:57,000
+Well, the first question is, what is Postgres? What is SQL, really?
+
+13
+00:00:57,000 --> 00:01:04,000
+Well, Postgres is a relational database. You're going to hear a lot about relational and non-relational databases out there,
+
+14
+00:01:04,000 --> 00:01:09,000
+and an initial assumption a lot of developers might have, in fact, when I used to teach,
+
+15
+00:01:09,000 --> 00:01:14,000
+I would ask students a lot, what's your assumption? What do you think relational means versus non-relational?
+
+16
+00:01:14,000 --> 00:01:22,000
+And oftentimes, they would say, well, I would just assume that a relational database allows you to relate data together.
+
+17
+00:01:22,000 --> 00:01:26,000
+And while that's true, you can do that in a relational database.
+
+18
+00:01:26,000 --> 00:01:29,000
+What's also true is that you can do that in a non-relational database.
+
+19
+00:01:29,000 --> 00:01:34,000
+What it actually is talking about is the math under the hood, what makes the database tick.
+
+20
+00:01:34,000 --> 00:01:39,000
+In relational databases, it's leveraging relational algebra, and that's the reason for the name.
+
+21
+00:01:39,000 --> 00:01:45,000
+So that's just a common misconception that I wanted to clear up before we dove right into Postgres.
+
+22
+00:01:45,000 --> 00:01:48,000
+So SQL stands for Structured Query Language.
+
+23
+00:01:48,000 --> 00:01:55,000
+It's a language that allows us to communicate with our database and make changes by using a series of keywords.
+
+24
+00:01:55,000 --> 00:02:01,000
+We're going to dive into it a little bit more, but just setting the stage for the rest of our talk today.
+
+25
+00:02:01,000 --> 00:02:11,000
+So let's go ahead and talk about the core building block for essentially all SQL databases, which is tables.
+
+26
+00:02:11,000 --> 00:02:16,000
+Tables are essentially containers for data. They're made up of columns and rows.
+
+27
+00:02:16,000 --> 00:02:22,000
+You can think much like an Excel spreadsheet or a Google Sheets spreadsheet.
+
+28
+00:02:22,000 --> 00:02:26,000
+You're going to have a series of columns, and then you're going to have multiple rows.
+
+29
+00:02:26,000 --> 00:02:31,000
+Oftentimes, we'll talk about entries into a table as entities.
+
+30
+00:02:31,000 --> 00:02:37,000
+So if you ever hear me talk about an entity, I'm just talking about one object in the database.
+
+31
+00:02:37,000 --> 00:02:45,000
+So for example here, what I would say is maybe this first user here, he's an entity in the database.
+
+32
+00:02:45,000 --> 00:02:50,000
+What we can see is this is actually a screenshot from the editor that we'll be in soon.
+
+33
+00:02:50,000 --> 00:02:57,000
+We have a series of these columns here. So we've got an ID column, email column, name column, age column, and password column.
+
+34
+00:02:57,000 --> 00:03:07,000
+What you'll also see is that we have these rows. We have these entries into that table, and those rows have specific entries for each column.
+
+35
+00:03:07,000 --> 00:03:14,000
+So for example, for the email column, we're going to see troy at fake email dot com is this user's email address.
+
+36
+00:03:14,000 --> 00:03:19,000
+And then same for name, same for age, and password here. These are actually hashed.
+
+37
+00:03:19,000 --> 00:03:25,000
+You're never really going to store raw text passwords in a database. It's a huge security concern.
+
+38
+00:03:25,000 --> 00:03:30,000
+We're not going to talk about that much in this video. Maybe that's a great topic for future ones,
+
+39
+00:03:30,000 --> 00:03:35,000
+but I just wanted to explain why you're seeing that nonsense in the password column.
+
+40
+00:03:35,000 --> 00:03:43,000
+Okay, so let's jump over to an editor now, and let's create our first table together.
+
+41
+00:03:43,000 --> 00:03:49,000
+All right. So welcome to Postico. Postico is just an interface for interacting with Postgres.
+
+42
+00:03:49,000 --> 00:03:55,000
+I'll have some links for setting up Postgres on your local machine as well as Postico down below in the description.
+
+43
+00:03:55,000 --> 00:04:01,000
+But all you need to know for now is it's an editor that allows us to write SQL and interact with our database.
+
+44
+00:04:01,000 --> 00:04:06,000
+It also gives us a nice UI so that we can see things. It's fantastic for beginners.
+
+45
+00:04:06,000 --> 00:04:12,000
+So let's jump right in. So here, this is where we're going to write our SQL.
+
+46
+00:04:12,000 --> 00:04:20,000
+So, you know, we can type away as normal. But SQL, like I said, is made up of a series of keywords.
+
+47
+00:04:20,000 --> 00:04:28,000
+So what do I say when I mean keyword? Well, a keyword is just a word that tells SQL to do a very specific operation.
+
+48
+00:04:28,000 --> 00:04:35,000
+And in this example, what we want to do is tell SQL or tell Postgres, I should say, to create a table.
+
+49
+00:04:35,000 --> 00:04:45,000
+Okay, so what table are we creating today? Well, I think it's best to go through anything new that we're learning with a actual realistic example.
+
+50
+00:04:45,000 --> 00:04:54,000
+So we're going to build a little bit of a schema here that would represent an application that allows us to have users and posts eventually.
+
+51
+00:04:54,000 --> 00:05:02,000
+And when I say schema, all a schema is, is it's just the database itself. The way that data is laid out is the schema.
+
+52
+00:05:02,000 --> 00:05:10,000
+Okay, fantastic. So let's jump into it. First, we're going to create a table. I'm going to call the table profile for now.
+
+53
+00:05:10,000 --> 00:05:17,000
+I'm going to revisit that, but we'll come back to it. And then the syntax for this is after we say create table profile,
+
+54
+00:05:17,000 --> 00:05:25,000
+we open up these parentheses here. And then inside of here, each line, we're going to define a new column for that table.
+
+55
+00:05:25,000 --> 00:05:34,000
+Troy from the future here. Sorry for the interruption. I just want to note that SQL statements need to end in a semicolon.
+
+56
+00:05:34,000 --> 00:05:42,000
+I didn't specifically say that, which is my bad. But you'll notice that every statement that I write throughout this entire video ends in a semicolon.
+
+57
+00:05:42,000 --> 00:05:50,000
+It's how we tell SQL that the statement is done. So we always, whenever you're working with the database,
+
+58
+00:05:50,000 --> 00:05:57,000
+you need to make sure that you have an ID column. That column is going to be what we call a serial column.
+
+59
+00:05:57,000 --> 00:06:06,000
+And we're going to go ahead and also tell it that this is the primary key. The user might also have a name.
+
+60
+00:06:06,000 --> 00:06:13,000
+The name we're going to say is Varchar 255. And don't worry, I'm going to come back and talk through all of this.
+
+61
+00:06:13,000 --> 00:06:20,000
+What does this stuff mean? You might not know, but I think it's helpful to write it all out first so that you can see it together.
+
+62
+00:06:20,000 --> 00:06:25,000
+We're going to have an email. That's also going to be Varchar 255. We're going to have a password.
+
+63
+00:06:25,000 --> 00:06:33,000
+I'm going to make the password text. And then finally, we're going to have an age, which is an integer.
+
+64
+00:06:33,000 --> 00:06:42,000
+Okay, great. So what does all of this mean? And why are there these different capitalizations for certain words and some not?
+
+65
+00:06:42,000 --> 00:06:51,000
+Okay, so first things first, let's address capitalization. In programming languages, you're going to have a series of conventions oftentimes.
+
+66
+00:06:51,000 --> 00:06:56,000
+In languages like JavaScript, you're going to see a lot of camel cases. In Python, you're going to see a lot of snake casing.
+
+67
+00:06:56,000 --> 00:07:07,000
+In SQL, the convention is that you uppercase all keywords and anything that relates to your table itself should be lowercase snake case.
+
+68
+00:07:07,000 --> 00:07:14,000
+So all lowercase characters snake case. The reason that is, is SQL does not care about casing.
+
+69
+00:07:14,000 --> 00:07:23,000
+So this is the same thing. It's going to do the same operation. Me lowercase and create had no effect on it.
+
+70
+00:07:23,000 --> 00:07:30,000
+But you write code for other people, and it's important to structure things in a way that makes it easy to read.
+
+71
+00:07:30,000 --> 00:07:39,000
+So here, by uppercasing everything that's a keyword, it becomes very, very clear what is baked into Postgres itself and what is something that I'm naming.
+
+72
+00:07:39,000 --> 00:07:46,000
+What is something that I have control over? So here, this this profile name, this is a name I'm giving.
+
+73
+00:07:46,000 --> 00:07:54,000
+It could be anything I want virtually. I could call this person. I could call this user.
+
+74
+00:07:54,000 --> 00:07:58,000
+But for now, we may call it profile. I want to come back to that user point.
+
+75
+00:07:58,000 --> 00:08:06,000
+But that's the idea is that you're uppercasing all of the keywords and anything that is lowercase is something you're naming yourself.
+
+76
+00:08:06,000 --> 00:08:13,000
+So let's follow that to the next line. In fact, I'm going to skip over ID for a second because it's the most complex column we have.
+
+77
+00:08:13,000 --> 00:08:18,000
+We're going to talk about name next. So name here, that's, well, the name of the column.
+
+78
+00:08:18,000 --> 00:08:25,000
+I'm creating a column and I'm calling it name. And this is something to look out for the entirety of this video.
+
+79
+00:08:25,000 --> 00:08:30,000
+Anytime you see something that's lowercase, you should assume that is something that I'm naming.
+
+80
+00:08:30,000 --> 00:08:37,000
+It's not something that's built into Postgres itself. Next, we have this, which is a data type.
+
+81
+00:08:37,000 --> 00:08:43,000
+The data type is what constraints we're placing on this column itself.
+
+82
+00:08:43,000 --> 00:08:48,000
+And for me, this is what makes using relational databases so powerful.
+
+83
+00:08:48,000 --> 00:08:55,000
+You can add constraints to your columns. Data does not just exist in containers that have rules that are made up.
+
+84
+00:08:55,000 --> 00:09:03,000
+They are enforced by the database itself. I could not insert just a raw number into the name column if I wanted to.
+
+85
+00:09:03,000 --> 00:09:10,000
+And the reason is I'm telling Postgres here that this column is varchar 255. What is varchar?
+
+86
+00:09:10,000 --> 00:09:16,000
+That's a great question you might ask. This is the syntax for a comment. So I'm just, you know, I can write anything in here.
+
+87
+00:09:16,000 --> 00:09:22,000
+It doesn't matter. The editor ignores it. I'm just commenting on the column and it's good for taking notes.
+
+88
+00:09:22,000 --> 00:09:35,000
+So what I'm going to say here is varchar, and I'll uppercase it, is a text column that has a constraint on size.
+
+89
+00:09:35,000 --> 00:09:39,000
+And I know it's overflowing a little bit to the next line, but this is the same line.
+
+90
+00:09:39,000 --> 00:09:49,000
+So the idea here is that varchar is a text-based column, but critically it has a constraint on how long that text can be.
+
+91
+00:09:49,000 --> 00:09:59,000
+And the upper bounds for that is 255 characters. So the max we can do is varchar 255, but varchar 50 is valid as well.
+
+92
+00:09:59,000 --> 00:10:04,000
+And I think it's probably fine for me. It's pretty rare to have a name that's greater than 50 characters.
+
+93
+00:10:04,000 --> 00:10:09,000
+Maybe for covering all of our bases we'll do a 100 character name column.
+
+94
+00:10:09,000 --> 00:10:15,000
+So what this means is that this column is only going to take up enough space to show 100 characters.
+
+95
+00:10:15,000 --> 00:10:20,000
+And it's a great way to optimize your database so that you're not consuming more data than you need.
+
+96
+00:10:20,000 --> 00:10:27,000
+So here again we're saying that this name column is a text column and it can only max out at 100 characters.
+
+97
+00:10:27,000 --> 00:10:33,000
+For email it's the same thing. I'll leave 255. You can have some long emails. We'll leave 255.
+
+98
+00:10:33,000 --> 00:10:41,000
+And then password is just plain text. And the reason you would do that is that at least for applications I've worked on
+
+99
+00:10:41,000 --> 00:10:47,000
+in pretty much any app that you're ever going to touch actually, you're going to be hashing passwords in the database.
+
+100
+00:10:47,000 --> 00:10:58,000
+And password hashes can get pretty long depending on what hashing library you're using and what hashing algorithm you're using.
+
+101
+00:10:58,000 --> 00:11:04,000
+Whether you're using SHA or MD5. Anyways, that's not important for this talk.
+
+102
+00:11:04,000 --> 00:11:10,000
+The point is I'm making password text because placing constraints on something that's going to be hashed, it's kind of silly.
+
+103
+00:11:10,000 --> 00:11:18,000
+Next up we have age which is an integer. An integer is straightforward. It's a number itself.
+
+104
+00:11:18,000 --> 00:11:24,000
+So you're going to see numbers in here like 20 etc.
+
+105
+00:11:24,000 --> 00:11:29,000
+I want to note that there's a lot of different types for your columns.
+
+106
+00:11:29,000 --> 00:11:39,000
+And if you want an exhausted list of them, you can google Postgres column types and you'll get an extremely large list of all the different types.
+
+107
+00:11:39,000 --> 00:11:45,000
+One of those such types is serial. Serial is a special type because it sets up some additional stuff for us.
+
+108
+00:11:45,000 --> 00:11:50,000
+Some additional stuff that I'll dive into more in a future advanced Postgres tutorial.
+
+109
+00:11:50,000 --> 00:12:02,000
+But for now, the way I want you to think of this column is this column is an integer that automatically adds one for us.
+
+110
+00:12:02,000 --> 00:12:10,000
+Every new entity. So every single time we insert into this table, it will automatically add one to the ID column.
+
+111
+00:12:10,000 --> 00:12:18,000
+And what I mean by that is our first profile that we insert, the ID will be one. It starts at one with a serial column.
+
+112
+00:12:18,000 --> 00:12:24,000
+Then the next one, we don't have to do anything. It'll just automatically get the ID of two.
+
+113
+00:12:24,000 --> 00:12:30,000
+The ID column is something you never want to edit yourself. You want to let the database handle this.
+
+114
+00:12:30,000 --> 00:12:36,000
+When you're inserting profiles later, and we'll talk about this a bit more when we're actually inserting data momentarily,
+
+115
+00:12:36,000 --> 00:12:42,000
+but we want to avoid touching this column. This column is something we want the database to control.
+
+116
+00:12:42,000 --> 00:12:52,000
+The next part is the primary key. So primary key is just telling the database that this is the key that we're using to represent each row in the table.
+
+117
+00:12:52,000 --> 00:13:00,000
+And critically, that also means that it's going to be unique. We shouldn't have multiple profiles that have the same ID.
+
+118
+00:13:00,000 --> 00:13:07,000
+It's a unique identifier that we can then use later on to reference for specific rows. It's incredibly useful.
+
+119
+00:13:07,000 --> 00:13:12,000
+And we'll show that more as we get later into the crash course.
+
+120
+00:13:12,000 --> 00:13:18,000
+So again, serial is a data type. It's an integer that automatically does plus one every time.
+
+121
+00:13:18,000 --> 00:13:23,000
+So without further ado, let's go ahead and execute this statement.
+
+122
+00:13:23,000 --> 00:13:28,000
+So it worked. That's what this create table is. And I can show you it worked because Postico is awesome.
+
+123
+00:13:28,000 --> 00:13:35,000
+And if we come back here to the lecture DB and we hit this refresh icon at the top, you'll notice that there is this profile table here.
+
+124
+00:13:35,000 --> 00:13:40,000
+And if we click into it, we're seeing ID, name, email, password and age. Sorry if that's a bit small.
+
+125
+00:13:40,000 --> 00:13:47,000
+I tried to increase the font up there, but I couldn't. But that's our table. It's there. It does exist.
+
+126
+00:13:47,000 --> 00:13:54,000
+But you might be saying, Troy, in it seems kind of weird to call it a profile.
+
+127
+00:13:54,000 --> 00:14:02,000
+This seems like this table should probably be called user. Well, if we run this, it's going to fail.
+
+128
+00:14:02,000 --> 00:14:07,000
+And we're getting syntax error at or near user. That's a bit strange.
+
+129
+00:14:07,000 --> 00:14:14,000
+Think for a minute why that might happen. And you might get a bit hint, a bit of a hint by the coloring here.
+
+130
+00:14:14,000 --> 00:14:19,000
+So pause the video if you want a second to just think about why that could happen. All right.
+
+131
+00:14:19,000 --> 00:14:30,000
+Here's why. This is a keyword. So creating a table that's called table wouldn't work, because like I said at the start.
+
+132
+00:14:30,000 --> 00:14:36,000
+SQL doesn't care about casing. So when it sees this lowercase table, it's treating it the same as the uppercase one.
+
+133
+00:14:36,000 --> 00:14:42,000
+And it thinks that it's a keyword. So it's seeing some syntax error. It's like, hey, you're using a keyword here.
+
+134
+00:14:42,000 --> 00:14:46,000
+We're expecting a name. There's an easy way to omit this.
+
+135
+00:14:46,000 --> 00:14:51,000
+Whenever you're trying to name something in SQL or reference something that is not a keyword,
+
+136
+00:14:51,000 --> 00:14:59,000
+but happens to share the same name as one, you can wrap it in very specifically double quotes so we can say user.
+
+137
+00:14:59,000 --> 00:15:07,000
+Now this works and we get a user table. So if we refresh, we'll see the user table.
+
+138
+00:15:07,000 --> 00:15:15,000
+One last note on tables before we move on. You'll notice I'm calling it the user table, not users.
+
+139
+00:15:15,000 --> 00:15:23,000
+The reason for this is that the convention that you'll often see in Postgres is that you name tables as singular items.
+
+140
+00:15:23,000 --> 00:15:29,000
+And the thought behind that is that you think about tables as this bag that you put things in.
+
+141
+00:15:29,000 --> 00:15:34,000
+And because of that, when you're talking about it, it's really useful to think of it as a user table.
+
+142
+00:15:34,000 --> 00:15:43,000
+It's a bag to contain things. So you wouldn't say you have a bag of candy, not you have bags of candy, unless you have multiple.
+
+143
+00:15:43,000 --> 00:15:50,000
+So that's the thought process. And I've seen it broken. I've worked at companies before that pluralized tables.
+
+144
+00:15:50,000 --> 00:15:55,000
+It doesn't really matter. It's not going to make a big difference on your software itself.
+
+145
+00:15:55,000 --> 00:16:02,000
+But there are times when you'll have tools that automatically generate things for you based off of your table names.
+
+146
+00:16:02,000 --> 00:16:10,000
+Rails and Ruby are a great example of that. Rails will automatically generate a lot of code for you as long as you follow good conventions.
+
+147
+00:16:10,000 --> 00:16:16,000
+And the other thing is it's a convention. It's what other developers will be expecting from your work.
+
+148
+00:16:16,000 --> 00:16:20,000
+So I think it's important to keep them singular whenever possible.
+
+149
+00:16:20,000 --> 00:16:28,000
+And if you ever work with or for me, you know, and I see a pluralized table in your code, I'm going to come at you a little bit.
+
+150
+00:16:28,000 --> 00:16:35,000
+You're going to have to be prepared for me to shoot down your code review and tell you you need to go change that.
+
+151
+00:16:35,000 --> 00:16:41,000
+OK, great. So we've got our user and profile in place. We're going to go ahead and drop the profile table.
+
+152
+00:16:41,000 --> 00:16:46,000
+This is really, really easy in post. You can just right click and delete.
+
+153
+00:16:46,000 --> 00:16:54,000
+And delete. And it's gone. In order to do that in SQL, you can just say drop table and then the table name.
+
+154
+00:16:54,000 --> 00:16:59,000
+But we have an editor. I would recommend using an editor, especially as you're getting started with SQL.
+
+155
+00:16:59,000 --> 00:17:04,000
+And I think Postico is a great option. OK, we've got our table in place.
+
+156
+00:17:04,000 --> 00:17:09,000
+We're very excited about that. Now we just need to get data inside.
+
+157
+00:17:09,000 --> 00:17:15,000
+We're going to learn some new ones here. We're going to say insert into our table name, which is user.
+
+158
+00:17:15,000 --> 00:17:22,000
+And remember, user here happens to also be a keyword. So we're going to wrap it in double quotes.
+
+159
+00:17:22,000 --> 00:17:27,000
+Then in parentheses, we specify what columns we want to insert.
+
+160
+00:17:27,000 --> 00:17:33,000
+Well, those columns are email, name, age and password.
+
+161
+00:17:33,000 --> 00:17:41,000
+You might be asking yourself or thinking, why is it ID here? We surely want an ID for each user.
+
+162
+00:17:41,000 --> 00:17:48,000
+Well, if you remember back to when we were talking about creating a table, the ID is of data type serial.
+
+163
+00:17:48,000 --> 00:17:54,000
+What that means is it's going to automatically generate an integer ID for us every new row.
+
+164
+00:17:54,000 --> 00:17:58,000
+So we don't have to insert it ourselves. In fact, it would be a mistake to.
+
+165
+00:17:58,000 --> 00:18:07,000
+This user that we insert will automatically have the ID of one for us because of Postgres's serial data type.
+
+166
+00:18:07,000 --> 00:18:11,000
+Let's go ahead and move on with the query. So we've got insert into user.
+
+167
+00:18:11,000 --> 00:18:19,000
+The columns were inserting email, name, age and password. And then we say the values, which is a keyword.
+
+168
+00:18:19,000 --> 00:18:23,000
+And now we can start to enter those values and how this works.
+
+169
+00:18:23,000 --> 00:18:29,000
+Is within these parentheses, we go in the same order that the columns are listed in these.
+
+170
+00:18:29,000 --> 00:18:33,000
+So the order here doesn't matter. We can order this however we want.
+
+171
+00:18:33,000 --> 00:18:37,000
+We just need to make sure we follow the order order after the values keyword.
+
+172
+00:18:37,000 --> 00:18:42,000
+So within here. So what that means is email needs to come first here when we're entering the value.
+
+173
+00:18:42,000 --> 00:18:45,000
+Name second, age third and password fourth.
+
+174
+00:18:45,000 --> 00:18:52,000
+So for email, I'm going to go ahead and enter Troy at fake email.
+
+175
+00:18:52,000 --> 00:19:03,000
+For name, I'm going to enter Troy. For age, I'll enter 26. And for password, I'll enter some nonsense.
+
+176
+00:19:03,000 --> 00:19:08,000
+OK, this is great. We've got our values in place. And if we run this, it should work.
+
+177
+00:19:08,000 --> 00:19:12,000
+But you might have a question. What are these single quotes doing here?
+
+178
+00:19:12,000 --> 00:19:18,000
+Well, single quotes are how we tell SQL that we're entering some text.
+
+179
+00:19:18,000 --> 00:19:26,000
+So this is just looked at by SQL as text. It's not read as if it was part of the code itself.
+
+180
+00:19:26,000 --> 00:19:32,000
+So if we put some SQL in here, this would get inserted as the actual email.
+
+181
+00:19:32,000 --> 00:19:37,000
+Sorry, let me use something you're familiar with. We haven't gotten to create statements or to select statements yet.
+
+182
+00:19:37,000 --> 00:19:43,000
+I'm getting ahead of myself. If we put like create table in here, this will get inserted as the email, right?
+
+183
+00:19:43,000 --> 00:19:50,000
+It's not going to look at this as code. It looks at it as text. And in fact, without it, it will look at it as code.
+
+184
+00:19:50,000 --> 00:20:00,000
+So if I omit those single quotes, it will read this and we'll get a syntax error because it doesn't know what Troy at fake email is.
+
+185
+00:20:00,000 --> 00:20:04,000
+We need the single quotes to tell it that this is a string value.
+
+186
+00:20:04,000 --> 00:20:11,000
+It's also important to call out if you've done other programming languages before, which if you're looking at in this course, you probably have.
+
+187
+00:20:11,000 --> 00:20:19,000
+Single quotes and double quotes are not the same here, which they are in a lot of programming languages like JavaScript, for example.
+
+188
+00:20:19,000 --> 00:20:25,000
+And double quotes here are specifically for referencing columns and tables.
+
+189
+00:20:25,000 --> 00:20:30,000
+And whenever you use them, SQL will expect you to be referencing one as such.
+
+190
+00:20:30,000 --> 00:20:36,000
+And the same with single quotes. If we swap these two and it's double quotes here and single quotes here, we're going to get a syntax error.
+
+191
+00:20:36,000 --> 00:20:40,000
+It's important to recognize the difference between those two.
+
+192
+00:20:40,000 --> 00:20:45,000
+Ages and integer. Integers are not text based data. They're not a string.
+
+193
+00:20:45,000 --> 00:20:50,000
+So we can just put it, you know, in line here. We don't need to wrap it in anything.
+
+194
+00:20:50,000 --> 00:20:54,000
+OK, fantastic. Let's execute that statement.
+
+195
+00:20:54,000 --> 00:21:00,000
+We say we've inserted and if we come back and look at our table here and refresh, you will notice.
+
+196
+00:21:00,000 --> 00:21:07,000
+And I know it's a bit hard to see. I'm sorry about that. But the tables there and all of our information is in there correctly.
+
+197
+00:21:07,000 --> 00:21:10,000
+This is great. I'm really, really happy that that worked.
+
+198
+00:21:10,000 --> 00:21:15,000
+And in fact, let's go ahead and insert another user just for practice sake.
+
+199
+00:21:15,000 --> 00:21:23,000
+OK, I'm going to insert another user. We're going to make it Chris at another dot example.
+
+200
+00:21:23,000 --> 00:21:27,000
+The person's name is going to be you're never going to believe it is Chris.
+
+201
+00:21:27,000 --> 00:21:33,000
+He's a notorious 98 year old man who's using our application and his password is.
+
+202
+00:21:33,000 --> 00:21:40,000
+Wow, I love SQL 28. And we'll go ahead and insert Chris.
+
+203
+00:21:40,000 --> 00:21:47,000
+It does work. And we can come back and look at our user table. And sure enough, he's along with Troy now.
+
+204
+00:21:47,000 --> 00:21:52,000
+All right. That's great news. We've got two rows in there now.
+
+205
+00:21:52,000 --> 00:21:57,000
+You might be thinking about something and I hope you are.
+
+206
+00:21:57,000 --> 00:22:00,000
+What do you do if you don't have a nice editor like this?
+
+207
+00:22:00,000 --> 00:22:08,000
+How do you get information out? And in fact, what is this editor maybe doing under the hood to show us this data?
+
+208
+00:22:08,000 --> 00:22:15,000
+Well, friends, that's what we're going to talk about next. And it leads us to some more keywords.
+
+209
+00:22:15,000 --> 00:22:21,000
+The next keyword that we unlock in our journey to SQL mastery is going to be select.
+
+210
+00:22:21,000 --> 00:22:27,000
+Select is a keyword that allows us to fetch information from existing tables.
+
+211
+00:22:27,000 --> 00:22:35,000
+It's what Postico is using under the hood to show us our entries when we go and we click on the user table here.
+
+212
+00:22:35,000 --> 00:22:37,000
+This is how it's grabbing information.
+
+213
+00:22:37,000 --> 00:22:42,000
+And remember, you're not always going to have access to a nice editor like this.
+
+214
+00:22:42,000 --> 00:22:50,000
+And also select gives us additional tools that make it even better sometimes than just viewing the data in an editor.
+
+215
+00:22:50,000 --> 00:22:53,000
+And we'll show you that more later on in the video.
+
+216
+00:22:53,000 --> 00:22:58,000
+But let's cover the basics for now, which, of course, starts with the select keyword.
+
+217
+00:22:58,000 --> 00:23:08,000
+So I'm going to go ahead and write out a basic select statement and then we'll break it down.
+
+218
+00:23:08,000 --> 00:23:13,000
+All right. Fantastic. Select star from user and let's run it.
+
+219
+00:23:13,000 --> 00:23:20,000
+And we can see here in the bottom, this is our SQL output that those rows show up in the user table.
+
+220
+00:23:20,000 --> 00:23:24,000
+The user table is there. I want you to think for a moment.
+
+221
+00:23:24,000 --> 00:23:30,000
+What does this star probably mean? You can probably easily infer what from means.
+
+222
+00:23:30,000 --> 00:23:34,000
+Select is clearly a keyword that's initiating the statement.
+
+223
+00:23:34,000 --> 00:23:40,000
+What do you think this star means? Pause the video here and contemplate with yourself.
+
+224
+00:23:40,000 --> 00:23:45,000
+So when I taught, most students would assume that it meant all rows.
+
+225
+00:23:45,000 --> 00:23:48,000
+It doesn't. It means all columns.
+
+226
+00:23:48,000 --> 00:23:55,000
+So this star is referring to what columns you want from user and star means all.
+
+227
+00:23:55,000 --> 00:24:01,000
+I can say I just want the name. And when we run this, we're only going to see Troy and Chris here.
+
+228
+00:24:01,000 --> 00:24:06,000
+It's only giving me the name back. I can say I just want the email and it's only going to give me the email.
+
+229
+00:24:06,000 --> 00:24:13,000
+Or I can do some combination. Give me the ID, the email and the name.
+
+230
+00:24:13,000 --> 00:24:18,000
+And there you go. Fantastic.
+
+231
+00:24:18,000 --> 00:24:22,000
+That brings up a question. We'll go back to select star so we can see everything.
+
+232
+00:24:22,000 --> 00:24:27,000
+How do we say that we only want specific entries? And it's a good question.
+
+233
+00:24:27,000 --> 00:24:31,000
+The way we do this is with the where keyword.
+
+234
+00:24:31,000 --> 00:24:38,000
+We can say select all columns from the user table where and then some condition.
+
+235
+00:24:38,000 --> 00:24:46,000
+So my condition might be where the name is Troy.
+
+236
+00:24:46,000 --> 00:24:52,000
+And if we run this, we're only going to see that single Troy row.
+
+237
+00:24:52,000 --> 00:24:56,000
+We can do this with any combination of different conditions.
+
+238
+00:24:56,000 --> 00:25:02,000
+So I could also say maybe get me all the users where the age is greater than 20.
+
+239
+00:25:02,000 --> 00:25:04,000
+We'll see both of our users in that case.
+
+240
+00:25:04,000 --> 00:25:09,000
+But if we change this to 27, we're only going to see Chris.
+
+241
+00:25:09,000 --> 00:25:13,000
+There's a lot of different conditions that you can use with a where statement.
+
+242
+00:25:13,000 --> 00:25:18,000
+I would encourage you to look up a more exhaustive list than I'm able to go through here.
+
+243
+00:25:18,000 --> 00:25:26,000
+But it's extremely powerful and it's our way where we can specify specifically what rows we want to see.
+
+244
+00:25:26,000 --> 00:25:31,000
+And then later on when we're talking about update and delete statements, where statements become critical.
+
+245
+00:25:31,000 --> 00:25:39,000
+Because it allows us to specify what rows we want to specifically affect from our queries.
+
+246
+00:25:39,000 --> 00:25:43,000
+All right. So we've got data in. We're able to select it.
+
+247
+00:25:43,000 --> 00:25:48,000
+We're able to say, you know, give me the user with the ID of one. Give me the user with the ID of two.
+
+248
+00:25:48,000 --> 00:25:54,000
+We have that power now. The next thing we need to learn is how do we change data?
+
+249
+00:25:54,000 --> 00:25:58,000
+We've got these users in place. What happens when we made a mistake?
+
+250
+00:25:58,000 --> 00:26:03,000
+Troy is not 26. He's 30. And we need to update that user. How do we do that?
+
+251
+00:26:03,000 --> 00:26:09,000
+All right. So we've just unlocked our ability to select information. Now we need to be able to change it.
+
+252
+00:26:09,000 --> 00:26:18,000
+So like I mentioned, we want to be able to change this row from age 26 to age 30.
+
+253
+00:26:18,000 --> 00:26:23,000
+How do we do that? Well, in order to do it, we're yet again going to need some new keywords.
+
+254
+00:26:23,000 --> 00:26:33,000
+Those keywords are update and set. So the way we construct an update statement is we initiate it off with the update keyword.
+
+255
+00:26:33,000 --> 00:26:38,000
+And then we tell it what table we're going to be updating. In our case, that's the user table.
+
+256
+00:26:38,000 --> 00:26:46,000
+Then we say what we would like to change. I'm going to say set the age equal to 30.
+
+257
+00:26:46,000 --> 00:26:53,000
+OK, so we're saying update user set age equal to 30 where and then we use that where statement again.
+
+258
+00:26:53,000 --> 00:26:58,000
+Remember it from select. This is how we drill down into it without this.
+
+259
+00:26:58,000 --> 00:27:03,000
+If I was to just say set age to 30, it would update every user.
+
+260
+00:27:03,000 --> 00:27:07,000
+Any time you're writing an update statement and then later on, I'll reiterate for deletes.
+
+261
+00:27:07,000 --> 00:27:13,000
+We need to make sure that we're specifying a condition or we're going to make that update to everything.
+
+262
+00:27:13,000 --> 00:27:19,000
+It's a really, really good way to have some embarrassing conversations in your first engineering job.
+
+263
+00:27:19,000 --> 00:27:25,000
+So let's make sure we're using our where condition. We'll say where the ID is one.
+
+264
+00:27:25,000 --> 00:27:33,000
+So this is our condition. We're saying update the user table, set the age to be 30, where the ID is currently one.
+
+265
+00:27:33,000 --> 00:27:44,000
+And then the update went through. Let's use our new skill and let's select star from user where ID is one.
+
+266
+00:27:44,000 --> 00:27:49,000
+And again, we have to wrap this in double quotes.
+
+267
+00:27:49,000 --> 00:27:54,000
+And then we'll go ahead and we'll remove this statement for now. We'll come back and revisit it.
+
+268
+00:27:54,000 --> 00:27:59,000
+But let's just see if we've got the update going through and we did. His age is now 30. That's awesome.
+
+269
+00:27:59,000 --> 00:28:06,000
+It worked. All right, great. So that's the basics for update statements.
+
+270
+00:28:06,000 --> 00:28:14,000
+I want to make one additional note, and it's about this equal operator, the equal operator, as well as a lot of operators in SQL.
+
+271
+00:28:14,000 --> 00:28:22,000
+They change based off of the context in which you use them. This one here is being used to construct a condition because it's prefaced by a where statement.
+
+272
+00:28:22,000 --> 00:28:27,000
+This one here is being used to assign a value, and that's because it's prefaced by a set.
+
+273
+00:28:27,000 --> 00:28:31,000
+It's important to distinct or to separate those two in your mind.
+
+274
+00:28:31,000 --> 00:28:38,000
+And remember that the equal sign operator changes based off of the context in which it's being used.
+
+275
+00:28:38,000 --> 00:28:43,000
+OK, great. That's the basics of update statements. We could use this to update any of the columns, really.
+
+276
+00:28:43,000 --> 00:28:46,000
+But again, we want to avoid updating the ID.
+
+277
+00:28:46,000 --> 00:28:58,000
+But maybe just for the sake of another example, maybe we go ahead and we update the email of that same user to be Troy at test dot fake.
+
+278
+00:28:58,000 --> 00:29:05,000
+And these are obviously fake emails, but we go ahead and update that and then, you know, select.
+
+279
+00:29:05,000 --> 00:29:11,000
+Maybe I just want to see the email from user where.
+
+280
+00:29:11,000 --> 00:29:17,000
+ID is one. And there you go. The email has been updated.
+
+281
+00:29:17,000 --> 00:29:22,000
+That's fantastic. So we've learned how to do almost all of the basic operations.
+
+282
+00:29:22,000 --> 00:29:28,000
+There's just one more left, and that's removing information. What happens when we have a user that we want to delete?
+
+283
+00:29:28,000 --> 00:29:35,000
+Right. This is an applications database. We might want to remove users, allow them to delete their account entirely.
+
+284
+00:29:35,000 --> 00:29:43,000
+How would we do that in SQL? Well, the way we do that is with the lead statements and they start with a new keyword.
+
+285
+00:29:43,000 --> 00:29:48,000
+You say delete and we say what table it's from. We'll specify user.
+
+286
+00:29:48,000 --> 00:29:53,000
+And then another call out here. Don't run this query. The old table is gone.
+
+287
+00:29:53,000 --> 00:29:59,000
+If we run this query, we need a where condition, just like we needed with the update query.
+
+288
+00:29:59,000 --> 00:30:03,000
+We're going to delete from user where the ID equals two.
+
+289
+00:30:03,000 --> 00:30:08,000
+Maybe our 98 year old friend Chris is done using the application. We got to get rid of them.
+
+290
+00:30:08,000 --> 00:30:13,000
+So we'll go ahead and delete them again. Don't run. Just delete from user in isolation.
+
+291
+00:30:13,000 --> 00:30:19,000
+Make sure you're specifying the condition so it knows what to delete.
+
+292
+00:30:19,000 --> 00:30:25,000
+So we've gone ahead and deleted that user. And if we go and we select all from user.
+
+293
+00:30:25,000 --> 00:30:32,000
+So we'll get all the users. We're going to see. Sure enough, there's only one user left.
+
+294
+00:30:32,000 --> 00:30:37,000
+And that's Troy. All right. That's the basic operations with that.
+
+295
+00:30:37,000 --> 00:30:43,000
+You can do full crud, create, read, update, delete operations on any table of your choosing.
+
+296
+00:30:43,000 --> 00:30:51,000
+That's the basics, the building blocks of SQL. But now we need to talk about something just a shred more advanced.
+
+297
+00:30:51,000 --> 00:30:57,000
+And that's that data does not live alone. Data is related to one another, right?
+
+298
+00:30:57,000 --> 00:31:03,000
+You don't just have users in your application. And for our application, we're going to also have posts.
+
+299
+00:31:03,000 --> 00:31:09,000
+Let's talk about how to relate information together in SQL. I brought you back to everyone's favorite realm.
+
+300
+00:31:09,000 --> 00:31:14,000
+It's the PowerPoint realm. And we're going to talk about table relationships.
+
+301
+00:31:14,000 --> 00:31:19,000
+So tables can have relationships with other tables. And I'm not talking about the bachelor type.
+
+302
+00:31:19,000 --> 00:31:25,000
+I'm talking about data relating to another piece of data.
+
+303
+00:31:25,000 --> 00:31:32,000
+So information in our applications does not live alone. Things have relationships with one another.
+
+304
+00:31:32,000 --> 00:31:37,000
+If you think about the site you're on right now, YouTube, each of these videos have comments.
+
+305
+00:31:37,000 --> 00:31:41,000
+How does that relationship work? How do we relate those things together?
+
+306
+00:31:41,000 --> 00:31:46,000
+Well, the way we relate those together is through foreign keys.
+
+307
+00:31:46,000 --> 00:31:54,000
+And those foreign keys allow us to reference specific entities in another table from a table.
+
+308
+00:31:54,000 --> 00:31:58,000
+So I'll show you exactly what I mean with one of these examples here.
+
+309
+00:31:58,000 --> 00:32:04,000
+Let's go ahead and look at our user post example. That one is actually a bit covered up by me.
+
+310
+00:32:04,000 --> 00:32:07,000
+OK, let's look at the Avodart example here.
+
+311
+00:32:07,000 --> 00:32:11,000
+So the user table here, and this is just real quick, I want to touch on what this is.
+
+312
+00:32:11,000 --> 00:32:14,000
+This is what we would call an entity relationship diagram.
+
+313
+00:32:14,000 --> 00:32:20,000
+So it's showcasing from a high level how our tables are laid out and related.
+
+314
+00:32:20,000 --> 00:32:25,000
+So here we have that user table that we made, but you'll notice we've added something new.
+
+315
+00:32:25,000 --> 00:32:33,000
+It's the avatar ID. That avatar ID is referencing a row, an entity in the avatar table.
+
+316
+00:32:33,000 --> 00:32:41,000
+It's a new table. And then the avatar itself has a user ID that's referencing back to this user's ID.
+
+317
+00:32:41,000 --> 00:32:48,000
+So it's related in that manner. Basically, what that means is that each new user might have an avatar ID.
+
+318
+00:32:48,000 --> 00:32:52,000
+So say we have that user one. It's Troy. We all know and love him.
+
+319
+00:32:52,000 --> 00:32:59,000
+He's got the avatar ID three. What that tells SQL is that if you go over to that avatar table
+
+320
+00:32:59,000 --> 00:33:07,000
+and you look for the avatar where the ID is equal to three, you will find Troy's avatar.
+
+321
+00:33:07,000 --> 00:33:14,000
+That kind of relationship where a user has one avatar and each avatar belongs to one user,
+
+322
+00:33:14,000 --> 00:33:17,000
+that's called a one to one relationship.
+
+323
+00:33:17,000 --> 00:33:22,000
+There's three different relationship types when we're using relational databases.
+
+324
+00:33:22,000 --> 00:33:30,000
+There's a one to one like this user and avatar relationship where one user has one avatar and one avatar belongs to one user.
+
+325
+00:33:30,000 --> 00:33:33,000
+Then there's one to many. And this is the most common type.
+
+326
+00:33:33,000 --> 00:33:41,000
+And it's the example we'll be using in our code. One to many is when one entity has multiple of another entity.
+
+327
+00:33:41,000 --> 00:33:49,000
+A great example is users and posts. Another good example is the YouTube video we have and comments.
+
+328
+00:33:49,000 --> 00:33:55,000
+A YouTube video has multiple comments. So you might imagine that in YouTube's internal system,
+
+329
+00:33:55,000 --> 00:34:03,000
+they have a video table and then that video table, you know, exists with no foreign key.
+
+330
+00:34:03,000 --> 00:34:09,000
+And then there's this other separate comments table that has video IDs on each one.
+
+331
+00:34:09,000 --> 00:34:17,000
+We'll break those down more in further slides. Let's jump in and talk about each one of the three relationship types in depth.
+
+332
+00:34:17,000 --> 00:34:20,000
+The final ones, many to many, we'll get there. We'll get there. I know it's on the bullet point.
+
+333
+00:34:20,000 --> 00:34:23,000
+I don't want to make anyone nervous. I just don't have a photo for it.
+
+334
+00:34:23,000 --> 00:34:29,000
+Let's talk about one to one. One to one is the easiest type of relationship to wrap your head around.
+
+335
+00:34:29,000 --> 00:34:33,000
+A user here has an avatar ID, an avatar has a user ID.
+
+336
+00:34:33,000 --> 00:34:41,000
+So each row in the user table will have an ID referencing a very specific entity in the avatar table.
+
+337
+00:34:41,000 --> 00:34:45,000
+We talked about this on the last slide, but let's reiterate again. Say you have Troy.
+
+338
+00:34:45,000 --> 00:34:48,000
+He's got the idea of one we all know and love. We made him ourself.
+
+339
+00:34:48,000 --> 00:35:00,000
+He's now got an avatar ID. That avatar ID references the row in the avatar table in which you will find Troy's avatar.
+
+340
+00:35:00,000 --> 00:35:08,000
+So if Troy has the avatar ID three, we would go to the avatar table and look for, you know, maybe you write a select statement,
+
+341
+00:35:08,000 --> 00:35:16,000
+select for the avatar where the avatar ID is three, and then you'll see Troy's avatar is sitting there.
+
+342
+00:35:16,000 --> 00:35:22,000
+And just the same in reverse. That's the critical part here is that the avatar also has the user ID, right?
+
+343
+00:35:22,000 --> 00:35:26,000
+That user ID is referencing back to Troy. That's what makes it a one to one.
+
+344
+00:35:26,000 --> 00:35:31,000
+I want to note that although this example is one of the easiest to go through,
+
+345
+00:35:31,000 --> 00:35:34,000
+one to one relationships are an easy thing to wrap your head around.
+
+346
+00:35:34,000 --> 00:35:38,000
+They're actually the least useful and it's something you won't see a ton.
+
+347
+00:35:38,000 --> 00:35:43,000
+Oftentimes they're used to just avoid column bloat, which is when a table gets out of hand,
+
+348
+00:35:43,000 --> 00:35:47,000
+because over time you're continuously adding more and more things to an application.
+
+349
+00:35:47,000 --> 00:35:55,000
+So oftentimes you'll see it to just avoid bloating the size of your tables by spreading out information across multiple.
+
+350
+00:35:55,000 --> 00:36:02,000
+The next type of relationship is a one to many. One to many relationships are the most common one you're going to see.
+
+351
+00:36:02,000 --> 00:36:09,000
+And in fact, the next relationship we look at, which is a many to many, is just actually two one to minis.
+
+352
+00:36:09,000 --> 00:36:12,000
+But we're getting ahead of ourselves. Let's talk about one to many.
+
+353
+00:36:12,000 --> 00:36:20,000
+So one to many is when one entity has many of another entities, or they can potentially have many of another entities.
+
+354
+00:36:20,000 --> 00:36:24,000
+And let's talk about that example a bit more in the context of YouTube in this video.
+
+355
+00:36:24,000 --> 00:36:30,000
+This video has multiple comments, right? But it doesn't need to have multiple comments.
+
+356
+00:36:30,000 --> 00:36:35,000
+In fact, when you're watching this right now, it might not have any comments. And that's the case.
+
+357
+00:36:35,000 --> 00:36:42,000
+You could be the first one, please. But anyways, the point is the entity, which is the video in YouTube's case,
+
+358
+00:36:42,000 --> 00:36:47,000
+has the potential to have multiple comments, even if it doesn't yet.
+
+359
+00:36:47,000 --> 00:36:50,000
+And the way that we set that up is through a one to many relationship.
+
+360
+00:36:50,000 --> 00:36:55,000
+Let's jump back to thinking about our specific example, which is a user and a post.
+
+361
+00:36:55,000 --> 00:37:01,000
+A user has multiple posts. And the way we set that up is we keep our user table as is.
+
+362
+00:37:01,000 --> 00:37:10,000
+You'll notice it's the same. It's unchanged. But now we've created this post table and the post table has the user ID.
+
+363
+00:37:10,000 --> 00:37:15,000
+In a one to many relationship, it's up to the many to say who owns it.
+
+364
+00:37:15,000 --> 00:37:20,000
+Right. Each entity of that post will tell us who owns that user.
+
+365
+00:37:20,000 --> 00:37:29,000
+And the reason is we can't put a post ID on a user because that would mean that each user can only have one post,
+
+366
+00:37:29,000 --> 00:37:35,000
+which isn't the case. The user cannot reference posts. The post needs to reference the user.
+
+367
+00:37:35,000 --> 00:37:43,000
+When we dive into actually making this post table, I'll reiterate that and elaborate just a hair more to make sure you wrap your head around it.
+
+368
+00:37:43,000 --> 00:37:50,000
+But in relationships, the many references the one, not the other way around.
+
+369
+00:37:50,000 --> 00:37:56,000
+And again, the reason is that would constrain the user to only being able to have one thing.
+
+370
+00:37:56,000 --> 00:38:04,000
+Because if you think about it, each of these posts has a user ID. That user ID can only exist once per post.
+
+371
+00:38:04,000 --> 00:38:09,000
+So the post belongs to the user. If we invert that and the user has a post ID,
+
+372
+00:38:09,000 --> 00:38:15,000
+that would mean the user could only have one post just like they can only have one name.
+
+373
+00:38:15,000 --> 00:38:17,000
+But they don't. They don't have a post ID here.
+
+374
+00:38:17,000 --> 00:38:27,000
+And that that omitting of that column allows the user to have multiple posts through this post table.
+
+375
+00:38:27,000 --> 00:38:31,000
+Let's talk about the final relationship, which is a many to many.
+
+376
+00:38:31,000 --> 00:38:35,000
+This one is a bit more complex and in complicated schemas, you'll see it a lot.
+
+377
+00:38:35,000 --> 00:38:39,000
+But don't freak out. Don't freak out that we have three tables now.
+
+378
+00:38:39,000 --> 00:38:48,000
+All we want to focus on here is that if you look at these tables in isolation, they're actually just two one to manys, which you're comfortable with.
+
+379
+00:38:48,000 --> 00:38:55,000
+So all a many to many is it relates two separate tables to each other through one center table.
+
+380
+00:38:55,000 --> 00:38:58,000
+And we typically call that table a join table.
+
+381
+00:38:58,000 --> 00:39:02,000
+So we've got a one to many over here and another one to many over here.
+
+382
+00:39:02,000 --> 00:39:06,000
+Those are related together through a join table.
+
+383
+00:39:06,000 --> 00:39:10,000
+The best example I could think of for this was a school set up.
+
+384
+00:39:10,000 --> 00:39:17,000
+So you have in a school students or users that are taking classes from instructors.
+
+385
+00:39:17,000 --> 00:39:22,000
+An instructor has multiple students and the student will have multiple instructors.
+
+386
+00:39:22,000 --> 00:39:27,000
+So how do we relate that stuff together? Well, we relate them together through the class.
+
+387
+00:39:27,000 --> 00:39:29,000
+Right. So we have a user.
+
+388
+00:39:29,000 --> 00:39:34,000
+A user has a class here. This class, as such, has the user ID.
+
+389
+00:39:34,000 --> 00:39:38,000
+Remember, the user has nothing about the class because it owns the class.
+
+390
+00:39:38,000 --> 00:39:42,000
+The class is the one who references the owner.
+
+391
+00:39:42,000 --> 00:39:49,000
+Now, that instructor is also teaching the class. So as such, they have their instructor ID on the class.
+
+392
+00:39:49,000 --> 00:39:52,000
+And you'll notice that these are two separate one to many relationships.
+
+393
+00:39:52,000 --> 00:39:57,000
+But through them, we have the ability for a user to have multiple classes.
+
+394
+00:39:57,000 --> 00:40:01,000
+And then each of those classes could have different instructors.
+
+395
+00:40:01,000 --> 00:40:07,000
+And because of that, you could say that a user has many instructors through this class table.
+
+396
+00:40:07,000 --> 00:40:10,000
+And that's true in inverse as well.
+
+397
+00:40:10,000 --> 00:40:18,000
+OK, we're back in post to go world and we're ready to create our post table.
+
+398
+00:40:18,000 --> 00:40:22,000
+So let's go ahead and start with create table. You guys know this now.
+
+399
+00:40:22,000 --> 00:40:24,000
+We're going to create the post table.
+
+400
+00:40:24,000 --> 00:40:30,000
+Think about why I don't have to wrap this in quotes. Remember back to past in the lecture?
+
+401
+00:40:30,000 --> 00:40:34,000
+Why don't I have to wrap that in quotes? Make sure you know. Make sure you know why.
+
+402
+00:40:34,000 --> 00:40:42,000
+I'm going to create the table post. It's going to need, just like every table, an ID, which is a serial primary key.
+
+403
+00:40:42,000 --> 00:40:47,000
+And then we're going to give it a name, a name for the post itself. Maybe this is a varchar 255.
+
+404
+00:40:47,000 --> 00:40:51,000
+You're maxing out at 255 characters for the name.
+
+405
+00:40:51,000 --> 00:40:55,000
+Then content, which we can go ahead and make text.
+
+406
+00:40:55,000 --> 00:41:03,000
+And finally, that foreign key. What relates the post to the user is a user ID.
+
+407
+00:41:03,000 --> 00:41:10,000
+Each post will have the ID associated with the user that made said post.
+
+408
+00:41:10,000 --> 00:41:13,000
+And we'll go ahead and just make it an integer.
+
+409
+00:41:13,000 --> 00:41:21,000
+Next, what we need to do is we need to tell Postgres that this user ID is not just a normal integer.
+
+410
+00:41:21,000 --> 00:41:26,000
+It's a special integer. It's a foreign key. And the way we do that is by creating a constraint.
+
+411
+00:41:26,000 --> 00:41:33,000
+We can come and say constraint. Constraint. I can type. I can text.
+
+412
+00:41:33,000 --> 00:41:40,000
+Constraint. And then we give the constraint a name. I'll call it FK user, which is just a convention.
+
+413
+00:41:40,000 --> 00:41:49,000
+It means foreign key for the user. Then we can say it's a foreign key.
+
+414
+00:41:49,000 --> 00:41:55,000
+Then we tell it what column the foreign key belongs to, which in our case is the user ID.
+
+415
+00:41:55,000 --> 00:42:05,000
+Next, we tell it what that column is referencing. Well, it references the user ID column.
+
+416
+00:42:05,000 --> 00:42:11,000
+And now this here is referencing the table. So we'll say user and ID.
+
+417
+00:42:11,000 --> 00:42:15,000
+So again, at the end of our create table, we're creating a constraint.
+
+418
+00:42:15,000 --> 00:42:21,000
+The constraint is that we have a foreign key. The foreign key here is what column we're talking about.
+
+419
+00:42:21,000 --> 00:42:30,000
+The user ID. And then we tell it what that foreign key is for. It's referencing the user table ID column.
+
+420
+00:42:30,000 --> 00:42:38,000
+So we're saying this user ID column in the post table is referencing the ID column in the user table.
+
+421
+00:42:38,000 --> 00:42:42,000
+We'll go ahead and execute that statement and our table is made.
+
+422
+00:42:42,000 --> 00:42:48,000
+If we go ahead and refresh post to go here, we'll see now that that post table is there.
+
+423
+00:42:48,000 --> 00:42:54,000
+And if we look, it has this nice structure tab for us just for us to confirm that it worked.
+
+424
+00:42:54,000 --> 00:43:01,000
+We'll see user ID and I know it might be a bit small, but here it has a constraint where it's referencing.
+
+425
+00:43:01,000 --> 00:43:09,000
+It's got this arrow to user ID. It's a foreign key. We've got it separate or we've got it set up properly.
+
+426
+00:43:09,000 --> 00:43:15,000
+OK, we made our table with the foreign key. Let's go ahead and insert into this table.
+
+427
+00:43:15,000 --> 00:43:22,000
+So we could just write an insert. But remember, we have a constraint. Each post needs to belong to a user.
+
+428
+00:43:22,000 --> 00:43:28,000
+So let's just quickly review what users we have in our table.
+
+429
+00:43:28,000 --> 00:43:32,000
+And excuse me, I have to wrap that in double quotes. And there we go.
+
+430
+00:43:32,000 --> 00:43:37,000
+We have just the one and they've got the ID of one. So let's remember that we're inserting for ID one.
+
+431
+00:43:37,000 --> 00:43:43,000
+So we'll go ahead and construct our post insert now. We'll do insert into post.
+
+432
+00:43:43,000 --> 00:43:47,000
+And again, we don't have to wrap this in double quotes. You guys know that.
+
+433
+00:43:47,000 --> 00:43:53,000
+The values we'll insert are the name and the content and the user ID.
+
+434
+00:43:53,000 --> 00:44:03,000
+And we say the values. Maybe this post is why I love corgis.
+
+435
+00:44:03,000 --> 00:44:11,000
+The content is, oh my God, I love them. And the user who made them was user one.
+
+436
+00:44:11,000 --> 00:44:16,000
+He's a big corgi fan. We can go ahead and insert them.
+
+437
+00:44:16,000 --> 00:44:30,000
+And then if we look at the post table, we're going to see, sure enough, the corgi post is there.
+
+438
+00:44:30,000 --> 00:44:33,000
+Now, let's go ahead and insert some more. So we'll bring back.
+
+439
+00:44:33,000 --> 00:44:40,000
+I just undid a bit to get back to the insert post. Excuse me there.
+
+440
+00:44:40,000 --> 00:44:44,000
+So we're inserting the post. Why I love corgis. OMG, I love them.
+
+441
+00:44:44,000 --> 00:44:50,000
+Let's just say why I love dogs in general. So much.
+
+442
+00:44:50,000 --> 00:44:57,000
+And it was also made by user one. What did I do wrong here?
+
+443
+00:44:57,000 --> 00:45:02,000
+Content, user ID. OMG, why I love them so much.
+
+444
+00:45:02,000 --> 00:45:05,000
+I don't see. I don't see it. Do you guys see it?
+
+445
+00:45:05,000 --> 00:45:07,000
+Do you guys see where I made my mistake?
+
+446
+00:45:14,000 --> 00:45:19,000
+I love them in general. Oh, oh, oh, oh my goodness. Something good.
+
+447
+00:45:19,000 --> 00:45:22,000
+This is a good call out. Something good to know about Postico.
+
+448
+00:45:22,000 --> 00:45:26,000
+Is that if you highlight something and hit execute selection, it's just going to execute that.
+
+449
+00:45:26,000 --> 00:45:31,000
+We want to execute the whole statement. I'm not going insane. This is correct.
+
+450
+00:45:31,000 --> 00:45:39,000
+Okay, we inserted the post now. So if we go back and we say select star from post.
+
+451
+00:45:39,000 --> 00:45:47,000
+And end it with a semicolon. There we go. We've got these two posts in place.
+
+452
+00:45:47,000 --> 00:45:53,000
+Okay, perfect. So we've got our two posts in place. That's great.
+
+453
+00:45:53,000 --> 00:45:56,000
+And we can see that those both belong to user one.
+
+454
+00:45:56,000 --> 00:46:01,000
+And that's how we get that one to many, right? This user one has many posts.
+
+455
+00:46:01,000 --> 00:46:06,000
+Because we've got two separate posts with the user ID one. It works.
+
+456
+00:46:06,000 --> 00:46:12,000
+Now the question is, how do we say I want the user along with their posts?
+
+457
+00:46:12,000 --> 00:46:17,000
+That seems like an interesting piece of data to retrieve.
+
+458
+00:46:17,000 --> 00:46:24,000
+The way that we select data from multiple tables is by leveraging a join.
+
+459
+00:46:24,000 --> 00:46:30,000
+Now there's multiple types of joins. There's an inner join, an outer join, a left join, and a right join.
+
+460
+00:46:30,000 --> 00:46:36,000
+But diving into them super thoroughly is probably a good topic for a future Postgres video.
+
+461
+00:46:36,000 --> 00:46:42,000
+Because we're just trying to talk about the basics. And for now, let's just talk about inner joins.
+
+462
+00:46:42,000 --> 00:46:46,000
+So what we can do is we can start from the user table.
+
+463
+00:46:46,000 --> 00:46:51,000
+So we'll go from the user table. Select from user.
+
+464
+00:46:51,000 --> 00:46:53,000
+There we go. There's our user data.
+
+465
+00:46:53,000 --> 00:47:03,000
+And then what we can do is we can tell this table that it needs to also join to the posts table.
+
+466
+00:47:03,000 --> 00:47:08,000
+So I'm saying select from users table. Join it to the posts table.
+
+467
+00:47:08,000 --> 00:47:14,000
+So we're going to combine those two tables together. And then we need to tell it on what place does it join.
+
+468
+00:47:14,000 --> 00:47:26,000
+Well, it joins on where the posts table user ID is the same as the user ID.
+
+469
+00:47:26,000 --> 00:47:34,000
+So we've got these big tables. And what we're saying is wherever the posts table has a user ID,
+
+470
+00:47:34,000 --> 00:47:41,000
+that lines up with one of the IDs of a user, we're going to match those things together.
+
+471
+00:47:41,000 --> 00:47:46,000
+So what we'll see here is we'll see two rows because there's two separate posts.
+
+472
+00:47:46,000 --> 00:47:51,000
+But for each one, they've lined up with the user ID one.
+
+473
+00:47:51,000 --> 00:47:56,000
+Because we're joining wherever the posts user ID is, you know, the user ID.
+
+474
+00:47:56,000 --> 00:48:01,000
+So give me for a post like this first post. Let's talk about the second one.
+
+475
+00:48:01,000 --> 00:48:08,000
+Like the second post. Give me the user information where the user's ID, in this case one,
+
+476
+00:48:08,000 --> 00:48:14,000
+lines up with our post user ID column. And there we go. It lines up.
+
+477
+00:48:14,000 --> 00:48:18,000
+So there's our join. But you might notice something here.
+
+478
+00:48:18,000 --> 00:48:22,000
+We have two name columns, which is fine for us viewing it here.
+
+479
+00:48:22,000 --> 00:48:29,000
+But what if we're using this in an application and these become variables in some other programming language?
+
+480
+00:48:29,000 --> 00:48:33,000
+Well, you can't have variables with the same name in most languages.
+
+481
+00:48:33,000 --> 00:48:39,000
+So it's probably useful to know how we can reference these things differently.
+
+482
+00:48:39,000 --> 00:48:44,000
+Well, remember the star means select everything. And we can change it up a little bit.
+
+483
+00:48:44,000 --> 00:48:51,000
+We can say select everything from the user table.
+
+484
+00:48:51,000 --> 00:49:01,000
+So we'll say user star. But then maybe from the post table, we'll get the post ID, the post name.
+
+485
+00:49:01,000 --> 00:49:10,000
+But then we'll tell it to not call it post name. We'll say call it title as title.
+
+486
+00:49:10,000 --> 00:49:17,000
+Then we can say, get me the post content and get me the post user ID.
+
+487
+00:49:17,000 --> 00:49:23,000
+Now, what you'll notice is when we run this, it's the same data, but it's gone ahead and it's changed.
+
+488
+00:49:23,000 --> 00:49:28,000
+And it might be hard to see. But now the title of the poster,
+
+489
+00:49:28,000 --> 00:49:34,000
+I should say the name of the post is now called title. And that doesn't change anything in the table itself.
+
+490
+00:49:34,000 --> 00:49:39,000
+It's just changing the results we get back with our select statement.
+
+491
+00:49:39,000 --> 00:49:45,000
+So that covers the basics of joins. In future videos, we'll be talking about more complex joins,
+
+492
+00:49:45,000 --> 00:49:54,000
+more complex schema design, as well as triggers, Postgres functions and more complex constraints.
+
+493
+00:49:54,000 --> 00:50:00,000
+Thank you so much for watching this video. If you found it helpful, please consider giving it a like.
+
+494
+00:50:00,000 --> 00:50:05,000
+And if you have any feedback, it would be great to hear about it in the comments down below.
+
+495
+00:50:05,000 --> 00:50:10,000
+I hope that this video was useful for you and helps you get started in Postgres.
+
+496
+00:50:10,000 --> 00:50:16,000
+Please consider subscribing so that in the future, any additional content I release, you're able to get notified for,
+
+497
+00:50:16,000 --> 00:50:21,000
+whether that's additional Postgres tutorials or just general software engineering advice and tutorials.
+
+498
+00:50:21,000 --> 00:50:25,000
+You'll see it all on this channel. So subscribing is probably a good idea.
+

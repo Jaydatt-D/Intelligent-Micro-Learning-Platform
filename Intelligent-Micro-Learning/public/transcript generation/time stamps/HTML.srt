@@ -1,0 +1,1580 @@
+1
+00:00:00,000 --> 00:00:07,600
+Hi, everyone. Kevin here. Today, we're going to learn the basics of HTML or what stands for
+
+2
+00:00:07,600 --> 00:00:13,600
+hypertext markup language. I know that may not mean very much right now, but the thing to keep
+
+3
+00:00:13,600 --> 00:00:19,760
+in mind is that it's the basic building block of the web. When you type in a website address,
+
+4
+00:00:19,760 --> 00:00:27,200
+like let's say kevincookiecompany.com, the web server sends back an HTML file to your web browser,
+
+5
+00:00:27,200 --> 00:00:33,440
+say Google Chrome or Microsoft Edge, that tells your browser how to display the content on the
+
+6
+00:00:33,440 --> 00:00:40,640
+page. In this video, we're going to build a very simple HTML page, and you're welcome to follow
+
+7
+00:00:40,640 --> 00:00:46,800
+along. We'll go through this step by step, and the great thing is you don't have to install anything.
+
+8
+00:00:46,800 --> 00:00:53,600
+You already have all the tools that you need. We'll start with the basic HTML structure,
+
+9
+00:00:53,600 --> 00:00:59,440
+what elements you have available. We're not going to touch CSS or cascading style sheets,
+
+10
+00:00:59,440 --> 00:01:05,280
+which defines the look and feel of the page. We're also not going to touch on JavaScript,
+
+11
+00:01:05,280 --> 00:01:09,360
+which allows you to make a website more interactive. We're just looking at the
+
+12
+00:01:09,360 --> 00:01:15,920
+essentials of HTML. So if you're ready to learn about HTML, let's check this out.
+
+13
+00:01:15,920 --> 00:01:22,400
+Here I am on my desktop, and we are going to create an HTML website directly on your computer.
+
+14
+00:01:23,040 --> 00:01:26,320
+I happen to be running Windows, but this will work on any operating system.
+
+15
+00:01:27,040 --> 00:01:33,200
+On my desktop, I'll right click, and let's go down to new. At the very top of this menu,
+
+16
+00:01:33,200 --> 00:01:39,440
+let's click on folder, and this places a new folder on my desktop. I'll title it Kevin
+
+17
+00:01:39,440 --> 00:01:44,400
+Cookie Company website, and feel free to do the same if you would like to follow along.
+
+18
+00:01:45,120 --> 00:01:50,480
+Then let's click into this folder. This opens up file explorer. At the very top,
+
+19
+00:01:50,480 --> 00:01:55,600
+let's click on view, and then go all the way to the bottom to show. Within this menu,
+
+20
+00:01:55,600 --> 00:02:01,600
+we see the option for file name extensions. Make sure that there's a check mark next to this,
+
+21
+00:02:01,600 --> 00:02:07,280
+and you'll see why in just a moment. Let's now click out of this menu. Let's now right click,
+
+22
+00:02:07,280 --> 00:02:14,720
+and within this menu, let's go to new, and then let's select text document. This now places a new
+
+23
+00:02:14,720 --> 00:02:20,720
+text document in the Kevin Cookie Company website, and because we turned on file name extensions,
+
+24
+00:02:20,720 --> 00:02:27,200
+you'll see that the extension is .txt. Now, we want to create an HTML file, so let's select
+
+25
+00:02:27,200 --> 00:02:33,520
+all of this, and in place of this text, let's type in index.html. Look at that. We're creating
+
+26
+00:02:33,520 --> 00:02:41,200
+our very first HTML file. Let's now click away, and when we click away, we get a dialogue telling us
+
+27
+00:02:41,200 --> 00:02:46,720
+that we're changing the file name extension, and that the file might become unusable. That sounds
+
+28
+00:02:46,720 --> 00:02:53,840
+scary, but we know why we're changing it to .html, so let's click on yes, and as soon as we do that,
+
+29
+00:02:53,840 --> 00:02:59,920
+you'll now notice a logo appears next to the file name. This simply means that Windows knows what
+
+30
+00:02:59,920 --> 00:03:05,200
+application is associated with this file. Microsoft Edge is my default browser, which is
+
+31
+00:03:05,200 --> 00:03:10,080
+why we see the Edge logo here, but you might see the Google Chrome logo if that's your default
+
+32
+00:03:10,080 --> 00:03:16,320
+browser. Let's now click on this file, and this opens up Microsoft Edge, or maybe it opens up
+
+33
+00:03:16,320 --> 00:03:22,480
+Google Chrome, and look at that. We've now opened our very first HTML file, but you'll notice that
+
+34
+00:03:22,480 --> 00:03:27,360
+there's nothing in this file. It's completely blank, and that makes sense because we haven't
+
+35
+00:03:27,360 --> 00:03:32,800
+yet added anything to that HTML file. Let's now close out this browser window. Back in
+
+36
+00:03:32,800 --> 00:03:40,000
+File Explorer, I now want to edit my HTML file, so I've opened up an application called Notepad.
+
+37
+00:03:40,560 --> 00:03:45,520
+It's a really simple application, and you don't have to install it. It comes pre-installed on
+
+38
+00:03:45,520 --> 00:03:52,480
+Windows PCs. Especially for creating a very basic HTML website, Notepad will work just fine.
+
+39
+00:03:53,280 --> 00:03:59,760
+To edit this file index.html in Notepad, simply press and hold on this file, and then drag and
+
+40
+00:03:59,840 --> 00:04:06,480
+drop it into Notepad. Up at the top, we'll see that it's opened up a new tab for index.html.
+
+41
+00:04:07,040 --> 00:04:12,160
+I'll click onto the Untitled tab, and let me close out of that. Here, we just have this one file
+
+42
+00:04:12,160 --> 00:04:19,440
+open. Down below, I can type in some text. Let's type in Kevin Cookie Company, and then I'll press
+
+43
+00:04:19,440 --> 00:04:25,440
+Ctrl S, and that saves the file. Back over here, let's click on index.html, and that opens up
+
+44
+00:04:25,440 --> 00:04:31,840
+Microsoft Edge. Look at that. We've now included some content into our HTML file. Nice work so far.
+
+45
+00:04:32,400 --> 00:04:38,240
+Let's close back out of Edge. Back within File Explorer, I want to be able to edit my website
+
+46
+00:04:38,240 --> 00:04:43,280
+side by side with my browser window, so I can see all of the different changes that I'm making.
+
+47
+00:04:43,840 --> 00:04:48,720
+I'll snap this window over to the left-hand side. Next, I'll click into File Explorer,
+
+48
+00:04:48,720 --> 00:04:54,560
+and let's open up this index.html file again in the browser. Let's snap this over to the
+
+49
+00:04:54,560 --> 00:05:00,240
+right-hand side. Now, I have my Notepad opened up side by side with my web browser. This way,
+
+50
+00:05:00,240 --> 00:05:05,760
+I can see all of the changes that I'm making. I now want to add some additional text to my
+
+51
+00:05:05,760 --> 00:05:11,040
+HTML file. I'll press Enter on my keyboard, and here, I'll paste in some additional text.
+
+52
+00:05:12,000 --> 00:05:16,240
+You can pull this text from the kevincookiecompany.com website if you simply want to copy
+
+53
+00:05:16,240 --> 00:05:22,560
+and paste it into your index.html file. I'll press Ctrl S in Notepad. That saves the file.
+
+54
+00:05:22,560 --> 00:05:27,200
+Then, I'll click into the browser window. A really easy way to refresh the view is simply
+
+55
+00:05:27,200 --> 00:05:33,120
+press the F5 key, and that'll refresh it. Here, I see all that text within the browser window.
+
+56
+00:05:33,680 --> 00:05:38,720
+If you look closely at the text in the web browser, it doesn't quite match up with what
+
+57
+00:05:38,720 --> 00:05:44,240
+we see in the HTML file. I'll zoom in a little bit here. I say the Kevin Cookie Company. This
+
+58
+00:05:44,240 --> 00:05:49,200
+is my title. Then, I have a new line where it jumps to deliciousness in every bite.
+
+59
+00:05:49,840 --> 00:05:54,960
+If we look over at the HTML file, here, it says Kevin Cookie Company, and it just runs into that
+
+60
+00:05:54,960 --> 00:06:04,160
+next sentence. Why is that? Well, HTML is what's called a declarative language. We need to declare
+
+61
+00:06:04,160 --> 00:06:10,880
+what things are. I need to tell it, hey, this is a title, or this is a header, this is a paragraph,
+
+62
+00:06:10,880 --> 00:06:16,720
+or maybe this is a list. I need to tell the computer the meaning of the different content
+
+63
+00:06:16,720 --> 00:06:24,080
+that I have in my file. To do that, we're going to use something called elements and also tags.
+
+64
+00:06:24,080 --> 00:06:30,400
+Let's now insert our very first tag. I want Kevin Cookie Company to be the header of this
+
+65
+00:06:30,400 --> 00:06:38,320
+entire page. To insert a tag, we're going to enter in the less than symbol, followed by H, H for
+
+66
+00:06:38,320 --> 00:06:44,400
+header. Then, I'll enter in a one. This is the biggest header. Then, I'll enter in the greater
+
+67
+00:06:44,400 --> 00:06:50,000
+than symbol. There's my very first tag. I could save my file, and over on the right-hand side,
+
+68
+00:06:50,000 --> 00:06:56,960
+I'll press F5 to refresh. Whoa, look at that. It turned everything into a header. I don't want
+
+69
+00:06:56,960 --> 00:07:04,640
+that. If we look up at the top, you'll see that I opened the tag with H1, but I also need to close
+
+70
+00:07:04,640 --> 00:07:12,000
+the tag at the very end. Here, again, I'll type in H1. To close a tag, we need to enter a forward
+
+71
+00:07:12,080 --> 00:07:17,920
+slash before H1. This lets the browser know that we are closing this tag at this point.
+
+72
+00:07:19,120 --> 00:07:23,440
+This whole section together, the opening tag, the text, and then the closing tag,
+
+73
+00:07:24,000 --> 00:07:30,560
+this is referred to as an element. An HTML page is made up of many different elements.
+
+74
+00:07:31,280 --> 00:07:37,120
+I'll press Ctrl S to save my file. Over on the right-hand side, let's press F5. Look at that.
+
+75
+00:07:37,120 --> 00:07:42,880
+The Kevin Cookie Company is now the header, and all the other text is smaller than the header.
+
+76
+00:07:42,880 --> 00:07:48,880
+That's exactly what I wanted. Over on the left-hand side for the header, you can choose
+
+77
+00:07:48,880 --> 00:07:54,880
+header one, which I currently have set, all the way down to header six. Here, I'll change it to
+
+78
+00:07:54,880 --> 00:07:59,840
+a six, save the page, and let's refresh it over on the right-hand side. Here, you see that it's
+
+79
+00:07:59,840 --> 00:08:04,960
+a lot smaller. I actually want this to be the title of my page, so header one is the most
+
+80
+00:08:04,960 --> 00:08:11,440
+appropriate for this. I also want deliciousness in every byte to also be a header. Here, I'll
+
+81
+00:08:11,440 --> 00:08:17,440
+lower that text down, and let's insert another header. Here, I'll enter in the less than sign,
+
+82
+00:08:17,440 --> 00:08:24,000
+H, but this time, I'll enter in two. The reason why is Kevin Cookie Company is the main title.
+
+83
+00:08:24,880 --> 00:08:30,640
+This is a subheader, so I don't want it to be on the same level as my title, which is why I'll
+
+84
+00:08:30,640 --> 00:08:36,640
+use two here. Just like we did in this element up on top, we need to close it. Here, I'll enter in
+
+85
+00:08:36,640 --> 00:08:41,760
+the closing tag. I'll type in H2, and then the greater than sign, and here, I have my second
+
+86
+00:08:41,760 --> 00:08:46,480
+header. I'll save this page, and over on the right-hand side, let's refresh it. Look at that.
+
+87
+00:08:46,480 --> 00:08:52,960
+Here, I have my title, and then here, I have my subheader. As you insert different headers
+
+88
+00:08:52,960 --> 00:08:59,280
+into your HTML file, don't think of how it looks. Instead, choose the header based on the meaning
+
+89
+00:08:59,280 --> 00:09:04,640
+that you want to convey. Later on, you can use something called CSS to change the look
+
+90
+00:09:04,640 --> 00:09:09,600
+and the feel, but for now, we're just concerned about the meaning of the different items within
+
+91
+00:09:09,600 --> 00:09:15,760
+your HTML page. Within my HTML file, I have all of this text down here at the bottom,
+
+92
+00:09:15,760 --> 00:09:22,640
+but I don't declare to the web browser what this is, and this is a paragraph of text,
+
+93
+00:09:22,640 --> 00:09:28,720
+so I want to insert a paragraph element. Right up here, let's enter in the less than sign,
+
+94
+00:09:28,720 --> 00:09:33,120
+and here, I'll type in a P, and then I'll enter in the greater than sign.
+
+95
+00:09:34,160 --> 00:09:39,920
+You'll see that with these different tags, you can use uppercase letters or lowercase letters.
+
+96
+00:09:39,920 --> 00:09:45,120
+They are case insensitive, so here, I'll enter in the lowercase letter. You'll typically find
+
+97
+00:09:45,120 --> 00:09:49,680
+that they're entered in lowercase, but you really don't have to worry. I'll copy this tag,
+
+98
+00:09:49,680 --> 00:09:54,160
+and right down here, I want to close it. I'll move that text down, and here, let's close out
+
+99
+00:09:54,160 --> 00:09:59,520
+this paragraph, and right here, I'll enter in another paragraph for baking is our passion,
+
+100
+00:09:59,520 --> 00:10:04,320
+and we take it very seriously, and here, I'll also close it out. On this page now,
+
+101
+00:10:04,320 --> 00:10:09,120
+we have four different elements. This is one element. We have the second. Here's our third
+
+102
+00:10:09,120 --> 00:10:14,560
+element, and then we also have a fourth element. I'll save the file, and over on the right-hand
+
+103
+00:10:14,560 --> 00:10:19,200
+side, let's press F5 to refresh, and here, you see that I have a paragraph, and then down here,
+
+104
+00:10:19,200 --> 00:10:23,840
+I have another paragraph. Now, because I declared these as separate paragraphs,
+
+105
+00:10:23,840 --> 00:10:29,120
+here it inserts spacing between these different paragraphs. Within this block of text,
+
+106
+00:10:29,120 --> 00:10:34,880
+you see that I say every cookie made at the Kevin Cookie Company is crafted with only the finest
+
+107
+00:10:34,880 --> 00:10:42,960
+ingredients, and I really want to emphasize the text every. We can insert an element within
+
+108
+00:10:42,960 --> 00:10:50,000
+another element or basically a nested element. Over on the left-hand side in our HTML file,
+
+109
+00:10:50,000 --> 00:10:56,560
+here, I say every, and I'm going to open a tag and close a tag, and let's use EM for emphasis,
+
+110
+00:10:57,200 --> 00:11:04,640
+and after every, here, I'll close it out and type in EM. So here, I have one element within another
+
+111
+00:11:04,640 --> 00:11:10,240
+element. Let's now save this file, and over on the right-hand side, I'll press F5, and look at that.
+
+112
+00:11:10,240 --> 00:11:17,840
+It's now italicized the word every. Over on the left-hand side, instead of emphasizing this word,
+
+113
+00:11:17,840 --> 00:11:22,880
+I can also use another element called italics. I'll change this to an I, and here,
+
+114
+00:11:22,880 --> 00:11:28,160
+I'll change this to an I, and then I'll save the file, and back over on the right-hand side,
+
+115
+00:11:28,160 --> 00:11:35,520
+I'll press the F5 key, and it doesn't look like there's any difference. Here, it still shows
+
+116
+00:11:35,520 --> 00:11:42,160
+every cookie made in italics. Here's every in italics. Visually, they look exactly the same.
+
+117
+00:11:42,880 --> 00:11:52,160
+So does it matter whether you use I or EM for emphasis? It does. When you use a screen reader,
+
+118
+00:11:52,160 --> 00:11:58,800
+it'll read the words differently. When you use EM, it'll apply extra emphasis to the word every.
+
+119
+00:11:59,360 --> 00:12:05,360
+However, if I just use I, that only affects the visual appearance, and a screen reader wouldn't
+
+120
+00:12:05,360 --> 00:12:10,960
+treat it any differently. So the element that you use is very important. So although they may look
+
+121
+00:12:10,960 --> 00:12:15,520
+the same visually, keep in mind that screen readers may treat them differently. Back over
+
+122
+00:12:15,520 --> 00:12:22,080
+on the left-hand side, you can also bold a word. Here, I'll change the I to a B, save the file,
+
+123
+00:12:22,080 --> 00:12:29,360
+and let's refresh, and here we see every in bold. I can also change this to strong. I'll copy this
+
+124
+00:12:29,360 --> 00:12:34,160
+text, and let's place it in for the closing tag, save the page, and here, I'll refresh,
+
+125
+00:12:34,160 --> 00:12:39,600
+and here again, just like with emphasis and I, you'll notice that the visual treatment's
+
+126
+00:12:39,600 --> 00:12:44,880
+exactly the same, but this word for screen readers now carries additional weight.
+
+127
+00:12:45,760 --> 00:12:49,440
+Back over on the left-hand side, I can also underline words. Instead of strong,
+
+128
+00:12:49,440 --> 00:12:54,880
+I'll enter in a U, and here I'll change that to a U, and over on the right-hand side, let's refresh,
+
+129
+00:12:54,880 --> 00:13:01,040
+and here we see that the word is underlined. There are many different elements that you can use to
+
+130
+00:13:01,040 --> 00:13:06,640
+affect the visual appearance, and also the semantic meaning of the word. As we've been
+
+131
+00:13:06,640 --> 00:13:14,160
+working through this, you're probably realizing that HTML is not a programming language. Instead,
+
+132
+00:13:14,160 --> 00:13:20,320
+it's what's referred to as a markup language. That is, after all, why it's called hypertext
+
+133
+00:13:20,320 --> 00:13:26,720
+markup language. As we're going through this HTML file, we're marking up or declaring what
+
+134
+00:13:26,720 --> 00:13:33,440
+all of these different elements are. Here's the header. Here's another header, but not quite as
+
+135
+00:13:33,440 --> 00:13:39,680
+important as the main title. Here's a paragraph, and here's another paragraph. We're helping tell
+
+136
+00:13:39,680 --> 00:13:46,560
+the browser what every single element is within this HTML file. Along with entering in individual
+
+137
+00:13:46,560 --> 00:13:53,200
+elements, you can also tell the browser what elements go together. For instance, here I have
+
+138
+00:13:53,200 --> 00:13:58,800
+deliciousness in every bite with all of this text, and this all belongs together. I want to
+
+139
+00:13:58,800 --> 00:14:05,680
+tell the browser that. Right up above, I'll insert some new lines. Here, I'll declare this as a
+
+140
+00:14:05,680 --> 00:14:11,680
+section. I also need to close it out. I'll enter the end tag at the bottom. Here, I'll enter
+
+141
+00:14:11,680 --> 00:14:18,320
+section, and let me put in a forward slash. It's a little hard to read or to know that all of these
+
+142
+00:14:18,320 --> 00:14:24,080
+other elements go within the section elements. To make all of your different HTML more readable,
+
+143
+00:14:24,080 --> 00:14:29,680
+I also recommend using indentation. Here, I'll indent this out, indent out my paragraph,
+
+144
+00:14:29,680 --> 00:14:35,760
+and also indent out this paragraph. Notepad isn't quite the best. Here, you see the text wrapping,
+
+145
+00:14:35,760 --> 00:14:41,120
+so it's a little hard to tell that all of this is within section. We could go up to view,
+
+146
+00:14:41,120 --> 00:14:46,640
+and here's the option to turn off word wrap. When I select this, here it's very easy to tell that
+
+147
+00:14:46,640 --> 00:14:51,920
+all of this content goes within this section and that all of this content is related.
+
+148
+00:14:51,920 --> 00:14:57,600
+Next, I want to enter another section into my HTML file. Here, I'll insert a new line,
+
+149
+00:14:57,600 --> 00:15:03,280
+and here I'll enter in a new section. Just like I did in the first section, here I used an H2,
+
+150
+00:15:03,280 --> 00:15:08,880
+I'll use another header too with chocolate chip cookie recipe. I want to make sure to include that
+
+151
+00:15:08,880 --> 00:15:15,600
+on this homepage. Within the chocolate chip cookie recipe, I also have two additional headers, but
+
+152
+00:15:15,600 --> 00:15:19,920
+they're one level down from the recipe. Here, I have the ingredients, and then I also have the
+
+153
+00:15:19,920 --> 00:15:24,880
+baking instructions. I'll press control S to save the file, and over on the right-hand side,
+
+154
+00:15:24,880 --> 00:15:30,000
+let's press the F5 key to see how it looks. Look at that. Now, we just need to fill in the
+
+155
+00:15:30,000 --> 00:15:35,360
+ingredients. Now that I have these additional headers on my page, I now want to fill in the
+
+156
+00:15:35,360 --> 00:15:41,440
+ingredients. You can get the ingredient list from the kevincookiecompany.com website under recipes.
+
+157
+00:15:42,240 --> 00:15:47,200
+Over on the left-hand side, I'll insert a new line, and here I'll paste in all of the
+
+158
+00:15:47,200 --> 00:15:54,320
+ingredients required for our delicious chocolate chip cookies. Now, the order of the ingredients
+
+159
+00:15:54,320 --> 00:16:00,640
+doesn't so much matter. Here, I'll save the file and let's refresh. Right now, it's just one long
+
+160
+00:16:00,640 --> 00:16:07,120
+list of all these ingredients, but I would like to show them in a bulleted list. So to include
+
+161
+00:16:07,200 --> 00:16:12,800
+a bulleted or unordered list, we're going to use another element. Here, I'm going to open it and
+
+162
+00:16:12,800 --> 00:16:18,960
+we're going to enter UL, and this stands for unordered list. Now, just like we've been doing
+
+163
+00:16:18,960 --> 00:16:24,080
+all along, we also need to close it out. Here at the very bottom, I'll enter in the closing tag
+
+164
+00:16:24,080 --> 00:16:31,920
+and type in UL, and that closes it out. But I also need to specify or let the browser know where each
+
+165
+00:16:31,920 --> 00:16:39,360
+list item is or an LI. So here, we're going to nest another element within the unordered list.
+
+166
+00:16:39,360 --> 00:16:45,840
+Here, I'll open and close. We'll enter LI for list item, and here at the very end, I'll close it out,
+
+167
+00:16:47,120 --> 00:16:51,200
+and there, that should also close the list item. I'll go through and do that for the rest of the
+
+168
+00:16:51,200 --> 00:16:57,120
+items here. I've now added all of my different list items, and I also indented all the different
+
+169
+00:16:57,120 --> 00:17:02,320
+items, so I know that these are all part of this list. Again, it just makes your code a little bit
+
+170
+00:17:02,320 --> 00:17:07,760
+more readable. I'll now save the file, and over on the right-hand side, let's press F5, and here,
+
+171
+00:17:07,760 --> 00:17:12,240
+I can now see an unordered list of all the different ingredients required to make our cookies.
+
+172
+00:17:12,880 --> 00:17:17,840
+Down below, I also want to include a list for all the different baking instructions.
+
+173
+00:17:17,840 --> 00:17:22,640
+I copied a list of all of the baking instructions from the kevincookiecompany.com website,
+
+174
+00:17:22,640 --> 00:17:27,040
+and back over on the left-hand side, I'll insert a new line. I could insert a whole bunch of new
+
+175
+00:17:27,040 --> 00:17:33,040
+lines, and I'll paste in all of the baking instructions. Now, I want this to be a list as
+
+176
+00:17:33,040 --> 00:17:39,040
+well, but the order of all of these steps very much matters, unlike with the ingredients.
+
+177
+00:17:39,920 --> 00:17:45,520
+Instead of using an unordered list, we want to use an ordered list, and you guessed it,
+
+178
+00:17:45,520 --> 00:17:51,120
+the element name for an ordered list is OL. At the very top, I'll make sure to open it,
+
+179
+00:17:51,120 --> 00:17:56,560
+and at the very bottom, I'll close it out. Here too, just like we did with this unordered list,
+
+180
+00:17:56,640 --> 00:18:02,960
+we need to add list items for every single step in the instructions. Here, let's open it up. I'll
+
+181
+00:18:02,960 --> 00:18:08,640
+add a list item, and at the very end, I'll also close it out. Here too, I'll go through and do
+
+182
+00:18:08,640 --> 00:18:13,120
+it for every single item and also apply indentation. Look at that, we now have an
+
+183
+00:18:13,120 --> 00:18:17,840
+ordered list for all the baking instructions. I'll press Ctrl S to save the file, and over on the
+
+184
+00:18:17,840 --> 00:18:22,480
+right-hand side, let's press F5 to refresh. Look at that, we now have an ordered list.
+
+185
+00:18:23,280 --> 00:18:27,680
+What's the difference between an ordered list and an unordered list? Well, here you'll notice that
+
+186
+00:18:27,680 --> 00:18:33,600
+we just have bullets for each one of these items, and down below, we have a numbered list. Again,
+
+187
+00:18:33,600 --> 00:18:39,440
+this implies that the order matters. Remember, when we enter these different elements into the
+
+188
+00:18:39,440 --> 00:18:45,120
+HTML, we're trying to make the right choice to convey the right meaning for the content
+
+189
+00:18:45,120 --> 00:18:51,040
+that's contained within. Over on the right-hand side, in number four and number five,
+
+190
+00:18:51,040 --> 00:18:56,160
+I have two sentences in each of these, but just to make sure it really stands out,
+
+191
+00:18:56,160 --> 00:19:00,400
+I want to place each of these sentences onto a separate line.
+
+192
+00:19:01,600 --> 00:19:06,720
+Here, I'll zoom out just a little bit, and here I see where that second sentence starts. Here's mix
+
+193
+00:19:06,720 --> 00:19:13,680
+on low speed, here's mix on low speed, and then I also say stir and here's stir. To insert another
+
+194
+00:19:13,680 --> 00:19:19,680
+line, if I just press Enter on my keyboard, that won't make any difference to what's shown within
+
+195
+00:19:19,680 --> 00:19:26,400
+my browser. We need to tell the browser that I want a new line there, and there's an element
+
+196
+00:19:26,400 --> 00:19:32,400
+that we can use called the break. I'll enter in a BR. That'll tell the browser that it should
+
+197
+00:19:32,400 --> 00:19:38,720
+insert a new line, and here too, I'll also insert a break. Now, with the break element, you don't
+
+198
+00:19:38,720 --> 00:19:43,360
+have to close it. That's because all you need to say is break, and the browser knows exactly what
+
+199
+00:19:43,360 --> 00:19:48,160
+it needs to do. You don't need to wrap it around the sentence. Let's now press Save, and over on
+
+200
+00:19:48,160 --> 00:19:52,320
+the right-hand side, let's refresh, and here I see that second sentence is on another line,
+
+201
+00:19:52,320 --> 00:19:56,640
+and here that second sentence is also on another line. I think that makes it a little bit more
+
+202
+00:19:56,640 --> 00:20:01,680
+readable. The page is coming together very nicely, but over on the left-hand side, I want to make
+
+203
+00:20:01,680 --> 00:20:06,880
+sure that if any web developer comes in to this page in the future, that they understand that
+
+204
+00:20:06,880 --> 00:20:13,280
+this isn't just any ordinary chocolate chip cookie recipe. This is our best-selling cookie recipe,
+
+205
+00:20:13,280 --> 00:20:18,400
+so I want to add what's called a comment, just to add a little bit of extra clarity to this
+
+206
+00:20:18,400 --> 00:20:23,520
+HTML page. Right underneath this header, I'll type in a comment that says,
+
+207
+00:20:23,520 --> 00:20:29,600
+this is the Kevin Cookie Company best-selling recipe. I used a less than sign, an exclamation
+
+208
+00:20:29,600 --> 00:20:34,320
+mark, and two hyphens, and then two hyphens at the end, and the greater than symbol to let the
+
+209
+00:20:34,320 --> 00:20:39,520
+browser know that this is a comment, and it shouldn't display it to a visitor coming to this
+
+210
+00:20:39,520 --> 00:20:44,480
+page. I'll save the page, and over on the right-hand side, let's press F5, and you'll
+
+211
+00:20:44,480 --> 00:20:50,400
+notice that that comment doesn't show up at all. It's only embedded into this HTML file,
+
+212
+00:20:50,400 --> 00:20:56,320
+so only if you come in to edit the file can you actually see it. Now, one fun little trick over
+
+213
+00:20:56,320 --> 00:21:01,440
+here on the HTML page in my browser, you can right-click, and there's the option at the very
+
+214
+00:21:01,440 --> 00:21:07,120
+bottom to view the page source. You could also press control together with you, and when you view
+
+215
+00:21:07,120 --> 00:21:12,320
+the page source, here you can see all the different HTML that makes up this page, and look
+
+216
+00:21:12,320 --> 00:21:18,560
+at that. Here's that comment highlighted in green, so it's not visible on the page, but it's very
+
+217
+00:21:18,560 --> 00:21:24,880
+much contained within the HTML file. I'll close out of the source. All in all, this page looks
+
+218
+00:21:24,880 --> 00:21:30,080
+pretty solid, but on second thought, I don't know if it makes sense to include the chocolate chip
+
+219
+00:21:30,080 --> 00:21:35,680
+cookie recipe directly on the home page or the index page. It probably makes sense to have a
+
+220
+00:21:35,760 --> 00:21:42,480
+separate page that we link to from this home page. Over on the left-hand side, let's select this
+
+221
+00:21:42,480 --> 00:21:47,440
+entire section with the chocolate chip cookie recipe. I'll highlight all of that and then press
+
+222
+00:21:47,440 --> 00:21:54,160
+control X on my keyboard. That cuts all that content and places it onto my clipboard. Next,
+
+223
+00:21:54,160 --> 00:22:00,640
+let's open up file explorer again. Back within file explorer, I want to create another page that
+
+224
+00:22:00,640 --> 00:22:05,840
+contains the recipe. I'll right-click with my mouse and let's go down to new, and here,
+
+225
+00:22:05,840 --> 00:22:10,720
+let's select text document just like we did with the index page. Here, I'll highlight all of this
+
+226
+00:22:10,720 --> 00:22:17,040
+text and let's type in recipe.html and then hit enter. Here, we get that warning again. Let's
+
+227
+00:22:17,040 --> 00:22:22,480
+click on yes, and look at that. We now have a recipe page. Just like we did before with the
+
+228
+00:22:22,480 --> 00:22:28,400
+index page, let's now drag and drop this file into notepad. Now, we have the index file opened up
+
+229
+00:22:28,400 --> 00:22:34,640
+side by side with the recipe. Let's now arrange notepad so it's side by side with the web browser
+
+230
+00:22:34,640 --> 00:22:41,040
+window. Here, I now have my recipe.html file and I'll paste in all of the content that contains the
+
+231
+00:22:41,040 --> 00:22:47,680
+chocolate chip cookie recipe. I'll save this file and I'll also save the index file. Over here,
+
+232
+00:22:47,680 --> 00:22:55,840
+let's refresh the index page, but one problem is how do I get from this index page to my recipe
+
+233
+00:22:55,840 --> 00:23:02,320
+page? Well, to do that, we can use what's called a link. To insert a link over on the left-hand
+
+234
+00:23:02,320 --> 00:23:07,600
+side on my index page, I'll insert a new line and type in some text that says, learned how to make
+
+235
+00:23:07,600 --> 00:23:13,120
+our chocolate chip cookies. If I save it and refresh, we see that line of text, but it's not
+
+236
+00:23:13,120 --> 00:23:20,160
+yet a link. There's an element that we can use to turn this into a link and it's called the anchor
+
+237
+00:23:20,160 --> 00:23:27,440
+element. Here, I'll open it and let's type in an A for anchor and I'll copy this tag, paste it at
+
+238
+00:23:27,440 --> 00:23:32,720
+the end and let's close it out. But still, that doesn't yet tell the browser where to send the
+
+239
+00:23:32,720 --> 00:23:38,640
+person. So we need to insert what's called an attribute. It basically tells the anchor
+
+240
+00:23:38,640 --> 00:23:44,560
+where to send someone and we're going to use an attribute called href or what stands for
+
+241
+00:23:44,560 --> 00:23:49,280
+hypertext reference. It basically tells the browser where we should send someone and I want
+
+242
+00:23:49,280 --> 00:23:57,920
+the person to go to recipe.html. Here, I'll type in recipe.html and then I'll save it. Now, over on
+
+243
+00:23:57,920 --> 00:24:03,120
+the right-hand side, let's refresh and look at that and there we have that link underlined and
+
+244
+00:24:03,120 --> 00:24:08,480
+you see that my cursor changes when I hover over it. When I click on it, look at that, that brings
+
+245
+00:24:08,480 --> 00:24:14,320
+us directly to our recipe page. Now, to go back, I could also click on this back button or we could
+
+246
+00:24:14,320 --> 00:24:20,400
+also include a backlink directly on the recipe page. Let's do that. Right up on top, let's click
+
+247
+00:24:20,400 --> 00:24:26,320
+into recipe. Back on the recipe page, at the very top, I'll insert a new line and let me paste in a
+
+248
+00:24:26,320 --> 00:24:33,600
+link. Here, I'm using that anchor element again and we're referring to the index.html page and
+
+249
+00:24:33,600 --> 00:24:39,280
+here I'm referring to it as home. I'll save this page, let's refresh it over on the right and now
+
+250
+00:24:39,280 --> 00:24:44,000
+I have a link that goes back home. So I could click on home, I'm back on the home and I can
+
+251
+00:24:44,000 --> 00:24:49,040
+click back and forth between my different pages. This way, you can help people navigate throughout
+
+252
+00:24:49,040 --> 00:24:53,840
+your website. The website really has some fantastic and valuable content but what would
+
+253
+00:24:53,840 --> 00:25:00,320
+bring it to that next level is if we included some imagery. Up on top, I have another tab open for
+
+254
+00:25:00,320 --> 00:25:05,120
+the Kevin Cookie Company and here we have this beautiful logo that I would like to incorporate
+
+255
+00:25:05,120 --> 00:25:10,880
+into the website. I'll right click on this logo and then save image as. Feel free to do the same.
+
+256
+00:25:11,440 --> 00:25:16,480
+This opens up my file picker and I'll place it in the Kevin Cookie Company website folder.
+
+257
+00:25:16,480 --> 00:25:23,760
+Down below, click on save. Back within my index.html file, I want to include the image here.
+
+258
+00:25:23,760 --> 00:25:30,000
+I'll insert a new line and I want to place it right above my header. There's an element called
+
+259
+00:25:30,000 --> 00:25:34,480
+IMG which stands for image that allows us to insert an image onto the page.
+
+260
+00:25:35,360 --> 00:25:42,960
+Let's open it up by typing in IMG. We also need to specify the image that we want to use. We need to
+
+261
+00:25:42,960 --> 00:25:50,160
+specify the image source. So we'll use an attribute called src. Then let's enter an equals and open
+
+262
+00:25:50,160 --> 00:25:57,360
+quotes and then here we'll type in the file name. It's called kcclogo.png and then we'll close the
+
+263
+00:25:57,360 --> 00:26:04,800
+parentheses and here let's enter in the greater than sign and next let's save it. All we need is
+
+264
+00:26:04,800 --> 00:26:10,160
+this one tag. We don't have to open and then close it. It basically stands alone similar to the line
+
+265
+00:26:10,160 --> 00:26:15,200
+break. Now that I saved the file on the right hand side, let's refresh the page and look at that.
+
+266
+00:26:15,200 --> 00:26:22,480
+We now have the logo on the page but it's a little bit big. Over on the left hand side,
+
+267
+00:26:22,480 --> 00:26:28,480
+we can also define the height and also the width of this image. To define the width,
+
+268
+00:26:28,480 --> 00:26:34,560
+we're going to use the width attribute. Now type in width equals and then insert quotes and I want
+
+269
+00:26:34,560 --> 00:26:42,320
+this to be 400 pixels wide so I'll enter in just 400. We can also define the height by using the
+
+270
+00:26:42,320 --> 00:26:49,200
+height attribute. I'll type in height, insert quotes and this will be 122 pixels high. Then
+
+271
+00:26:49,200 --> 00:26:53,200
+I'll save this file and on the right hand side, let's click on refresh and look at that. That
+
+272
+00:26:53,200 --> 00:26:58,560
+looks a lot better. Another benefit of specifying the width and the height is that the browser knows
+
+273
+00:26:58,560 --> 00:27:05,760
+to reserve this space for an image before it's able to completely load the image. If you've ever
+
+274
+00:27:05,760 --> 00:27:11,280
+been to a website where the content jumps around, if it hasn't all loaded yet, that's typically
+
+275
+00:27:11,280 --> 00:27:16,400
+because they haven't defined the width and the height of the different elements on the page.
+
+276
+00:27:16,640 --> 00:27:19,920
+It's a good practice to always do that for every single image.
+
+277
+00:27:19,920 --> 00:27:24,880
+There's one more attribute that I recommend including as part of the image element
+
+278
+00:27:24,880 --> 00:27:31,360
+and that's the alt description. Here I'll enter it in, alt equals and then insert quotes and here
+
+279
+00:27:31,360 --> 00:27:39,600
+I can define what this image is. I'll call it the Kevin Cookie Company logo and now I'll save it.
+
+280
+00:27:39,600 --> 00:27:44,000
+Now when I refresh the page, you don't notice any difference but let's say that someone comes to
+
+281
+00:27:44,000 --> 00:27:48,560
+this website using a screen reader or maybe they're blind and they can't actually see what
+
+282
+00:27:48,560 --> 00:27:54,400
+this logo is. With the alt text, they'll be able to hear that it's the Kevin Cookie Company logo
+
+283
+00:27:54,400 --> 00:27:59,040
+and just for demonstration purposes, I'm going to misspell the name of the file and save it and
+
+284
+00:27:59,040 --> 00:28:04,400
+then refresh the page. Here you'll notice that it's not able to load the logo yet but you see
+
+285
+00:28:04,400 --> 00:28:10,640
+this text that identifies what it should be. So anytime you add an image to a page, it's always
+
+286
+00:28:10,640 --> 00:28:14,880
+good to include these four attributes including the source, the width, the height and also the
+
+287
+00:28:14,880 --> 00:28:21,920
+alt text. I'll now return it to the previous file name. Not only can you insert images but you can
+
+288
+00:28:21,920 --> 00:28:27,120
+also insert other types of media like audio and video. Down at the very bottom of this file,
+
+289
+00:28:27,120 --> 00:28:32,960
+I'll insert some new lines and here I'll paste in two additional elements, one of them for audio and
+
+290
+00:28:32,960 --> 00:28:38,640
+one of them for video and it follows a very similar structure to an image. Over here we
+
+291
+00:28:38,640 --> 00:28:44,240
+call out that this is audio and here you define what the source is. Here I type in the name of
+
+292
+00:28:44,240 --> 00:28:49,760
+the audio file. We insert controls because I want it to show audio controls so you could play or
+
+293
+00:28:49,760 --> 00:28:55,040
+stop the playing and here you could also define the type. Now unlike with image, we also use a
+
+294
+00:28:55,040 --> 00:29:00,240
+closing tag. That's because this element is newer and this has been incorporated into that element
+
+295
+00:29:00,800 --> 00:29:06,080
+and video is very similar to audio. When I save this over on the right hand side, I'll refresh
+
+296
+00:29:06,080 --> 00:29:10,240
+and here we see an audio player controls and down below we see the video player.
+
+297
+00:29:11,200 --> 00:29:16,240
+If you're interested in using audio or video, do you know that you have additional attributes that
+
+298
+00:29:16,240 --> 00:29:21,920
+you can use? Maybe you want the audio to loop or maybe you want it to auto play although that one
+
+299
+00:29:21,920 --> 00:29:26,480
+can be a little bit annoying. With videos, you could also incorporate subtitles and you have
+
+300
+00:29:26,480 --> 00:29:31,360
+many other options as well. This is just to let you know that you can insert many different types
+
+301
+00:29:31,360 --> 00:29:38,080
+of media into your HTML page. We have a lot of compelling content on this page now. There's text,
+
+302
+00:29:38,080 --> 00:29:43,680
+there's recipe, there's audio, and there's video. I think what we really need now is an order form
+
+303
+00:29:43,680 --> 00:29:50,080
+where people can order some of these cookies. Let's open up File Explorer once again. Within
+
+304
+00:29:50,080 --> 00:29:57,600
+File Explorer, let's right click, go down to new, and let's click on text document and let's add a
+
+305
+00:29:57,600 --> 00:30:06,000
+new HTML file called order form dot HTML. Then let's click yes on this dialog and let's now open
+
+306
+00:30:06,000 --> 00:30:12,880
+this file in Notepad. I now have Notepad open with the order form dot HTML and over on the right hand
+
+307
+00:30:12,880 --> 00:30:18,560
+side, I have the browser window that shows me what this HTML file looks like. Currently, there's
+
+308
+00:30:18,560 --> 00:30:25,120
+nothing in this HTML file, which is why the browser window is empty. First, I want to include a table
+
+309
+00:30:25,120 --> 00:30:30,080
+that lists out all of the cookies that we offer here at the Kevin Cookie Company and the associated
+
+310
+00:30:30,080 --> 00:30:36,480
+price. I'm going to use the table element. I'm going to paste in some HTML. Right here,
+
+311
+00:30:36,480 --> 00:30:39,760
+we see that I'm setting up a new paragraph and down at the bottom, I close the paragraph.
+
+312
+00:30:40,560 --> 00:30:46,320
+Here, I use the table element. Right here, I open it up and down at the bottom, we close it again
+
+313
+00:30:46,320 --> 00:30:54,160
+with the closing tag. In a table, it's made up of multiple rows and also multiple columns. Here,
+
+314
+00:30:54,160 --> 00:31:02,240
+I'm setting up the first row of this table. We use the element TR. This stands for table row
+
+315
+00:31:02,240 --> 00:31:08,000
+and down here, I close it again. This is the first row in the table and within this row,
+
+316
+00:31:08,000 --> 00:31:15,760
+I have two columns, the cookie type and also the price. I refer to this element as TH. What does
+
+317
+00:31:15,760 --> 00:31:21,280
+that stand for? This is table header. This is letting my browser know that this is the header
+
+318
+00:31:21,280 --> 00:31:28,320
+of the table. Down here, I then have another row in my table. I use table row and then here,
+
+319
+00:31:28,320 --> 00:31:34,960
+I close table row. Here, too, I also have two columns, except this one is referred to as TD.
+
+320
+00:31:35,760 --> 00:31:42,400
+What's the difference between TD and TH? TD stands for table data. It's not the header row. This is
+
+321
+00:31:42,400 --> 00:31:47,520
+now where all the data within the table lives. Here, I have one cookie called chocolate chip
+
+322
+00:31:47,520 --> 00:31:53,280
+and it costs $4.50. I'll save this file and over on the right-hand side, let's now refresh the
+
+323
+00:31:53,280 --> 00:31:58,240
+browser window to see what this looks like. There, I have a very basic table. Of course,
+
+324
+00:31:58,240 --> 00:32:03,280
+when we look at the table over on the right-hand side, it's a little bit difficult to make out that
+
+325
+00:32:03,280 --> 00:32:10,400
+this is in fact a table. Over on the left-hand side, we can add an attribute that adds a border
+
+326
+00:32:10,400 --> 00:32:16,320
+to this table. Here, I'll type in border and let's say equals one. I'll save the file and on the
+
+327
+00:32:16,320 --> 00:32:22,640
+right-hand side, let's refresh and now, we can see a border around this table. To add additional
+
+328
+00:32:22,640 --> 00:32:29,360
+rows here, I'll copy this row and let's paste it in and maybe we also have, let's say, an oatmeal
+
+329
+00:32:29,360 --> 00:32:36,480
+raisin cookie. We'll say oatmeal raisin and this one goes for $2.50. I'll save it. Over on the
+
+330
+00:32:36,480 --> 00:32:41,840
+right-hand side, let's refresh and here, we now see another row in this table. This is a very simple
+
+331
+00:32:41,840 --> 00:32:46,880
+view of how you can create tables. There are many more attributes you can use. You could even have
+
+332
+00:32:46,880 --> 00:32:51,200
+certain columns span over multiple columns, so there are all sorts of different options here,
+
+333
+00:32:51,200 --> 00:32:56,880
+but this just gives you an idea of how you can use tables to represent data just like this.
+
+334
+00:32:57,440 --> 00:33:02,720
+Now that we've included a table listing out all of our different products and the associated price,
+
+335
+00:33:02,720 --> 00:33:07,440
+I'd like to add a very simple form that people can use to order some of these cookies.
+
+336
+00:33:08,080 --> 00:33:14,320
+Over on the left-hand side, I'll insert a new line and here, I'll paste in some very basic HTML to
+
+337
+00:33:14,320 --> 00:33:20,800
+add a form. Here, I use the form element. We open it and down at the bottom, we close it and there
+
+338
+00:33:20,800 --> 00:33:26,160
+are some very simple elements within here. Let me save this HTML page and over on the right-hand side,
+
+339
+00:33:26,160 --> 00:33:31,120
+let's refresh it to see what it looks like. Here, I have a label for the cookie type and here, we
+
+340
+00:33:31,120 --> 00:33:36,080
+see the label show up. To the right of that, I have an input field and here, we have input name
+
+341
+00:33:36,080 --> 00:33:42,400
+and this adds that input field. Down below, I use the same structure for the quantity and also the
+
+342
+00:33:42,400 --> 00:33:47,840
+delivery date. Now, instead of just using an input field for the delivery date, here, I could use one
+
+343
+00:33:47,840 --> 00:33:53,920
+of the attributes. I'll type in type equals and let's set this to date, save and refresh and this
+
+344
+00:33:53,920 --> 00:34:00,480
+now adds a date picker. The browser has tremendous functionality when it comes to displaying forms
+
+345
+00:34:00,480 --> 00:34:05,040
+via HTML. There are all sorts of different elements you can use. You can add drop-down
+
+346
+00:34:05,040 --> 00:34:09,760
+lists, you can add password fields, you can add radio buttons, check boxes, all sorts of different
+
+347
+00:34:09,760 --> 00:34:15,440
+things as you build out your forms. This is more just to give you a quick tour of what's possible
+
+348
+00:34:15,440 --> 00:34:20,080
+with forms and especially if you want to build them out, I recommend going deeper on this topic.
+
+349
+00:34:20,080 --> 00:34:24,400
+We've now looked at many of the different available elements within HTML,
+
+350
+00:34:24,400 --> 00:34:31,600
+but up to this point, we haven't yet formed a proper HTML page. To do that, in Notepad,
+
+351
+00:34:31,600 --> 00:34:38,240
+let's click back over into the index.html file. Back within the index.html file, down below,
+
+352
+00:34:38,240 --> 00:34:45,440
+we see all of the content that's displayed on the page. But what if we want to include a title that
+
+353
+00:34:45,440 --> 00:34:51,280
+shows up on the tab or what if we want to include a description for search engines? That wouldn't
+
+354
+00:34:51,280 --> 00:34:56,800
+be visible on the page, but we still need to pass that information to the browser. And so far,
+
+355
+00:34:56,800 --> 00:35:02,800
+we've just been focusing on the body content, but we need to structure this as a proper HTML page.
+
+356
+00:35:03,440 --> 00:35:08,720
+At the top, let's add a few new lines and then go to the very top line. At the very top,
+
+357
+00:35:08,720 --> 00:35:14,480
+I'm going to add an element that tells the browser that this is in fact an HTML document type.
+
+358
+00:35:15,360 --> 00:35:22,000
+We'll type in doc type and then HTML. Next, we need to tell the browser that all this content
+
+359
+00:35:22,000 --> 00:35:28,000
+that appears below is in fact HTML. So we're going to use a block element to do that. Here,
+
+360
+00:35:28,000 --> 00:35:33,440
+I'll type in HTML and at the very bottom, let's add it again, but this time we're going to close
+
+361
+00:35:33,440 --> 00:35:40,320
+it off. Now the browser knows that all this content stored within is HTML. And now we want
+
+362
+00:35:40,320 --> 00:35:46,720
+to separate this out into two separate sections. We have the head where we can pass information
+
+363
+00:35:46,720 --> 00:35:51,360
+that's not visually displayed on the page. And then we also have the body content. So right at
+
+364
+00:35:51,360 --> 00:35:57,120
+the very top, I'm going to add a block element called head. I'll copy it and down below,
+
+365
+00:35:57,120 --> 00:36:02,720
+let's close it out. And right down here, I'll add one called body, open it and down below,
+
+366
+00:36:02,720 --> 00:36:09,280
+I'll close it out. Now that I've added all of those, let me apply some indentation,
+
+367
+00:36:09,280 --> 00:36:13,840
+just so everything's a little bit easier to see. I've now applied some indentation,
+
+368
+00:36:13,840 --> 00:36:18,480
+so hopefully everything's a little bit easier to parse. Throughout this video,
+
+369
+00:36:18,480 --> 00:36:23,520
+we've been focused on the body section of the HTML document, basically everything that's
+
+370
+00:36:23,520 --> 00:36:31,920
+visually shown on the page. Let's now shift our focus to the head. The head contains all of the
+
+371
+00:36:31,920 --> 00:36:37,840
+metadata about the page, basically all of the stuff that the web browser needs to know,
+
+372
+00:36:37,840 --> 00:36:44,560
+but that won't be shown. Right up here, I'll paste into examples of the types of content that
+
+373
+00:36:44,560 --> 00:36:51,600
+you would put here. I've included a title, the Kevin Cookie Company homepage, and also the
+
+374
+00:36:51,600 --> 00:36:57,200
+description. This is what search engines can pick up. Over here, if we scroll over, the description
+
+375
+00:36:57,200 --> 00:37:03,040
+is the Kevin Cookie Company is the best cookie company in the world. Now, if I save this right
+
+376
+00:37:03,040 --> 00:37:08,080
+now, over on the right-hand side, I'll refresh the page and you'll notice that none of the body has
+
+377
+00:37:08,080 --> 00:37:14,000
+changed. But if we look at the very top, you'll now see that the tab name is titled Kevin Cookie
+
+378
+00:37:14,000 --> 00:37:19,760
+Company homepage. It's taking the title that I provide here. We also have a description,
+
+379
+00:37:19,760 --> 00:37:25,840
+so let's say that search engines now index this page. They'll take this description into account.
+
+380
+00:37:27,040 --> 00:37:30,800
+You could put lots of different things into the head. You could also include, let's say,
+
+381
+00:37:30,800 --> 00:37:36,480
+a favicon. You could also load various CSS, which affects the look and feel of the page.
+
+382
+00:37:36,480 --> 00:37:40,080
+You could even load up different JavaScript that you want to use on the page.
+
+383
+00:37:40,080 --> 00:37:43,680
+So there are lots of different items that you could put within the head of your page.
+
+384
+00:37:44,240 --> 00:37:48,640
+Under the head, we have the body section of our page. And again, this is what we focused
+
+385
+00:37:48,640 --> 00:37:54,320
+on for most of the video. And this is all of the content that's displayed visually on the page.
+
+386
+00:37:55,040 --> 00:37:59,280
+Now you might be wondering, well, when we started creating this HTML page,
+
+387
+00:37:59,280 --> 00:38:04,160
+how is it that it worked without all of this structure in place? Well, the reason why is
+
+388
+00:38:04,160 --> 00:38:10,240
+HTML is very resilient. Even though we didn't include HTML, the web browser assumed that this
+
+389
+00:38:10,240 --> 00:38:16,000
+was an HTML document. So it continued to work. However, to structure an HTML page properly,
+
+390
+00:38:16,000 --> 00:38:20,800
+I recommend using these key building blocks every single time you set up an HTML page.
+
+391
+00:38:20,800 --> 00:38:25,840
+All right. Well, thank you so much for helping with this basic HTML website for the Kevin
+
+392
+00:38:25,840 --> 00:38:33,200
+Cookie Company. I am sure we're going to sell a lot of cookies. Of course, there are many more
+
+393
+00:38:33,200 --> 00:38:39,120
+HTML elements and also attributes. To learn more, I've included resources down below in
+
+394
+00:38:39,120 --> 00:38:44,080
+the description. To watch more videos like this one, please consider subscribing,
+
+395
+00:38:44,080 --> 00:38:55,120
+and I will see you in the next video.
+

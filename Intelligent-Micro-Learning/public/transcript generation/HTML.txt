@@ -1,0 +1,395 @@
+Hi, everyone. Kevin here. Today, we're going to learn the basics of HTML or what stands for
+hypertext markup language. I know that may not mean very much right now, but the thing to keep
+in mind is that it's the basic building block of the web. When you type in a website address,
+like let's say kevincookiecompany.com, the web server sends back an HTML file to your web browser,
+say Google Chrome or Microsoft Edge, that tells your browser how to display the content on the
+page. In this video, we're going to build a very simple HTML page, and you're welcome to follow
+along. We'll go through this step by step, and the great thing is you don't have to install anything.
+You already have all the tools that you need. We'll start with the basic HTML structure,
+what elements you have available. We're not going to touch CSS or cascading style sheets,
+which defines the look and feel of the page. We're also not going to touch on JavaScript,
+which allows you to make a website more interactive. We're just looking at the
+essentials of HTML. So if you're ready to learn about HTML, let's check this out.
+Here I am on my desktop, and we are going to create an HTML website directly on your computer.
+I happen to be running Windows, but this will work on any operating system.
+On my desktop, I'll right click, and let's go down to new. At the very top of this menu,
+let's click on folder, and this places a new folder on my desktop. I'll title it Kevin
+Cookie Company website, and feel free to do the same if you would like to follow along.
+Then let's click into this folder. This opens up file explorer. At the very top,
+let's click on view, and then go all the way to the bottom to show. Within this menu,
+we see the option for file name extensions. Make sure that there's a check mark next to this,
+and you'll see why in just a moment. Let's now click out of this menu. Let's now right click,
+and within this menu, let's go to new, and then let's select text document. This now places a new
+text document in the Kevin Cookie Company website, and because we turned on file name extensions,
+you'll see that the extension is .txt. Now, we want to create an HTML file, so let's select
+all of this, and in place of this text, let's type in index.html. Look at that. We're creating
+our very first HTML file. Let's now click away, and when we click away, we get a dialogue telling us
+that we're changing the file name extension, and that the file might become unusable. That sounds
+scary, but we know why we're changing it to .html, so let's click on yes, and as soon as we do that,
+you'll now notice a logo appears next to the file name. This simply means that Windows knows what
+application is associated with this file. Microsoft Edge is my default browser, which is
+why we see the Edge logo here, but you might see the Google Chrome logo if that's your default
+browser. Let's now click on this file, and this opens up Microsoft Edge, or maybe it opens up
+Google Chrome, and look at that. We've now opened our very first HTML file, but you'll notice that
+there's nothing in this file. It's completely blank, and that makes sense because we haven't
+yet added anything to that HTML file. Let's now close out this browser window. Back in
+File Explorer, I now want to edit my HTML file, so I've opened up an application called Notepad.
+It's a really simple application, and you don't have to install it. It comes pre-installed on
+Windows PCs. Especially for creating a very basic HTML website, Notepad will work just fine.
+To edit this file index.html in Notepad, simply press and hold on this file, and then drag and
+drop it into Notepad. Up at the top, we'll see that it's opened up a new tab for index.html.
+I'll click onto the Untitled tab, and let me close out of that. Here, we just have this one file
+open. Down below, I can type in some text. Let's type in Kevin Cookie Company, and then I'll press
+Ctrl S, and that saves the file. Back over here, let's click on index.html, and that opens up
+Microsoft Edge. Look at that. We've now included some content into our HTML file. Nice work so far.
+Let's close back out of Edge. Back within File Explorer, I want to be able to edit my website
+side by side with my browser window, so I can see all of the different changes that I'm making.
+I'll snap this window over to the left-hand side. Next, I'll click into File Explorer,
+and let's open up this index.html file again in the browser. Let's snap this over to the
+right-hand side. Now, I have my Notepad opened up side by side with my web browser. This way,
+I can see all of the changes that I'm making. I now want to add some additional text to my
+HTML file. I'll press Enter on my keyboard, and here, I'll paste in some additional text.
+You can pull this text from the kevincookiecompany.com website if you simply want to copy
+and paste it into your index.html file. I'll press Ctrl S in Notepad. That saves the file.
+Then, I'll click into the browser window. A really easy way to refresh the view is simply
+press the F5 key, and that'll refresh it. Here, I see all that text within the browser window.
+If you look closely at the text in the web browser, it doesn't quite match up with what
+we see in the HTML file. I'll zoom in a little bit here. I say the Kevin Cookie Company. This
+is my title. Then, I have a new line where it jumps to deliciousness in every bite.
+If we look over at the HTML file, here, it says Kevin Cookie Company, and it just runs into that
+next sentence. Why is that? Well, HTML is what's called a declarative language. We need to declare
+what things are. I need to tell it, hey, this is a title, or this is a header, this is a paragraph,
+or maybe this is a list. I need to tell the computer the meaning of the different content
+that I have in my file. To do that, we're going to use something called elements and also tags.
+Let's now insert our very first tag. I want Kevin Cookie Company to be the header of this
+entire page. To insert a tag, we're going to enter in the less than symbol, followed by H, H for
+header. Then, I'll enter in a one. This is the biggest header. Then, I'll enter in the greater
+than symbol. There's my very first tag. I could save my file, and over on the right-hand side,
+I'll press F5 to refresh. Whoa, look at that. It turned everything into a header. I don't want
+that. If we look up at the top, you'll see that I opened the tag with H1, but I also need to close
+the tag at the very end. Here, again, I'll type in H1. To close a tag, we need to enter a forward
+slash before H1. This lets the browser know that we are closing this tag at this point.
+This whole section together, the opening tag, the text, and then the closing tag,
+this is referred to as an element. An HTML page is made up of many different elements.
+I'll press Ctrl S to save my file. Over on the right-hand side, let's press F5. Look at that.
+The Kevin Cookie Company is now the header, and all the other text is smaller than the header.
+That's exactly what I wanted. Over on the left-hand side for the header, you can choose
+header one, which I currently have set, all the way down to header six. Here, I'll change it to
+a six, save the page, and let's refresh it over on the right-hand side. Here, you see that it's
+a lot smaller. I actually want this to be the title of my page, so header one is the most
+appropriate for this. I also want deliciousness in every byte to also be a header. Here, I'll
+lower that text down, and let's insert another header. Here, I'll enter in the less than sign,
+H, but this time, I'll enter in two. The reason why is Kevin Cookie Company is the main title.
+This is a subheader, so I don't want it to be on the same level as my title, which is why I'll
+use two here. Just like we did in this element up on top, we need to close it. Here, I'll enter in
+the closing tag. I'll type in H2, and then the greater than sign, and here, I have my second
+header. I'll save this page, and over on the right-hand side, let's refresh it. Look at that.
+Here, I have my title, and then here, I have my subheader. As you insert different headers
+into your HTML file, don't think of how it looks. Instead, choose the header based on the meaning
+that you want to convey. Later on, you can use something called CSS to change the look
+and the feel, but for now, we're just concerned about the meaning of the different items within
+your HTML page. Within my HTML file, I have all of this text down here at the bottom,
+but I don't declare to the web browser what this is, and this is a paragraph of text,
+so I want to insert a paragraph element. Right up here, let's enter in the less than sign,
+and here, I'll type in a P, and then I'll enter in the greater than sign.
+You'll see that with these different tags, you can use uppercase letters or lowercase letters.
+They are case insensitive, so here, I'll enter in the lowercase letter. You'll typically find
+that they're entered in lowercase, but you really don't have to worry. I'll copy this tag,
+and right down here, I want to close it. I'll move that text down, and here, let's close out
+this paragraph, and right here, I'll enter in another paragraph for baking is our passion,
+and we take it very seriously, and here, I'll also close it out. On this page now,
+we have four different elements. This is one element. We have the second. Here's our third
+element, and then we also have a fourth element. I'll save the file, and over on the right-hand
+side, let's press F5 to refresh, and here, you see that I have a paragraph, and then down here,
+I have another paragraph. Now, because I declared these as separate paragraphs,
+here it inserts spacing between these different paragraphs. Within this block of text,
+you see that I say every cookie made at the Kevin Cookie Company is crafted with only the finest
+ingredients, and I really want to emphasize the text every. We can insert an element within
+another element or basically a nested element. Over on the left-hand side in our HTML file,
+here, I say every, and I'm going to open a tag and close a tag, and let's use EM for emphasis,
+and after every, here, I'll close it out and type in EM. So here, I have one element within another
+element. Let's now save this file, and over on the right-hand side, I'll press F5, and look at that.
+It's now italicized the word every. Over on the left-hand side, instead of emphasizing this word,
+I can also use another element called italics. I'll change this to an I, and here,
+I'll change this to an I, and then I'll save the file, and back over on the right-hand side,
+I'll press the F5 key, and it doesn't look like there's any difference. Here, it still shows
+every cookie made in italics. Here's every in italics. Visually, they look exactly the same.
+So does it matter whether you use I or EM for emphasis? It does. When you use a screen reader,
+it'll read the words differently. When you use EM, it'll apply extra emphasis to the word every.
+However, if I just use I, that only affects the visual appearance, and a screen reader wouldn't
+treat it any differently. So the element that you use is very important. So although they may look
+the same visually, keep in mind that screen readers may treat them differently. Back over
+on the left-hand side, you can also bold a word. Here, I'll change the I to a B, save the file,
+and let's refresh, and here we see every in bold. I can also change this to strong. I'll copy this
+text, and let's place it in for the closing tag, save the page, and here, I'll refresh,
+and here again, just like with emphasis and I, you'll notice that the visual treatment's
+exactly the same, but this word for screen readers now carries additional weight.
+Back over on the left-hand side, I can also underline words. Instead of strong,
+I'll enter in a U, and here I'll change that to a U, and over on the right-hand side, let's refresh,
+and here we see that the word is underlined. There are many different elements that you can use to
+affect the visual appearance, and also the semantic meaning of the word. As we've been
+working through this, you're probably realizing that HTML is not a programming language. Instead,
+it's what's referred to as a markup language. That is, after all, why it's called hypertext
+markup language. As we're going through this HTML file, we're marking up or declaring what
+all of these different elements are. Here's the header. Here's another header, but not quite as
+important as the main title. Here's a paragraph, and here's another paragraph. We're helping tell
+the browser what every single element is within this HTML file. Along with entering in individual
+elements, you can also tell the browser what elements go together. For instance, here I have
+deliciousness in every bite with all of this text, and this all belongs together. I want to
+tell the browser that. Right up above, I'll insert some new lines. Here, I'll declare this as a
+section. I also need to close it out. I'll enter the end tag at the bottom. Here, I'll enter
+section, and let me put in a forward slash. It's a little hard to read or to know that all of these
+other elements go within the section elements. To make all of your different HTML more readable,
+I also recommend using indentation. Here, I'll indent this out, indent out my paragraph,
+and also indent out this paragraph. Notepad isn't quite the best. Here, you see the text wrapping,
+so it's a little hard to tell that all of this is within section. We could go up to view,
+and here's the option to turn off word wrap. When I select this, here it's very easy to tell that
+all of this content goes within this section and that all of this content is related.
+Next, I want to enter another section into my HTML file. Here, I'll insert a new line,
+and here I'll enter in a new section. Just like I did in the first section, here I used an H2,
+I'll use another header too with chocolate chip cookie recipe. I want to make sure to include that
+on this homepage. Within the chocolate chip cookie recipe, I also have two additional headers, but
+they're one level down from the recipe. Here, I have the ingredients, and then I also have the
+baking instructions. I'll press control S to save the file, and over on the right-hand side,
+let's press the F5 key to see how it looks. Look at that. Now, we just need to fill in the
+ingredients. Now that I have these additional headers on my page, I now want to fill in the
+ingredients. You can get the ingredient list from the kevincookiecompany.com website under recipes.
+Over on the left-hand side, I'll insert a new line, and here I'll paste in all of the
+ingredients required for our delicious chocolate chip cookies. Now, the order of the ingredients
+doesn't so much matter. Here, I'll save the file and let's refresh. Right now, it's just one long
+list of all these ingredients, but I would like to show them in a bulleted list. So to include
+a bulleted or unordered list, we're going to use another element. Here, I'm going to open it and
+we're going to enter UL, and this stands for unordered list. Now, just like we've been doing
+all along, we also need to close it out. Here at the very bottom, I'll enter in the closing tag
+and type in UL, and that closes it out. But I also need to specify or let the browser know where each
+list item is or an LI. So here, we're going to nest another element within the unordered list.
+Here, I'll open and close. We'll enter LI for list item, and here at the very end, I'll close it out,
+and there, that should also close the list item. I'll go through and do that for the rest of the
+items here. I've now added all of my different list items, and I also indented all the different
+items, so I know that these are all part of this list. Again, it just makes your code a little bit
+more readable. I'll now save the file, and over on the right-hand side, let's press F5, and here,
+I can now see an unordered list of all the different ingredients required to make our cookies.
+Down below, I also want to include a list for all the different baking instructions.
+I copied a list of all of the baking instructions from the kevincookiecompany.com website,
+and back over on the left-hand side, I'll insert a new line. I could insert a whole bunch of new
+lines, and I'll paste in all of the baking instructions. Now, I want this to be a list as
+well, but the order of all of these steps very much matters, unlike with the ingredients.
+Instead of using an unordered list, we want to use an ordered list, and you guessed it,
+the element name for an ordered list is OL. At the very top, I'll make sure to open it,
+and at the very bottom, I'll close it out. Here too, just like we did with this unordered list,
+we need to add list items for every single step in the instructions. Here, let's open it up. I'll
+add a list item, and at the very end, I'll also close it out. Here too, I'll go through and do
+it for every single item and also apply indentation. Look at that, we now have an
+ordered list for all the baking instructions. I'll press Ctrl S to save the file, and over on the
+right-hand side, let's press F5 to refresh. Look at that, we now have an ordered list.
+What's the difference between an ordered list and an unordered list? Well, here you'll notice that
+we just have bullets for each one of these items, and down below, we have a numbered list. Again,
+this implies that the order matters. Remember, when we enter these different elements into the
+HTML, we're trying to make the right choice to convey the right meaning for the content
+that's contained within. Over on the right-hand side, in number four and number five,
+I have two sentences in each of these, but just to make sure it really stands out,
+I want to place each of these sentences onto a separate line.
+Here, I'll zoom out just a little bit, and here I see where that second sentence starts. Here's mix
+on low speed, here's mix on low speed, and then I also say stir and here's stir. To insert another
+line, if I just press Enter on my keyboard, that won't make any difference to what's shown within
+my browser. We need to tell the browser that I want a new line there, and there's an element
+that we can use called the break. I'll enter in a BR. That'll tell the browser that it should
+insert a new line, and here too, I'll also insert a break. Now, with the break element, you don't
+have to close it. That's because all you need to say is break, and the browser knows exactly what
+it needs to do. You don't need to wrap it around the sentence. Let's now press Save, and over on
+the right-hand side, let's refresh, and here I see that second sentence is on another line,
+and here that second sentence is also on another line. I think that makes it a little bit more
+readable. The page is coming together very nicely, but over on the left-hand side, I want to make
+sure that if any web developer comes in to this page in the future, that they understand that
+this isn't just any ordinary chocolate chip cookie recipe. This is our best-selling cookie recipe,
+so I want to add what's called a comment, just to add a little bit of extra clarity to this
+HTML page. Right underneath this header, I'll type in a comment that says,
+this is the Kevin Cookie Company best-selling recipe. I used a less than sign, an exclamation
+mark, and two hyphens, and then two hyphens at the end, and the greater than symbol to let the
+browser know that this is a comment, and it shouldn't display it to a visitor coming to this
+page. I'll save the page, and over on the right-hand side, let's press F5, and you'll
+notice that that comment doesn't show up at all. It's only embedded into this HTML file,
+so only if you come in to edit the file can you actually see it. Now, one fun little trick over
+here on the HTML page in my browser, you can right-click, and there's the option at the very
+bottom to view the page source. You could also press control together with you, and when you view
+the page source, here you can see all the different HTML that makes up this page, and look
+at that. Here's that comment highlighted in green, so it's not visible on the page, but it's very
+much contained within the HTML file. I'll close out of the source. All in all, this page looks
+pretty solid, but on second thought, I don't know if it makes sense to include the chocolate chip
+cookie recipe directly on the home page or the index page. It probably makes sense to have a
+separate page that we link to from this home page. Over on the left-hand side, let's select this
+entire section with the chocolate chip cookie recipe. I'll highlight all of that and then press
+control X on my keyboard. That cuts all that content and places it onto my clipboard. Next,
+let's open up file explorer again. Back within file explorer, I want to create another page that
+contains the recipe. I'll right-click with my mouse and let's go down to new, and here,
+let's select text document just like we did with the index page. Here, I'll highlight all of this
+text and let's type in recipe.html and then hit enter. Here, we get that warning again. Let's
+click on yes, and look at that. We now have a recipe page. Just like we did before with the
+index page, let's now drag and drop this file into notepad. Now, we have the index file opened up
+side by side with the recipe. Let's now arrange notepad so it's side by side with the web browser
+window. Here, I now have my recipe.html file and I'll paste in all of the content that contains the
+chocolate chip cookie recipe. I'll save this file and I'll also save the index file. Over here,
+let's refresh the index page, but one problem is how do I get from this index page to my recipe
+page? Well, to do that, we can use what's called a link. To insert a link over on the left-hand
+side on my index page, I'll insert a new line and type in some text that says, learned how to make
+our chocolate chip cookies. If I save it and refresh, we see that line of text, but it's not
+yet a link. There's an element that we can use to turn this into a link and it's called the anchor
+element. Here, I'll open it and let's type in an A for anchor and I'll copy this tag, paste it at
+the end and let's close it out. But still, that doesn't yet tell the browser where to send the
+person. So we need to insert what's called an attribute. It basically tells the anchor
+where to send someone and we're going to use an attribute called href or what stands for
+hypertext reference. It basically tells the browser where we should send someone and I want
+the person to go to recipe.html. Here, I'll type in recipe.html and then I'll save it. Now, over on
+the right-hand side, let's refresh and look at that and there we have that link underlined and
+you see that my cursor changes when I hover over it. When I click on it, look at that, that brings
+us directly to our recipe page. Now, to go back, I could also click on this back button or we could
+also include a backlink directly on the recipe page. Let's do that. Right up on top, let's click
+into recipe. Back on the recipe page, at the very top, I'll insert a new line and let me paste in a
+link. Here, I'm using that anchor element again and we're referring to the index.html page and
+here I'm referring to it as home. I'll save this page, let's refresh it over on the right and now
+I have a link that goes back home. So I could click on home, I'm back on the home and I can
+click back and forth between my different pages. This way, you can help people navigate throughout
+your website. The website really has some fantastic and valuable content but what would
+bring it to that next level is if we included some imagery. Up on top, I have another tab open for
+the Kevin Cookie Company and here we have this beautiful logo that I would like to incorporate
+into the website. I'll right click on this logo and then save image as. Feel free to do the same.
+This opens up my file picker and I'll place it in the Kevin Cookie Company website folder.
+Down below, click on save. Back within my index.html file, I want to include the image here.
+I'll insert a new line and I want to place it right above my header. There's an element called
+IMG which stands for image that allows us to insert an image onto the page.
+Let's open it up by typing in IMG. We also need to specify the image that we want to use. We need to
+specify the image source. So we'll use an attribute called src. Then let's enter an equals and open
+quotes and then here we'll type in the file name. It's called kcclogo.png and then we'll close the
+parentheses and here let's enter in the greater than sign and next let's save it. All we need is
+this one tag. We don't have to open and then close it. It basically stands alone similar to the line
+break. Now that I saved the file on the right hand side, let's refresh the page and look at that.
+We now have the logo on the page but it's a little bit big. Over on the left hand side,
+we can also define the height and also the width of this image. To define the width,
+we're going to use the width attribute. Now type in width equals and then insert quotes and I want
+this to be 400 pixels wide so I'll enter in just 400. We can also define the height by using the
+height attribute. I'll type in height, insert quotes and this will be 122 pixels high. Then
+I'll save this file and on the right hand side, let's click on refresh and look at that. That
+looks a lot better. Another benefit of specifying the width and the height is that the browser knows
+to reserve this space for an image before it's able to completely load the image. If you've ever
+been to a website where the content jumps around, if it hasn't all loaded yet, that's typically
+because they haven't defined the width and the height of the different elements on the page.
+It's a good practice to always do that for every single image.
+There's one more attribute that I recommend including as part of the image element
+and that's the alt description. Here I'll enter it in, alt equals and then insert quotes and here
+I can define what this image is. I'll call it the Kevin Cookie Company logo and now I'll save it.
+Now when I refresh the page, you don't notice any difference but let's say that someone comes to
+this website using a screen reader or maybe they're blind and they can't actually see what
+this logo is. With the alt text, they'll be able to hear that it's the Kevin Cookie Company logo
+and just for demonstration purposes, I'm going to misspell the name of the file and save it and
+then refresh the page. Here you'll notice that it's not able to load the logo yet but you see
+this text that identifies what it should be. So anytime you add an image to a page, it's always
+good to include these four attributes including the source, the width, the height and also the
+alt text. I'll now return it to the previous file name. Not only can you insert images but you can
+also insert other types of media like audio and video. Down at the very bottom of this file,
+I'll insert some new lines and here I'll paste in two additional elements, one of them for audio and
+one of them for video and it follows a very similar structure to an image. Over here we
+call out that this is audio and here you define what the source is. Here I type in the name of
+the audio file. We insert controls because I want it to show audio controls so you could play or
+stop the playing and here you could also define the type. Now unlike with image, we also use a
+closing tag. That's because this element is newer and this has been incorporated into that element
+and video is very similar to audio. When I save this over on the right hand side, I'll refresh
+and here we see an audio player controls and down below we see the video player.
+If you're interested in using audio or video, do you know that you have additional attributes that
+you can use? Maybe you want the audio to loop or maybe you want it to auto play although that one
+can be a little bit annoying. With videos, you could also incorporate subtitles and you have
+many other options as well. This is just to let you know that you can insert many different types
+of media into your HTML page. We have a lot of compelling content on this page now. There's text,
+there's recipe, there's audio, and there's video. I think what we really need now is an order form
+where people can order some of these cookies. Let's open up File Explorer once again. Within
+File Explorer, let's right click, go down to new, and let's click on text document and let's add a
+new HTML file called order form dot HTML. Then let's click yes on this dialog and let's now open
+this file in Notepad. I now have Notepad open with the order form dot HTML and over on the right hand
+side, I have the browser window that shows me what this HTML file looks like. Currently, there's
+nothing in this HTML file, which is why the browser window is empty. First, I want to include a table
+that lists out all of the cookies that we offer here at the Kevin Cookie Company and the associated
+price. I'm going to use the table element. I'm going to paste in some HTML. Right here,
+we see that I'm setting up a new paragraph and down at the bottom, I close the paragraph.
+Here, I use the table element. Right here, I open it up and down at the bottom, we close it again
+with the closing tag. In a table, it's made up of multiple rows and also multiple columns. Here,
+I'm setting up the first row of this table. We use the element TR. This stands for table row
+and down here, I close it again. This is the first row in the table and within this row,
+I have two columns, the cookie type and also the price. I refer to this element as TH. What does
+that stand for? This is table header. This is letting my browser know that this is the header
+of the table. Down here, I then have another row in my table. I use table row and then here,
+I close table row. Here, too, I also have two columns, except this one is referred to as TD.
+What's the difference between TD and TH? TD stands for table data. It's not the header row. This is
+now where all the data within the table lives. Here, I have one cookie called chocolate chip
+and it costs $4.50. I'll save this file and over on the right-hand side, let's now refresh the
+browser window to see what this looks like. There, I have a very basic table. Of course,
+when we look at the table over on the right-hand side, it's a little bit difficult to make out that
+this is in fact a table. Over on the left-hand side, we can add an attribute that adds a border
+to this table. Here, I'll type in border and let's say equals one. I'll save the file and on the
+right-hand side, let's refresh and now, we can see a border around this table. To add additional
+rows here, I'll copy this row and let's paste it in and maybe we also have, let's say, an oatmeal
+raisin cookie. We'll say oatmeal raisin and this one goes for $2.50. I'll save it. Over on the
+right-hand side, let's refresh and here, we now see another row in this table. This is a very simple
+view of how you can create tables. There are many more attributes you can use. You could even have
+certain columns span over multiple columns, so there are all sorts of different options here,
+but this just gives you an idea of how you can use tables to represent data just like this.
+Now that we've included a table listing out all of our different products and the associated price,
+I'd like to add a very simple form that people can use to order some of these cookies.
+Over on the left-hand side, I'll insert a new line and here, I'll paste in some very basic HTML to
+add a form. Here, I use the form element. We open it and down at the bottom, we close it and there
+are some very simple elements within here. Let me save this HTML page and over on the right-hand side,
+let's refresh it to see what it looks like. Here, I have a label for the cookie type and here, we
+see the label show up. To the right of that, I have an input field and here, we have input name
+and this adds that input field. Down below, I use the same structure for the quantity and also the
+delivery date. Now, instead of just using an input field for the delivery date, here, I could use one
+of the attributes. I'll type in type equals and let's set this to date, save and refresh and this
+now adds a date picker. The browser has tremendous functionality when it comes to displaying forms
+via HTML. There are all sorts of different elements you can use. You can add drop-down
+lists, you can add password fields, you can add radio buttons, check boxes, all sorts of different
+things as you build out your forms. This is more just to give you a quick tour of what's possible
+with forms and especially if you want to build them out, I recommend going deeper on this topic.
+We've now looked at many of the different available elements within HTML,
+but up to this point, we haven't yet formed a proper HTML page. To do that, in Notepad,
+let's click back over into the index.html file. Back within the index.html file, down below,
+we see all of the content that's displayed on the page. But what if we want to include a title that
+shows up on the tab or what if we want to include a description for search engines? That wouldn't
+be visible on the page, but we still need to pass that information to the browser. And so far,
+we've just been focusing on the body content, but we need to structure this as a proper HTML page.
+At the top, let's add a few new lines and then go to the very top line. At the very top,
+I'm going to add an element that tells the browser that this is in fact an HTML document type.
+We'll type in doc type and then HTML. Next, we need to tell the browser that all this content
+that appears below is in fact HTML. So we're going to use a block element to do that. Here,
+I'll type in HTML and at the very bottom, let's add it again, but this time we're going to close
+it off. Now the browser knows that all this content stored within is HTML. And now we want
+to separate this out into two separate sections. We have the head where we can pass information
+that's not visually displayed on the page. And then we also have the body content. So right at
+the very top, I'm going to add a block element called head. I'll copy it and down below,
+let's close it out. And right down here, I'll add one called body, open it and down below,
+I'll close it out. Now that I've added all of those, let me apply some indentation,
+just so everything's a little bit easier to see. I've now applied some indentation,
+so hopefully everything's a little bit easier to parse. Throughout this video,
+we've been focused on the body section of the HTML document, basically everything that's
+visually shown on the page. Let's now shift our focus to the head. The head contains all of the
+metadata about the page, basically all of the stuff that the web browser needs to know,
+but that won't be shown. Right up here, I'll paste into examples of the types of content that
+you would put here. I've included a title, the Kevin Cookie Company homepage, and also the
+description. This is what search engines can pick up. Over here, if we scroll over, the description
+is the Kevin Cookie Company is the best cookie company in the world. Now, if I save this right
+now, over on the right-hand side, I'll refresh the page and you'll notice that none of the body has
+changed. But if we look at the very top, you'll now see that the tab name is titled Kevin Cookie
+Company homepage. It's taking the title that I provide here. We also have a description,
+so let's say that search engines now index this page. They'll take this description into account.
+You could put lots of different things into the head. You could also include, let's say,
+a favicon. You could also load various CSS, which affects the look and feel of the page.
+You could even load up different JavaScript that you want to use on the page.
+So there are lots of different items that you could put within the head of your page.
+Under the head, we have the body section of our page. And again, this is what we focused
+on for most of the video. And this is all of the content that's displayed visually on the page.
+Now you might be wondering, well, when we started creating this HTML page,
+how is it that it worked without all of this structure in place? Well, the reason why is
+HTML is very resilient. Even though we didn't include HTML, the web browser assumed that this
+was an HTML document. So it continued to work. However, to structure an HTML page properly,
+I recommend using these key building blocks every single time you set up an HTML page.
+All right. Well, thank you so much for helping with this basic HTML website for the Kevin
+Cookie Company. I am sure we're going to sell a lot of cookies. Of course, there are many more
+HTML elements and also attributes. To learn more, I've included resources down below in
+the description. To watch more videos like this one, please consider subscribing,
+and I will see you in the next video.

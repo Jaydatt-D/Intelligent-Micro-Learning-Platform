@@ -1,0 +1,349 @@
+Hey there, this is Kamal, and in this video, we're gonna learn the basics of PHP.
+So, let's get this started.
+So, before going further, let me clarify a few things.
+I'm assuming that you only have a basic idea or some of the concepts of programming languages,
+like variables, functions, loops, and conditional statements.
+So, if you have a basic idea of what these terms mean, then this video will be really easy for you.
+But if you have no idea what I'm talking about, then you might have a bit difficulty to understand what's going on,
+as I'm trying to explain all these things in a very short time.
+So, I'm not going to go too deep into each of these concepts.
+I'm just going to give a basic idea of what these do and how the syntax works and everything else.
+Even if you have no idea what this is, just follow along, and I think you'll be able to understand,
+as I'll try to explain everything as easy as possible for you to understand.
+Okay, so without wasting any more time, let's jump into it.
+Alright, so first things first, what is PHP?
+PHP stands for Hypertext Preprocessor.
+So, it's a server-side scripting language which is generally used to write scripts which run on the server.
+So, in simple terms, it's like a script which connects the front-end part with a back-end, that is the database.
+So, it's like if you want to do some operations on the data which is taken from the front-end,
+and maybe you want to take that information and place it in the database,
+then you're going to use PHP which connects with the database and executes queries or things onto the database.
+In a similar way, it's going to take the data from the database and display it onto the front-end part.
+So, it's like a bridge between these two, and PHP is a language which generally runs on servers.
+So, if you want to actually execute PHP on your computer, you have to have a server installed on your computer.
+There are many servers out there, but the one that I'm using right now for this video is XAMPP or XAMPP.
+So, it's a bundle of different softwares, and in that, a server is also present, it's an Apache server,
+and it also comes with PHP bundle, so you don't need to manually install PHP onto your system.
+So, if you install XAMPP, automatically everything will be set up for you.
+So, if you have no idea what XAMPP is and how to install it on your computer,
+I'll provide a link in the description down below.
+You can go to that link and see the video on how to install XAMPP, I've already done that.
+So, once I'm done installing that, then you can carry on from here.
+Alright, so now let's go into the project structure.
+So, in my Visual Studio code, what I'm going to do is I'm going to create a file and name it as practice.php.
+So, observe here that I'm trying to name practice.php.
+So, I'm giving .php extinction as this is a PHP file.
+Alright, the first thing that you have to know when it comes to PHP is that you have to write PHP inside a specific tag.
+So, it's something like this.
+So, this is the PHP tag, so this is the opening tag, and this is the closing tag.
+This implies that whatever is written in between these two tags is PHP.
+Everything else that is written outside of these two tags is not considered PHP even though the file is named as PHP.
+That is because you can write HTML inside of PHP as well.
+So, if you want, you can just type in the HTML code below here and you can place your PHP above the HTML as well.
+Or you can use PHP in between HTML as well.
+So, you have to specify these two tags whenever you're trying to use PHP.
+Alright, so the first thing that we're going to see is how to print data onto the screen.
+So, we're going to use a function called as echo.
+So, echo is a function which is generally used to print data onto the screen and this is its syntax.
+So, here I'm going to output a string and save it.
+So, now if you want to execute this, what you have to do is you have to go to your exam control panel and start the server.
+Once you've done that, then you have to go to your browser and type in localhost.
+So, I'm going to quickly go to the file that we had created earlier.
+Okay, so this is the file that we have. If I zoom in a bit, so you're able to see the text, right?
+So, we're using echo to print the data onto the screen.
+So, the second thing that we're going to see is comments.
+So, if you're going to create a single line comment in PHP, you have to give it two slashes and that is going to create a comment.
+So, if you're going to create a multi-line comment, you're going to type in.
+So, this is a multi-line comment. Anything that is placed in between will become a comment.
+So, next thing that we're going to see are variables.
+So, variables are like containers in which you can store data.
+In other languages like C, C++, Java, you have to specifically define the type of data that you want to store.
+If you want to store int or integer, you have to type in int or if you want to store strings, you have to type in string.
+But, here in PHP, you don't need to explicitly define what data type that you're going to use.
+You can just type in dollar a is equal to 10.
+Here, dollar represents that this is a variable and the value of 10 is being assigned to a.
+And, as you can see here, we haven't defined what data type a is.
+It's just going to take the value and automatically define its data type implicitly.
+You don't have to define that it's int.
+You can just give it as text as well or string or you can give it a float value as well.
+Anything is fine. Everything is accepted here.
+And, one more thing that you have to keep in mind is that you have to end each line with a semicolon.
+Semicolon is what defines the end of a line and that's the end of an instruction.
+Then, the interpreter or compiler can just go to the next line and execute that.
+So, now you can echo out the value.
+So, I'm going to echo out dollar a and save it.
+So, if you now go to the browser and refresh, as you can see here, 10 is being outputted.
+That's the value that we had assigned it.
+Let's echo out the value of b as well.
+And, I'm going to change the value of a to let's say.
+So, now if you save that and go to the browser.
+So, as you can see here, the text is being printed.
+There's no space here and the data is not being printed onto the next line.
+It's just being printed on a single line.
+So, if you want to change that, what you can do is, in between these two echo statements,
+you can echo out another statement and it's going to be a HTML tag.
+So, I'm going to echo out a br tag and save it.
+Now, if you go to the browser and refresh, as you can see here, 20 has been shifted to the next line.
+So, in this way, you can echo out HTML inside of PHP.
+So, if you want to echo, let's say, horizontal line, as you can see here, the line has been printed.
+Similarly, you can echo out multiple statements consisting of headings, paragraphs, links and all of that.
+Anything can be echoed out.
+So, the next thing that we're going to see are operations.
+So, I'm just going to quickly type in all the operations that we can generally use.
+So, these are the operations that we generally use inside of PHP or any other language in a sense.
+So, these are the basic operations that we use.
+So, what I'm doing here is that I'm just adding a to b and assigning that value to a variable called as $r.
+I'm doing the same thing here except I'm doing subtraction, then multiplication, division or you can do modular division as well.
+So, what I'm going to do is, I'm going to just change this from text to, let's say, a number 20 and save it.
+So, now I'm just going to comment out everything else except the addition part.
+And then below this, what I'm going to do is, I'm going to echo out the value of $r.
+We'll just echo out this as well. We don't need this and save it.
+As you can see here, 30 has been printed. That is 20 plus 10 is equal to 30.
+So, the same thing will happen with all the other operations as well.
+So, I'm just going to comment out this and do one more operation.
+So, I'm going to do the modular operation and save it and refresh.
+So, as you can see here, 10 is being outputted.
+So, now let's say instead of echoing out the variable directly, let's say you want to echo out some text before the variable or after the variable.
+And in between that, you want to actually echo out this variable as well.
+So, what you're going to do is that you're going to concatenate.
+So, what does that mean?
+So, I'm just going to first type the text.
+So, this is the result and give a colon space.
+Then what I'm going to do is, I'm going to give it dot and then I'm going to give the variable that you want to echo out.
+So, essentially what we're doing here is that we're concatenating this text with this variable.
+Concatenation means adding the data to the end or the starting, wherever you put it actually.
+So, it's like adding or extending the data itself.
+So, I'm just concatenating this string with this variable.
+If you want, you can add one more text here.
+Let's say, test something like that and just save it.
+And if you go to the browser and refresh.
+So, as you can see here, the result is being printed.
+Okay, so now let's comment this and the next thing that we're going to do is we're going to see conditional statements.
+So, by conditional statements, what I mean is that, let's say you want to write a logic where you want to execute a particular statement if something is true.
+If that is not true, then you're going to execute something else, right?
+So, let's say I have something like this.
+So, what we're doing is that we're checking if $a or that variable is greater than $b.
+If that is true, then execute this statement that is a is greater than b.
+If not, check if a is equivalent to b.
+If that is true, then execute this.
+Else, if both of these are not true, then you're going to execute this, which is a is smaller than b.
+So, if you observe here, we're using two equal to's and not single.
+That is because we generally use a single equal to when you're trying to actually assign a variable.
+As you can see here, we first did that operation, right?
+After we had done the operations on a and b, we're assigning that result value to a variable called $r.
+In that case, we're using an equal to to assign a variable.
+Here, we're using double equal to to check if both of these entities are equal or not.
+Okay, remember that.
+So, this is a simple FL structure.
+Now, let's comment this out and what we're going to do is we're going to execute this and go to the browser and refresh.
+And as you can see, it's showing that a is smaller than b.
+That is because the value of a is currently 10.
+What if we change it to 50?
+Now, let's go to the browser and refresh.
+As you can see, a is greater than b.
+Now, if it is equivalent, then let's save that and see that a is equal to b.
+So, the FL statements are working right now.
+So, I'm just going to comment this out, okay?
+So, the next thing that we're going to take a look at is arrays.
+So, an array is a data structure.
+So, if you have a computer science background, then you already know what arrays are.
+But if you have no idea what array is, in simple terms, an array is a collection of data, right?
+So, it's like a continuous stream of collection of data inside the computer's memory, okay?
+So, it's like a row in which you place all the data consecutively, right?
+So, the way that you define an array inside PHP is like this.
+So, I have a variable here called as index array.
+In that, I've defined three values.
+The first one is the character a, the second one is the character b, and the third one is the character c.
+So, as you can see here, all three of them are of similar data type.
+And in any other language like C or C++, you have to define an array which is of same data type, right?
+You cannot define an element inside of an array which is different from all the other elements inside that array.
+It's like you can't define it as one, two, three, four.
+See, so you can't define one, two, three, four with the characters here.
+That is with other languages.
+But with PHP, you can define an integer along with other characters as well.
+So, this is of character type, this is of int type.
+You can define another float value as well inside the array and PHP will not mind it.
+It will take that array and it's going to execute its operations on it.
+So, the reason why I've given it as index array is because in PHP, we have two types of arrays.
+The first one is called as index array where we use indices that is numbers to represent each and every value.
+So, here for this array, the first value is given an id of zero.
+The second one is given an id of one.
+The third one is given an id of three and so on.
+So, you have to remember that arrays start from zero.
+So, it's going to start from zero, then one, two and three.
+So, let's say you want to print out the value of b, right?
+So, what I'm going to do is I'm going to type in echo and I'm going to take the variable index underscore array
+and I'm going to pass in the value of one and semicolon and save it.
+So, the reason why I've given it as one is because I've said it earlier, arrays start from zero.
+So, if this value is represented with the number zero, then b is represented with the number one.
+So, if you type that and save it and refresh the page, as you can see here, b is being printed.
+Now, if I change it to zero and save it and refresh, as you can see here, a is being printed.
+So, arrays start from zero and if you keep it as let's say three and save it, so it's going to print one, two, three, four.
+So, this is the syntax of printing the elements inside of an array.
+So, the second type of arrays that we generally have are called as associative arrays.
+So, in other programming languages, they are known as dictionaries or maps or something like that.
+In PHP, we refer to them as associative arrays.
+So, an associative array is similar to an index array, but instead of having indices, we're going to have key value pairs.
+So, it's going to be something like this.
+So, this is how we define an associative array.
+Here, as you can see here, we have two values representing each and every element, right?
+So, this is what is called as a key and this is called as a value.
+So, inside of an associative array, we have key value pairs.
+So, this whole thing is a single element and this is another element and so on.
+So, if you want to print out the values inside of an associative array, you're going to refer to the pencils, that is the key.
+So, if you remember in the index arrays, we used Ids, right?
+Which were not defined first, but it was defined by the programming language itself and it was given as 0, 1, 2 and 3.
+Here, we're defining the values also.
+So, we're trying to define the indices and here in the associative array, they are referred to as keys.
+So, let's say you want to print out the number of pens.
+So, we're going to type in echo.
+If you save that and refresh, as you can see here, 10 is being printed.
+That's the number of pens that we have.
+So, let's say you want to type in erasers.
+So, as you can see here, 2 is being printed.
+So, associative arrays have key and value pairs and the keys don't necessarily have to be a string.
+You can have a number as well.
+So, it can be something like, let's say, 1 and the value can be, let's say, test.
+You can give it as 2 and the value is going to be, let's say, test 2.
+The third one is going to be, let's say, 3 and the value is going to be 2.
+If you save that and try to access 1, test is being printed.
+So, you can use integers as well to define the elements.
+You don't need to necessarily give a string to define the element or the key, so to say.
+So, that's it for arrays.
+So, now let's jump into loops.
+So, what are loops?
+So, let's say you have a statement.
+It's called, hey this is Kamal and you have to print that string 50 times.
+So, what you can do?
+You can just type the echo statement 50 times and for each echo statement, you can just give that same string.
+But, that's tedious work, right?
+So, what you're going to do is you're going to create a loop in which it's going to execute that particular statement 50 number of times.
+So, that's the better way of printing the statements, right?
+So, in PHP, we have mainly 3 types of loops.
+So, the first one is a furl loop and it's something like this.
+So, this is the syntax of a furl loop and a furl loop consists of 3 statements.
+So, the control flow is something like this.
+The value of i is initialized to 0.
+Then, it's going to check if i is less than 20.
+0 is less than 20, that is true.
+So, it's going to echo out that value.
+Then, it's going to increment the value of i.
+Then, it's going to go and check if that incremented value is less than 20.
+Since it was 0, now the value of i has been incremented to 1.
+1 is less than 20, that is true.
+Then, it's going to echo out the value.
+Then, it's going to increment again.
+Then, it's going to check the value.
+If it is less than 20, it is less than 20.
+It's going to echo it again and increment again.
+This statement is going to keep on executing till the value of i is equal to 20.
+So, now if you save that and go to the browser and refresh.
+As you can see here, the numbers have been printed till 19.
+That is because we have started it from 0.
+If you give it as 1, then you have to give it here as equal to then save it and refresh.
+So, it's going to go from 1 to 20.
+Right!
+So, the second type of loops that we have are known as while loops.
+So, the syntax is something like this.
+So, what I have written here is that the while loop is going to first check if the value of a is less than value of b.
+Initially, the value of a is 20 and the value of b is 20.
+Before that, we have to first change the value of 20.
+So, I'm going to go to the top and change the value to 10.
+At the bottom, now what it's going to do is that it's going to check whether the value of a is less than value of b.
+Initially, the value of a is 10 and the value of b is 20.
+So, it's going to echo out the value of a.
+Then, it's going to increment it by 1.
+$a++ implies the value is being incremented by 1.
+Here is the same thing as well.
+$i++ implies that the value has been increased by 1.
+So, now if you see that and go to the browser and refresh the page.
+As you can see here, from 10 everything has been printed till 90 because the value we have given it as is less than and not equal to.
+If you give it as equal to as well, then save it and refresh the page once again.
+20 has been added as well.
+So, that's the while loop.
+So, the last loop that we're going to look at is known as a for each loop.
+So, the syntax for that is something like this.
+So, what the statement means is that for each element inside of the sx2 array, take that element as $ar and echo out that value.
+So, now if you save this and go to the browser and refresh.
+As you can see here, we have the three values that is test, test2 and test2.
+So, these were the values that we had defined earlier.
+So, it's going to take all the elements inside of the sx2 array as $ar and it's going to print the value associated with the id or with the key so to say.
+So, this is the for each loop.
+So, the last thing that we're going to look at is form handling.
+So, to actually explain form handling, we need a form inside of HTML page.
+So, I'm going to create that now.
+Okay, so what I've done here is that I've created a file called as index.php and if you observe, I've given the extension .php and as I mentioned earlier, you can write HTML inside of PHP as well and that is going to work.
+So, now inside this index page, what I've done is that I've created the basic boiler template and in that, I've created a dummy form and in that form, I've created a single input tag and below that, I have a button which says click me.
+So, for the input, I've given it a name property called as username and for the form, I've given it an action property called as practice.php.
+So, when you click on this button, what's going to happen is that the data is being taken from the input tag and being assigned to a name called as username and then it is being sent to the practice.php using the method get.
+So, there are actually four types of methods that we generally use but for this video, two are enough.
+The first one is the get method and the second one is the post method.
+So, we're going to first see the get method. So, now if you save this and go to the browser and go to index.php.
+So, now we have this form right. So, if I type in let's say camel and click me.
+As you can see here in the browser, automatically index.php has been removed and it has been redirected to practice.php and also a variable called as username has been assigned a value called as camel which was defined by me.
+So, now we have the data present inside the URL. Now, we have to take the data and do something with it right.
+So, now let's go to the practice page and here below everything else, what we're going to do is that we're going to write an if statement and it's going to be something like this.
+So, what I'm doing here is that I'm checking if this username variable is being set inside the URL and that too we're explicitly checking if a get method is being used to set this username variable.
+And as you can see here in the form use the get method and we actually gave an input as username and we actually got the data inside the URL which is being equal or being assigned to username.
+So, now if you refresh the page, the data is being taken from the username and it is being printed right.
+So, let's see if I give it as the second method that is post and save it.
+Now, if you go back, so I'm going to type the same thing again and click me.
+So, now as you can see here the data is not being passed to the URL.
+So, there is nothing after practice.php but if you go to the practice page and remove this get and type in post and also change this as well.
+Now, if I save this and go to the browser and refresh, click on continue.
+As you can see here the data is being printed but there is no data inside the URL.
+That means the data is being passed but it has been hidden.
+So, we generally use get or post methods to pass data in between files inside of PHP.
+So, this is how you take the data from a form and pass it to another PHP file and do some operations with it.
+So, this is generally how a login form or a signup form or a contact me form works.
+Generally take the data from this and pass it here and instead of echoing out we generally type in some SQL queries where it's going to take the data and push it onto the database where you have a login table.
+And all the data has been stored there.
+So, apart from get and post we also have another method here which is called as request.
+So, we generally use request only when we have no idea how we are passing the data.
+So, let's say you are given it as post but let's say you have many forms inside your website and you actually have no idea what method you are actually using to send the data through the URL.
+Then what you can do is you can give it request and it's going to accept get or post as well.
+So, as you can see here it's an associative array that by default contains the contents of get, post and cookie as well.
+So, it's going to accept all of these three.
+So, now if you save this and go to the browser and refresh the same thing is being printed that means it is still working.
+So, that's how you take the data from the form and print it out.
+So, post is used when you actually have to send sensitive data like username and passwords.
+And get is used when you have to pass data which is not required any prediction at all.
+Yeah, and one more thing is that actually forgot one concept inside of PHP.
+So, the last thing that we are going to cover is we are going to use functions.
+So, a function is like a block of code that you can write independently and you can execute it as many times as you want.
+So, the syntax of function is something like this.
+Okay, so there is something wrong with my editor that's why it's showing this red line.
+But anyway, so this is the syntax for writing a function inside PHP.
+So, what I've done here is that I've defined a keyword called as function and beside that I've given the name for the function.
+And inside the function what I've written is that hey this is coming.
+So, if you want to execute this particular set of code what you have to do is that you have to call this function.
+What I'm doing here is that below this I've just written that and if you just write the statement here that means you are trying to call this function.
+And as soon as this function is called it's going to go in and execute whatever is present inside this function.
+So, if you save this and go to the browser and refresh the page as you can see here.
+So, the text is being shown that means the function is being executed.
+So, this is how you generally define functions and functions are very useful when you have to execute a particular code multiple number of times.
+I'm not talking about loops but I'm talking about reusable codes.
+So, if you write a logic inside of a function and if you want to use that logic anywhere inside of your PHP project.
+What you can do is that you can just call the function and as soon as that is called it's going to execute whatever is there inside the function.
+And that is generally the logic that you have written before.
+So, those were the basics of PHP and I know that I haven't touched all the topics in PHP itself.
+But believe me this is more than enough for you to know if you want to create a simple website using PHP with integration of backend and frontend as well.
+So, these concepts will be enough for you.
+But if you want to create something which is much more advanced and you have to learn some more concepts and this is like just the tip of the iceberg.
+There are many more concepts that you have to learn but if you want to get started this is more than enough and these concepts will be enough for you to create a simple website.
+So, there is one last tip before ending this video.
+So, instead of writing all the PHP code inside of a separate file.
+What you can do is that you can just take the data from the PHP and remove that from there and paste it inside the main index page itself.
+So, let's say you have this form right.
+So, if you want to actually execute this what you have to do is that you have to create another file called as practice.php.
+And in that file you have to specify the logic that you want to use.
+But instead of doing that what you can do is that you can just remove this action itself.
+And what's going to happen is that whenever you click on this click me automatically the data is being sent to the same page.
+That is the execution is going to start and end in the index page.
+So, since the PHP is already present inside the index page that is above the HTML automatically when you click on this it's going to go to this function and it's going to execute this.
+So, now if you go to the browser and let's say you go to index page and you type in let's say my name and click me.
+As you can see here the data is being printed in the index page right.
+So, the data can also be written inside the index page and you don't have to create another file to execute the form itself.
+So, that's a pro tip that will help you guys a lot when you're trying to execute forms inside your web page.
+If you like this video then please hit the like button and don't forget to subscribe as well.
+Thanks so much for watching and I hope to see you in the next video.

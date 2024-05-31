@@ -1,0 +1,3656 @@
+1
+00:00:00,000 --> 00:00:10,000
+Welcome to the ultimate Django course. In this course, I'm going to teach you everything you need to know about Django from the very basics to more advanced concepts.
+
+2
+00:00:10,000 --> 00:00:16,000
+So by the end of this course, you'll be able to use Django to build production grade backends for your web and mobile apps.
+
+3
+00:00:16,000 --> 00:00:20,000
+If you have always wanted to learn web development with Python, you are in the right place.
+
+4
+00:00:20,000 --> 00:00:26,000
+We'll use Python and Django to build and deploy the backend for an e-commerce application.
+
+5
+00:00:26,000 --> 00:00:34,000
+If you're looking for a comprehensive, organized, and practical course that takes you from zero to hero and prepares you for the job, this is the right Django course for you.
+
+6
+00:00:34,000 --> 00:00:38,000
+Everything you need to know about Django is in one place in the right order.
+
+7
+00:00:38,000 --> 00:00:41,000
+So you don't need to jump back and forth between random tutorials.
+
+8
+00:00:41,000 --> 00:00:50,000
+I'm Mosh Hamidani, and I've taught millions of people how to advance their software engineering skills through my YouTube channel and online school, quotewithmosh.com.
+
+9
+00:00:50,000 --> 00:00:54,000
+If you're new here, be sure to subscribe as I upload new videos all the time.
+
+10
+00:00:54,000 --> 00:00:58,000
+So let's jump in and get started.
+
+11
+00:01:02,000 --> 00:01:06,000
+Let's talk about what you need to know to take this course.
+
+12
+00:01:06,000 --> 00:01:16,000
+For starters, you need to know Python. You need to know the basics of Python, as well as object oriented programming concepts such as classes, inheritance, polymorphism, and so on.
+
+13
+00:01:16,000 --> 00:01:22,000
+You should also know the basics of relational databases, so you should be familiar with concepts such as tables,
+
+14
+00:01:22,000 --> 00:01:26,000
+columns, primary and foreign keys, relationships, and so on.
+
+15
+00:01:26,000 --> 00:01:33,000
+If you need to refresh the fundamentals, I have a couple of beginner level tutorials on my YouTube channel, as well as comprehensive courses on my website,
+
+16
+00:01:33,000 --> 00:01:37,000
+codewithmosh.com. I've put the links down below in case you're interested.
+
+17
+00:01:41,000 --> 00:01:46,000
+Alright, so I'm assuming that you're the right student for this course, now let's talk about how you should take this course.
+
+18
+00:01:46,000 --> 00:01:50,000
+First and foremost, I want you to watch this entire course all the way
+
+19
+00:01:50,000 --> 00:01:54,000
+from the beginning to the end, even if you're familiar with Django, because along the way
+
+20
+00:01:54,000 --> 00:01:58,000
+I will share a lot of tips and tricks and I don't want you to miss out on any of them.
+
+21
+00:01:58,000 --> 00:02:02,000
+If you have taken any of my other courses, you know that I'm not going to waste your time
+
+22
+00:02:02,000 --> 00:02:06,000
+with repetitive or useless stuff, so make sure to watch every lesson.
+
+23
+00:02:06,000 --> 00:02:10,000
+Now, while watching each lesson, I want you to take notes.
+
+24
+00:02:10,000 --> 00:02:14,000
+You can just write down some keywords on a piece of paper if you don't want to write a lot of notes.
+
+25
+00:02:14,000 --> 00:02:18,000
+I strongly believe that the act of writing things down will help you
+
+26
+00:02:18,000 --> 00:02:22,000
+remember new things that you learn. Then, after each lesson, go through
+
+27
+00:02:22,000 --> 00:02:26,000
+your notes and repeat the same steps I showed you in the video. This is exactly how
+
+28
+00:02:26,000 --> 00:02:30,000
+I personally learn new things. Also, I've carefully designed
+
+29
+00:02:30,000 --> 00:02:34,000
+tons of exercises that help you understand and remember the materials.
+
+30
+00:02:34,000 --> 00:02:38,000
+So make sure to do all these exercises, because the more you practice, the better you'll be
+
+31
+00:02:38,000 --> 00:02:42,000
+at Django or coding in general.
+
+32
+00:02:42,000 --> 00:02:46,000
+Welcome back to the Ultimate Django course. In this section,
+
+33
+00:02:46,000 --> 00:02:50,000
+we're going to talk about the basics of Django. First, I will give you a quick
+
+34
+00:02:50,000 --> 00:02:54,000
+introduction to what Django is and why it's so popular.
+
+35
+00:02:54,000 --> 00:02:58,000
+Then we'll talk about the fundamental web development concepts that every web
+
+36
+00:02:58,000 --> 00:03:02,000
+developer must know. Next, we'll set up our machine for development and
+
+37
+00:03:02,000 --> 00:03:06,000
+create our first Django project. Once that project is up and running,
+
+38
+00:03:06,000 --> 00:03:10,000
+I will show you two essential techniques for debugging Django applications.
+
+39
+00:03:10,000 --> 00:03:14,000
+This is going to be a short and sweet introduction to Django, so let's jump in and get started.
+
+40
+00:03:22,000 --> 00:03:26,000
+So what is Django and why is it so popular? Well, Django
+
+41
+00:03:26,000 --> 00:03:30,000
+is a free and open source framework for building web applications with
+
+42
+00:03:30,000 --> 00:03:34,000
+Python. It's not the only web framework for Python, but it's the most popular
+
+43
+00:03:34,000 --> 00:03:38,000
+one. Because it helps us build the website in less time with fewer
+
+44
+00:03:38,000 --> 00:03:42,000
+lines of code. That's why a lot of companies like YouTube, Instagram,
+
+45
+00:03:42,000 --> 00:03:46,000
+Spotify, and Dropbox use Django in their tech stack.
+
+46
+00:03:46,000 --> 00:03:50,000
+Now, Django is what we call a batteries included framework, which
+
+47
+00:03:50,000 --> 00:03:54,000
+means it comes with a lot of features out of the box so we don't have to
+
+48
+00:03:54,000 --> 00:03:58,000
+code them from scratch. For example, it gives us an admin interface for
+
+49
+00:03:58,000 --> 00:04:02,000
+managing our data which is a huge time saver, it also has an
+
+50
+00:04:02,000 --> 00:04:06,000
+object relational mapper that abstracts the database so we can query
+
+51
+00:04:06,000 --> 00:04:10,000
+or persist data without writing a lot of SQL code. It also comes
+
+52
+00:04:10,000 --> 00:04:14,000
+with an authentication package for identifying users, it also has a
+
+53
+00:04:14,000 --> 00:04:18,000
+package for caching data and much much more. So since Django
+
+54
+00:04:18,000 --> 00:04:22,000
+offers all these amazing features, we can focus on our application and its requirements.
+
+55
+00:04:22,000 --> 00:04:26,000
+We don't have to reinvent the wheel and code all these features from scratch.
+
+56
+00:04:26,000 --> 00:04:30,000
+Now, once in a while, you might come across someone like our popular
+
+57
+00:04:30,000 --> 00:04:34,000
+superstar developer, John Smith, who thinks Django is a piece of crap
+
+58
+00:04:34,000 --> 00:04:38,000
+because it's old and bloated with so many features. He used it, hated it,
+
+59
+00:04:38,000 --> 00:04:42,000
+and then rewrote his entire project with a new shiny framework that is
+
+60
+00:04:42,000 --> 00:04:46,000
+faster. Well, saying a framework is better than Django because it's faster
+
+61
+00:04:46,000 --> 00:04:50,000
+is kind of like saying a Ferrari is better than a truck because it's faster.
+
+62
+00:04:50,000 --> 00:04:54,000
+What if you want to move something? You're not going to use your Ferrari for that, right?
+
+63
+00:04:54,000 --> 00:04:58,000
+So a wise software engineer doesn't pick up a framework
+
+64
+00:04:58,000 --> 00:05:02,000
+merely based on its performance. There are so many other things you need to take into account
+
+65
+00:05:02,000 --> 00:05:06,000
+like the maturity of the framework, how stable it is from one version to another,
+
+66
+00:05:06,000 --> 00:05:10,000
+its learning curve, the size of the community and so on. Django
+
+67
+00:05:10,000 --> 00:05:14,000
+has been around for a long time and it has a huge community. So there are tons
+
+68
+00:05:14,000 --> 00:05:18,000
+of Django packages built by the community that you can reuse in your applications.
+
+69
+00:05:18,000 --> 00:05:22,000
+Also, if you get stuck, there's always someone out there to help you.
+
+70
+00:05:22,000 --> 00:05:26,000
+If you want to hire people, there are tons of people to choose from. So these are the benefits
+
+71
+00:05:26,000 --> 00:05:30,000
+of having a huge community around the framework. Now, regarding Django features,
+
+72
+00:05:30,000 --> 00:05:34,000
+yes, Django comes with a lot of features, but you don't have to use
+
+73
+00:05:34,000 --> 00:05:38,000
+or even learn all of them, because all these features are optional.
+
+74
+00:05:38,000 --> 00:05:42,000
+So you can use the features that make sense for your application. So in my opinion,
+
+75
+00:05:42,000 --> 00:05:46,000
+debates about the best framework in the world are useless. We all like
+
+76
+00:05:46,000 --> 00:05:50,000
+different things and just because someone doesn't like Django, it doesn't mean it's bad.
+
+77
+00:05:50,000 --> 00:05:54,000
+A lot of companies are using Django and are looking for Django developers.
+
+78
+00:05:54,000 --> 00:05:58,000
+Here in the US, the average salary of a Django developer is just over
+
+79
+00:05:58,000 --> 00:06:02,000
+$117,000 a year. So if you like Python and
+
+80
+00:06:02,000 --> 00:06:06,000
+want to get into web development, learning Django is a good investment for your future.
+
+81
+00:06:12,000 --> 00:06:16,000
+So, you learned that Django is a framework for building web
+
+82
+00:06:16,000 --> 00:06:20,000
+applications with Python. Now let's talk about some of the fundamental
+
+83
+00:06:20,000 --> 00:06:24,000
+concepts you need to understand to build web applications. Let's say we're going to
+
+84
+00:06:24,000 --> 00:06:28,000
+build an online store and publish it at mosh buy.com. Now this
+
+85
+00:06:28,000 --> 00:06:32,000
+website is going to have two parts or two applications. A front
+
+86
+00:06:32,000 --> 00:06:36,000
+end and a back end. The front end is the part that is loaded
+
+87
+00:06:36,000 --> 00:06:40,000
+inside a web browser on a client machine. It's the part that the user sees
+
+88
+00:06:40,000 --> 00:06:44,000
+and interacts with. The back end is the part that runs on a web server
+
+89
+00:06:44,000 --> 00:06:48,000
+and is responsible for data processing, validating business
+
+90
+00:06:48,000 --> 00:06:52,000
+rules and so on. Now let's imagine that Alice wants to visit our website.
+
+91
+00:06:52,000 --> 00:06:56,000
+So, she points her browser to mosh buy.com. This address
+
+92
+00:06:56,000 --> 00:07:00,000
+is also called a URL, which is short for uniform resource
+
+93
+00:07:00,000 --> 00:07:04,000
+locator. It's basically a way to locate a resource on our internet.
+
+94
+00:07:04,000 --> 00:07:08,000
+A resource can be a web page, an image, a video, a PDF
+
+95
+00:07:08,000 --> 00:07:12,000
+and so on. So, Alice types mosh buy.com in her browser and
+
+96
+00:07:12,000 --> 00:07:16,000
+presses enter. At this moment, her browser sends a request to the web
+
+97
+00:07:16,000 --> 00:07:20,000
+server that hosts our website and says, hey, Alice wants to see the
+
+98
+00:07:20,000 --> 00:07:24,000
+home page. So, the web server should take this request, process it,
+
+99
+00:07:24,000 --> 00:07:28,000
+and return a response back to the client. This data exchange is
+
+100
+00:07:28,000 --> 00:07:32,000
+defined by a protocol called HTTP, which is short for hyper text
+
+101
+00:07:32,000 --> 00:07:36,000
+transfer protocol. It defines how clients and servers can communicate.
+
+102
+00:07:36,000 --> 00:07:40,000
+So this is the big picture. As Alice navigates our website,
+
+103
+00:07:40,000 --> 00:07:44,000
+for each page, her browser sends an HTTP request to the server
+
+104
+00:07:44,000 --> 00:07:48,000
+and receives an HTTP response. Now, as part of building the back end
+
+105
+00:07:48,000 --> 00:07:52,000
+for this website, we need to decide how we're going to respond to clients.
+
+106
+00:07:52,000 --> 00:07:56,000
+One option is to generate the requested page on the server and return it to the client.
+
+107
+00:07:56,000 --> 00:08:00,000
+We use HTML for that. HTML is short for hyper text
+
+108
+00:08:00,000 --> 00:08:04,000
+markup language. It's a simple language for representing web pages
+
+109
+00:08:04,000 --> 00:08:08,000
+on their content. Every web page we have seen on our internet is built using HTML.
+
+110
+00:08:08,000 --> 00:08:12,000
+So one option is to generate the page on the server and return
+
+111
+00:08:12,000 --> 00:08:16,000
+an HTML document to the client. The other option is to return
+
+112
+00:08:16,000 --> 00:08:20,000
+only the data needed on the requested page and have the client generate
+
+113
+00:08:20,000 --> 00:08:24,000
+the page. So, instead of putting a complete page or
+
+114
+00:08:24,000 --> 00:08:28,000
+a complete HTML document in an HTTP response, we only return
+
+115
+00:08:28,000 --> 00:08:32,000
+the data like the list of products. Now what is the difference?
+
+116
+00:08:32,000 --> 00:08:36,000
+Well, if we push this responsibility to the client, we can free up the server
+
+117
+00:08:36,000 --> 00:08:40,000
+so it can serve more clients. Our application will be more scalable.
+
+118
+00:08:40,000 --> 00:08:44,000
+That's why over the past few years this approach has become more trendy and
+
+119
+00:08:44,000 --> 00:08:48,000
+is now considered the industry best practice. These days we have tools like
+
+120
+00:08:48,000 --> 00:08:52,000
+React, Angular, and Vue for generating web pages on the client.
+
+121
+00:08:52,000 --> 00:08:56,000
+These are all client side tools that are used by front end developers. In contrast,
+
+122
+00:08:56,000 --> 00:09:00,000
+we have server side tools for building back ends. Django falls
+
+123
+00:09:00,000 --> 00:09:04,000
+in this category. So you should not compare Django with let's say React.
+
+124
+00:09:04,000 --> 00:09:08,000
+You may compare Django with other server side frameworks like
+
+125
+00:09:08,000 --> 00:09:12,000
+ASP.NET Core which is used by C sharp developers, Express used by
+
+126
+00:09:12,000 --> 00:09:16,000
+JavaScript developers and so on. So if we push the responsibility
+
+127
+00:09:16,000 --> 00:09:20,000
+of generating web pages to the client, the server essentially becomes
+
+128
+00:09:20,000 --> 00:09:24,000
+a gateway to the data. On the server, we can provide endpoints
+
+129
+00:09:24,000 --> 00:09:28,000
+that the client can talk to to get or save various pieces of data.
+
+130
+00:09:28,000 --> 00:09:32,000
+For example, we can provide one endpoint to get the list of products
+
+131
+00:09:32,000 --> 00:09:36,000
+and another endpoint to get the list of orders someone has placed.
+
+132
+00:09:36,000 --> 00:09:40,000
+Now all these endpoints together represent the interface that clients
+
+133
+00:09:40,000 --> 00:09:44,000
+use to talk to the server. In technical terms, we say the server
+
+134
+00:09:44,000 --> 00:09:48,000
+provides an API or an application programming interface to clients.
+
+135
+00:09:48,000 --> 00:09:52,000
+This API is essentially like the buttons on a remote control.
+
+136
+00:09:52,000 --> 00:09:56,000
+All these buttons together represent the interface or the API we use to
+
+137
+00:09:56,000 --> 00:10:00,000
+interact with the TV. Okay? So in this course, our focus will
+
+138
+00:10:00,000 --> 00:10:04,000
+be on using Django to build an API for our online store. Client
+
+139
+00:10:04,000 --> 00:10:08,000
+applications can use this API to get or save the data. How
+
+140
+00:10:08,000 --> 00:10:12,000
+these clients are built is irrelevant here. We can use react, angular, or
+
+141
+00:10:12,000 --> 00:10:16,000
+even plain JavaScript. That falls under frontend development which has nothing to do
+
+142
+00:10:16,000 --> 00:10:20,000
+with Django. Once we build this API, if you know frontend development, you can
+
+143
+00:10:20,000 --> 00:10:24,000
+always build a client app that talks to this API. Alright, now that
+
+144
+00:10:24,000 --> 00:10:28,000
+you understand the big picture, we are ready to set up our development environment.
+
+145
+00:10:28,000 --> 00:10:32,000
+And that's what we will do next.
+
+146
+00:10:32,000 --> 00:10:38,000
+Alright, let's
+
+147
+00:10:38,000 --> 00:10:42,000
+make sure you have the right setup before we start coding. The first thing I want you to do is
+
+148
+00:10:42,000 --> 00:10:46,000
+upgrade your python to the latest version. So head over to python.org
+
+149
+00:10:46,000 --> 00:10:50,000
+slash download and download the latest version of python for your operating system.
+
+150
+00:10:50,000 --> 00:10:54,000
+Once you do that, then open up your terminal window and run
+
+151
+00:10:54,000 --> 00:10:58,000
+python dash dash version to make sure you have upgraded your python
+
+152
+00:10:58,000 --> 00:11:02,000
+correctly. Now here we see python 2.7 because on
+
+153
+00:11:02,000 --> 00:11:06,000
+mac we have two different versions of python running side by side. We have the old
+
+154
+00:11:06,000 --> 00:11:10,000
+python 2 which is now deprecated and we also have python
+
+155
+00:11:10,000 --> 00:11:14,000
+3. So if you're using a mac, you have to run python 3
+
+156
+00:11:14,000 --> 00:11:18,000
+dash dash version. But if you're on windows or linux you have to run
+
+157
+00:11:18,000 --> 00:11:22,000
+python dash dash version. So here I'm using python
+
+158
+00:11:22,000 --> 00:11:26,000
+3.9.5, great. Next we're going to use pip
+
+159
+00:11:26,000 --> 00:11:30,000
+or pip 3 if you're on mac, to install pip
+
+160
+00:11:30,000 --> 00:11:34,000
+n. I talked about pip n in my python course, it's basically a
+
+161
+00:11:34,000 --> 00:11:38,000
+dependency management tool for installing our application dependencies in
+
+162
+00:11:38,000 --> 00:11:42,000
+virtual environments. This way our application dependencies will not
+
+163
+00:11:42,000 --> 00:11:46,000
+clash with other applications dependencies. Okay, so
+
+164
+00:11:46,000 --> 00:11:50,000
+let's go ahead and install this.
+
+165
+00:11:50,000 --> 00:11:54,000
+Now in this course, just like my other courses, I'm going to use
+
+166
+00:11:54,000 --> 00:11:58,000
+visual studio code or vs code as my editor. It's just my personal preference.
+
+167
+00:11:58,000 --> 00:12:02,000
+If you have a preference for a different tool like pycharm, that's totally fine.
+
+168
+00:12:02,000 --> 00:12:06,000
+Having said that, I highly encourage you to use vs code, because throughout
+
+169
+00:12:06,000 --> 00:12:10,000
+the course I'm going to show you a lot of shortcuts and time saving tips that will
+
+170
+00:12:10,000 --> 00:12:14,000
+not apply to your editor. In case you don't have vs code, you can get it from
+
+171
+00:12:14,000 --> 00:12:18,000
+code.visualstudio.com. Now once you run it,
+
+172
+00:12:18,000 --> 00:12:22,000
+I want you to go to the extensions panel over here, and search
+
+173
+00:12:22,000 --> 00:12:26,000
+for python, make sure to install this extension
+
+174
+00:12:26,000 --> 00:12:30,000
+because with this we get features such as intellisense, debugging, code
+
+175
+00:12:30,000 --> 00:12:34,000
+navigation and so on.
+
+176
+00:12:38,000 --> 00:12:42,000
+Alright, now that we have installed all the necessary tools, let's create our first
+
+177
+00:12:42,000 --> 00:12:46,000
+Django project. So here in the terminal window, I'm going to go to my desktop,
+
+178
+00:12:46,000 --> 00:12:50,000
+you can go anywhere on your machine, it doesn't really matter, now
+
+179
+00:12:50,000 --> 00:12:54,000
+we're going to create a directory called storefront.
+
+180
+00:12:54,000 --> 00:12:58,000
+That is the name of our project. Next, we go inside this directory
+
+181
+00:12:58,000 --> 00:13:02,000
+and run pipenv install Django.
+
+182
+00:13:02,000 --> 00:13:06,000
+So we're going to install Django using pipenv inside a
+
+183
+00:13:06,000 --> 00:13:10,000
+virtual environment. Now, let's go ahead,
+
+184
+00:13:10,000 --> 00:13:14,000
+take a look, so over here
+
+185
+00:13:14,000 --> 00:13:18,000
+you can see that pipenv has created a virtual environment for this
+
+186
+00:13:18,000 --> 00:13:22,000
+project. Down below you can see the path to this virtual environment.
+
+187
+00:13:22,000 --> 00:13:26,000
+Now if you're on windows, you're going to see something like C drive backslash
+
+188
+00:13:26,000 --> 00:13:30,000
+whatever. Now if you're on a Mac and using z shell, which is this fancy
+
+189
+00:13:30,000 --> 00:13:34,000
+colorful terminal window, you can hold down the command key
+
+190
+00:13:34,000 --> 00:13:38,000
+and click on this path to go into it, otherwise you can just copy
+
+191
+00:13:38,000 --> 00:13:42,000
+this and use the cd command to go inside this directory.
+
+192
+00:13:42,000 --> 00:13:46,000
+Now take a look, so here's our virtual environment,
+
+193
+00:13:46,000 --> 00:13:50,000
+in this environment we have this bin folder that contains
+
+194
+00:13:50,000 --> 00:13:54,000
+a bunch of binaries, for example we have python, pip, Django
+
+195
+00:13:54,000 --> 00:13:58,000
+admin and so on. So back to the terminal, pipenv
+
+196
+00:13:58,000 --> 00:14:02,000
+created a virtual environment and installed Django inside that environment.
+
+197
+00:14:02,000 --> 00:14:06,000
+But in addition to this, pipenv also created two files
+
+198
+00:14:06,000 --> 00:14:10,000
+in this directory, pipfile and pipfile.log.
+
+199
+00:14:10,000 --> 00:14:14,000
+So I'm going to open this directory using visual studio code by running
+
+200
+00:14:14,000 --> 00:14:18,000
+code period. If this doesn't work on your machine, just drag and drop
+
+201
+00:14:18,000 --> 00:14:22,000
+this folder onto vs code. Alright,
+
+202
+00:14:22,000 --> 00:14:26,000
+so here's our pipfile, this is like package.json for JavaScript
+
+203
+00:14:26,000 --> 00:14:30,000
+projects. So in this file we can see that our project needs
+
+204
+00:14:30,000 --> 00:14:34,000
+this particular version of python, and under packages
+
+205
+00:14:34,000 --> 00:14:38,000
+you can see the packages that our application is dependent upon.
+
+206
+00:14:38,000 --> 00:14:42,000
+So here we have Django equals asterisk, that means any version
+
+207
+00:14:42,000 --> 00:14:46,000
+or the latest version of Django. If we installed a particular version
+
+208
+00:14:46,000 --> 00:14:50,000
+of Django, we would see that version here. Now back to the terminal
+
+209
+00:14:50,000 --> 00:14:54,000
+window, we need to activate this virtual environment, so we'll use the
+
+210
+00:14:54,000 --> 00:14:58,000
+python interpreter inside this virtual environment, not the one that is
+
+211
+00:14:58,000 --> 00:15:02,000
+installed globally on this machine. To do that we're going to run pipenv
+
+212
+00:15:02,000 --> 00:15:06,000
+shell. Okay, next
+
+213
+00:15:06,000 --> 00:15:10,000
+we're going to use Django admin to start a new project. Django
+
+214
+00:15:10,000 --> 00:15:14,000
+admin is a utility that comes with Django. So if you run it,
+
+215
+00:15:14,000 --> 00:15:18,000
+we can see all these commands that we can use to work with Django
+
+216
+00:15:18,000 --> 00:15:22,000
+projects. As we go through the course, you'll become familiar with these commands.
+
+217
+00:15:22,000 --> 00:15:26,000
+In this lesson we're going to use Django admin, start
+
+218
+00:15:26,000 --> 00:15:30,000
+project, and we're going to call that project store front.
+
+219
+00:15:30,000 --> 00:15:34,000
+Now back to vs code, Django
+
+220
+00:15:34,000 --> 00:15:38,000
+admin created this directory for our project, and inside this directory
+
+221
+00:15:38,000 --> 00:15:42,000
+it created another directory that is the core of our application.
+
+222
+00:15:42,000 --> 00:15:46,000
+In this directory we have these files which I'm going to talk about in a second, but before
+
+223
+00:15:46,000 --> 00:15:50,000
+I do so, let's get rid of this redundancy. Because we have three
+
+224
+00:15:50,000 --> 00:15:54,000
+store front directories. The top one is the one that we created
+
+225
+00:15:54,000 --> 00:15:58,000
+earlier in the terminal, and then we have these two other directories
+
+226
+00:15:58,000 --> 00:16:02,000
+one for the project, one for the core of our application. So
+
+227
+00:16:02,000 --> 00:16:06,000
+I'm going to delete this project directory,
+
+228
+00:16:06,000 --> 00:16:10,000
+now we're back in the previous step. So we don't have a Django project at this stage.
+
+229
+00:16:10,000 --> 00:16:14,000
+Now, back in the terminal, let's bring up the last command
+
+230
+00:16:14,000 --> 00:16:18,000
+but type a period at the end. This tells Django to use
+
+231
+00:16:18,000 --> 00:16:22,000
+the current directory as the project directory. So Django is not going to
+
+232
+00:16:22,000 --> 00:16:26,000
+create an additional directory for our project.
+
+233
+00:16:26,000 --> 00:16:30,000
+Now take a look. So, we have this directory
+
+234
+00:16:30,000 --> 00:16:34,000
+which is the core of our application. In this directory we have this init file
+
+235
+00:16:34,000 --> 00:16:38,000
+which defines this directory as a package, we have this settings module
+
+236
+00:16:38,000 --> 00:16:42,000
+where we define our application settings, we have the URLs module
+
+237
+00:16:42,000 --> 00:16:46,000
+where we define the URLs of our application, and these two other modules
+
+238
+00:16:46,000 --> 00:16:50,000
+that are used for deployment. For now, don't worry about them.
+
+239
+00:16:50,000 --> 00:16:54,000
+Now, next to this directory we have is file manage.py.
+
+240
+00:16:54,000 --> 00:16:58,000
+This is a wrapper around Django admin, so going forward
+
+241
+00:16:58,000 --> 00:17:02,000
+instead of Django admin we're going to use manage.py. The reason for this
+
+242
+00:17:02,000 --> 00:17:06,000
+is that manage.py takes the settings of this project into account.
+
+243
+00:17:06,000 --> 00:17:10,000
+Let me show you what I mean. So, now that we have a project
+
+244
+00:17:10,000 --> 00:17:14,000
+we want to run a web server. So, another command that Django admin
+
+245
+00:17:14,000 --> 00:17:18,000
+provides is run server.
+
+246
+00:17:18,000 --> 00:17:22,000
+However, if you're on Django admin, run server
+
+247
+00:17:22,000 --> 00:17:26,000
+we get an error saying request setting
+
+248
+00:17:26,000 --> 00:17:30,000
+debug, but settings are not configured because at this point
+
+249
+00:17:30,000 --> 00:17:34,000
+Django admin doesn't know about the settings of our project. So,
+
+250
+00:17:34,000 --> 00:17:38,000
+now that we have a project, instead of Django admin we're going to run
+
+251
+00:17:38,000 --> 00:17:42,000
+python manage.py, now look
+
+252
+00:17:42,000 --> 00:17:46,000
+we see the same commands that Django admin provides.
+
+253
+00:17:46,000 --> 00:17:50,000
+So, here we can say python manage.py
+
+254
+00:17:50,000 --> 00:17:54,000
+run server. Now, optionally we can supply a port
+
+255
+00:17:54,000 --> 00:17:58,000
+number, if we don't supply this, by default this will use port
+
+256
+00:17:58,000 --> 00:18:02,000
+8000. But you might have another application running on port 8000,
+
+257
+00:18:02,000 --> 00:18:06,000
+in that case you might want to explicitly set the port number. So,
+
+258
+00:18:06,000 --> 00:18:10,000
+let's go ahead with that, now we don't get an error, because manage.py
+
+259
+00:18:10,000 --> 00:18:14,000
+knows about the settings of our project. Now,
+
+260
+00:18:14,000 --> 00:18:18,000
+here we get this warning saying you have 18 unapplied migrations.
+
+261
+00:18:18,000 --> 00:18:22,000
+Don't worry about this yet, we'll talk about this soon. So, if you look
+
+262
+00:18:22,000 --> 00:18:26,000
+over here, you can see that Django has started a development server
+
+263
+00:18:26,000 --> 00:18:30,000
+at this address. So we can copy this and paste it into browser,
+
+264
+00:18:30,000 --> 00:18:34,000
+or if you're on a Mac and using z shell, you can hold down the command key
+
+265
+00:18:34,000 --> 00:18:38,000
+and click this. Alright, beautiful,
+
+266
+00:18:38,000 --> 00:18:42,000
+our first Django project is running successfully, so let's move on to the next lesson.
+
+267
+00:18:50,000 --> 00:18:54,000
+So far I've been using a separate terminal window, but vs code also has
+
+268
+00:18:54,000 --> 00:18:58,000
+an integrated terminal window that is easier to use, but to use that
+
+269
+00:18:58,000 --> 00:19:02,000
+we have to properly configure it to use the python interpreter inside
+
+270
+00:19:02,000 --> 00:19:06,000
+our virtual environment. Let me show you how to do this. So,
+
+271
+00:19:06,000 --> 00:19:10,000
+back to our terminal window, first we're going to stop the web server by pressing
+
+272
+00:19:10,000 --> 00:19:14,000
+ctrl and c. Now, back in vs code,
+
+273
+00:19:14,000 --> 00:19:18,000
+on the top, under the view menu, look,
+
+274
+00:19:18,000 --> 00:19:22,000
+we have this command palette, the shortcut on Mac is shift, command
+
+275
+00:19:22,000 --> 00:19:26,000
+and p. Now here we're going to search for python
+
+276
+00:19:26,000 --> 00:19:30,000
+interpreter. So, currently,
+
+277
+00:19:30,000 --> 00:19:34,000
+vs code is using this python interpreter that is installed globally on this
+
+278
+00:19:34,000 --> 00:19:38,000
+machine, we don't want to use this, we want to use the one inside our virtual environment.
+
+279
+00:19:38,000 --> 00:19:42,000
+But how can we find the path to our virtual environment? Very easy.
+
+280
+00:19:42,000 --> 00:19:46,000
+So, back to the terminal, let's run pip n
+
+281
+00:19:46,000 --> 00:19:50,000
+dash dash vn. Alright, here's the path
+
+282
+00:19:50,000 --> 00:19:54,000
+so let's copy this, good,
+
+283
+00:19:54,000 --> 00:19:58,000
+now back to vs code, we're going to select
+
+284
+00:19:58,000 --> 00:20:02,000
+interpreter path, then we're going to paste the path, and append
+
+285
+00:20:02,000 --> 00:20:06,000
+slash bin slash python
+
+286
+00:20:06,000 --> 00:20:10,000
+at the end. If you're on windows, instead of a forward slash, you have to
+
+287
+00:20:10,000 --> 00:20:14,000
+use a backslash. Good, now
+
+288
+00:20:14,000 --> 00:20:18,000
+in this project we have an extra directory vs code,
+
+289
+00:20:18,000 --> 00:20:22,000
+we have a settings file, and here we have the path to
+
+290
+00:20:22,000 --> 00:20:26,000
+python interpreter. Good. With this, we can go to the view menu,
+
+291
+00:20:26,000 --> 00:20:30,000
+now look, we have this integrated terminal,
+
+292
+00:20:30,000 --> 00:20:34,000
+the shortcut on Mac is control and backtick,
+
+293
+00:20:34,000 --> 00:20:38,000
+now vs code automatically activates the virtual environment
+
+294
+00:20:38,000 --> 00:20:42,000
+for this project. So, here we can run python
+
+295
+00:20:42,000 --> 00:20:46,000
+manage.py, run server. Good, so going
+
+296
+00:20:46,000 --> 00:20:50,000
+forward, I'm going to use the integrated terminal window here, it's easier,
+
+297
+00:20:50,000 --> 00:20:54,000
+we can always hide it by pressing control and backtick, or bring it
+
+298
+00:20:54,000 --> 00:20:58,000
+back, we can maximize it, move it around and so on.
+
+299
+00:20:58,000 --> 00:21:02,000
+Now one quick tip, sometimes when running this command, you might get a
+
+300
+00:21:02,000 --> 00:21:06,000
+syntax error saying invalid syntax. This happens every now and then
+
+301
+00:21:06,000 --> 00:21:10,000
+when vs code fails to activate the virtual environment for this project.
+
+302
+00:21:10,000 --> 00:21:14,000
+To solve this problem, all you have to do is open a new
+
+303
+00:21:14,000 --> 00:21:18,000
+terminal window, and look vs code executed this command
+
+304
+00:21:18,000 --> 00:21:22,000
+to activate the virtual environment for this project. Now we can run
+
+305
+00:21:22,000 --> 00:21:26,000
+python manage.py run server. Great.
+
+306
+00:21:26,000 --> 00:21:30,000
+Hey guys, Mosh here, I just wanted to let you know
+
+307
+00:21:30,000 --> 00:21:34,000
+that this tutorial you've been watching is actually the first hour of my
+
+308
+00:21:34,000 --> 00:21:38,000
+ultimate Django course. The complete course is about 10 hours and
+
+309
+00:21:38,000 --> 00:21:42,000
+goes way beyond this tutorial. So if you're serious about learning Django
+
+310
+00:21:42,000 --> 00:21:46,000
+and are looking for a job as a backend developer, I highly encourage you to
+
+311
+00:21:46,000 --> 00:21:50,000
+enroll in the course. The course comes with tons of exercises and solutions,
+
+312
+00:21:50,000 --> 00:21:54,000
+a full e-commerce project that you will eventually deploy to the cloud, plus
+
+313
+00:21:54,000 --> 00:21:58,000
+a 30 day money back guarantee and a certificate of completion you can add to your
+
+314
+00:21:58,000 --> 00:22:02,000
+resume. In case you're interested, I'll put the link down below. And if not,
+
+315
+00:22:02,000 --> 00:22:06,000
+that's totally fine, let's move on to the next lesson.
+
+316
+00:22:06,000 --> 00:22:10,000
+Alright,
+
+317
+00:22:10,000 --> 00:22:14,000
+let's talk about apps. So every Django project is essentially
+
+318
+00:22:14,000 --> 00:22:18,000
+a collection of various apps, each providing certain functionality.
+
+319
+00:22:18,000 --> 00:22:22,000
+Just like the apps on your mobile phone, each app provides a certain
+
+320
+00:22:22,000 --> 00:22:26,000
+functionality, right? Django projects are exactly the same. So
+
+321
+00:22:26,000 --> 00:22:30,000
+in this project, let's open up the store front directory, and then
+
+322
+00:22:30,000 --> 00:22:34,000
+look at our settings module. Now we can collapse this panel by pressing command
+
+323
+00:22:34,000 --> 00:22:38,000
+and B on Mac, or control and B on Windows. Okay, now
+
+324
+00:22:38,000 --> 00:22:42,000
+in this module, we have a bunch of different settings, in this lesson
+
+325
+00:22:42,000 --> 00:22:46,000
+we're going to look at the install apps. So every Django project
+
+326
+00:22:46,000 --> 00:22:50,000
+by default includes these apps. The first app is the
+
+327
+00:22:50,000 --> 00:22:54,000
+admin app, which gives us an admin interface for managing our data.
+
+328
+00:22:54,000 --> 00:22:58,000
+Then we have the auth app, which is used for authenticating
+
+329
+00:22:58,000 --> 00:23:02,000
+users, then we have content types app, which we'll talk about later in the course.
+
+330
+00:23:02,000 --> 00:23:06,000
+Next we have the sessions app, which is kind of legacy, we don't use sessions anymore.
+
+331
+00:23:06,000 --> 00:23:10,000
+A session is a temporary memory on the server for managing
+
+332
+00:23:10,000 --> 00:23:14,000
+users data. These days when building APIs with Django, we don't use
+
+333
+00:23:14,000 --> 00:23:18,000
+the sessions app. So we can come here and delete this app.
+
+334
+00:23:18,000 --> 00:23:22,000
+Then we have the messages app, which is used for displaying one time
+
+335
+00:23:22,000 --> 00:23:26,000
+notifications to the user, and finally we have the static files app
+
+336
+00:23:26,000 --> 00:23:30,000
+for serving static files, like images, CSS files and so on.
+
+337
+00:23:30,000 --> 00:23:34,000
+So each app provides a certain piece of functionality.
+
+338
+00:23:34,000 --> 00:23:38,000
+Now we can also create our own apps here. So let's save this file.
+
+339
+00:23:38,000 --> 00:23:42,000
+Now let's open up the terminal window by pressing control and back
+
+340
+00:23:42,000 --> 00:23:46,000
+tick. So here's our terminal window where we have our development
+
+341
+00:23:46,000 --> 00:23:50,000
+server running. We're going to open a new terminal window.
+
+342
+00:23:50,000 --> 00:23:54,000
+Okay, now let's expand this. To clear the window
+
+343
+00:23:54,000 --> 00:23:58,000
+we simply press control and L. Now we're going to run Python
+
+344
+00:23:58,000 --> 00:24:02,000
+manage.py, start app, and we're going to call this app
+
+345
+00:24:02,000 --> 00:24:06,000
+playground. Okay, so let's close
+
+346
+00:24:06,000 --> 00:24:10,000
+this window and open up the explorer panel. Alright,
+
+347
+00:24:10,000 --> 00:24:14,000
+look, here's our new app which is represented using a folder with a
+
+348
+00:24:14,000 --> 00:24:18,000
+special structure. So every Django app has the exact same structure.
+
+349
+00:24:18,000 --> 00:24:22,000
+Here we have the migrations folder for generating database tables,
+
+350
+00:24:22,000 --> 00:24:26,000
+we'll talk about that later in the course. We have a complete section about this topic.
+
+351
+00:24:26,000 --> 00:24:30,000
+We have the admin module where we define how the admin interface
+
+352
+00:24:30,000 --> 00:24:34,000
+for this app is going to look like. Next we have the apps module where
+
+353
+00:24:34,000 --> 00:24:38,000
+we configure this app. So the name is misleading. I don't know why Django
+
+354
+00:24:38,000 --> 00:24:42,000
+developers decided to call this module apps. It would be better if it was called
+
+355
+00:24:42,000 --> 00:24:46,000
+config. That's just my two cents. Next we have the models module where we define
+
+356
+00:24:46,000 --> 00:24:50,000
+the model classes for this app. We use model classes to pull out
+
+357
+00:24:50,000 --> 00:24:54,000
+data from the database and present to the user. Next we have the tests
+
+358
+00:24:54,000 --> 00:24:58,000
+module where we write our unit tests. And finally we have the views
+
+359
+00:24:58,000 --> 00:25:02,000
+module which we'll talk about in the next lesson. Again the name is misleading, this is
+
+360
+00:25:02,000 --> 00:25:06,000
+not the view that you think if you come from a frontend development background. So
+
+361
+00:25:06,000 --> 00:25:10,000
+what we have here is essentially a request handler. It's not a view, it doesn't have
+
+362
+00:25:10,000 --> 00:25:14,000
+a template or HTML. Again we'll talk about that in the next lesson.
+
+363
+00:25:14,000 --> 00:25:18,000
+So we created a new app, now we need to register this app in the
+
+364
+00:25:18,000 --> 00:25:22,000
+settings module. So, every time you create a new app,
+
+365
+00:25:22,000 --> 00:25:26,000
+you need to register it here in the list of installed apps. We simply
+
+366
+00:25:26,000 --> 00:25:30,000
+add the name of the app which is called playground.
+
+367
+00:25:30,000 --> 00:25:34,000
+Save the changes, done. In the next lesson we're going to talk about views.
+
+368
+00:25:38,000 --> 00:25:42,000
+Alright, let's talk about views. So
+
+369
+00:25:42,000 --> 00:25:46,000
+earlier you learned that HTTP is a request response protocol.
+
+370
+00:25:46,000 --> 00:25:50,000
+So every data exchange involves a request and a response. This is
+
+371
+00:25:50,000 --> 00:25:54,000
+where we use views in Django. So here in the playground folder,
+
+372
+00:25:54,000 --> 00:25:58,000
+let's open up the views module. This is where we define our
+
+373
+00:25:58,000 --> 00:26:02,000
+views or view functions. A view function is a function that
+
+374
+00:26:02,000 --> 00:26:06,000
+takes a request and returns a response. So more
+
+375
+00:26:06,000 --> 00:26:10,000
+accurately, it's a request handler. In some frameworks
+
+376
+00:26:10,000 --> 00:26:14,000
+it's called an action. In Django it's called a view. But I don't
+
+377
+00:26:14,000 --> 00:26:18,000
+agree with this name because from an architectural point of view, a view is often
+
+378
+00:26:18,000 --> 00:26:22,000
+associated with something that the user sees. That part in Django is called
+
+379
+00:26:22,000 --> 00:26:26,000
+a template and we'll talk about that later in this section. Now that aside, let's
+
+380
+00:26:26,000 --> 00:26:30,000
+create our first view function. So we're going to create a function
+
+381
+00:26:30,000 --> 00:26:34,000
+we can call it anything we want. I'm going to call it say
+
+382
+00:26:34,000 --> 00:26:38,000
+hello. Now this function should take a request object and
+
+383
+00:26:38,000 --> 00:26:42,000
+return a response. So first, on the top
+
+384
+00:26:42,000 --> 00:26:46,000
+from Django, that HTTP package, we're going to import
+
+385
+00:26:46,000 --> 00:26:50,000
+the HTTP response class. Now in this function we can
+
+386
+00:26:50,000 --> 00:26:54,000
+do anything we want. In a real world scenario we can pull data from a database
+
+387
+00:26:54,000 --> 00:26:58,000
+we can transform data, we can send emails and so on.
+
+388
+00:26:58,000 --> 00:27:02,000
+For now, let's just return a simple response. So we're
+
+389
+00:27:02,000 --> 00:27:06,000
+going to return an instance of the HTTP response
+
+390
+00:27:06,000 --> 00:27:10,000
+class, and in this object, in this response, you want to
+
+391
+00:27:10,000 --> 00:27:14,000
+add a simple string. So let's say hello world.
+
+392
+00:27:14,000 --> 00:27:18,000
+So this is our first view or first view function, now we need to
+
+393
+00:27:18,000 --> 00:27:22,000
+map this view to a URL, so when we get a request at that URL
+
+394
+00:27:22,000 --> 00:27:26,000
+this function will be called. And that's what we're going to do next.
+
+395
+00:27:30,000 --> 00:27:34,000
+Alright here's our Django project, now let's say
+
+396
+00:27:34,000 --> 00:27:38,000
+whenever we send a request to playground slash hello,
+
+397
+00:27:38,000 --> 00:27:42,000
+our view function should be called and return hello world to the user. Let's see
+
+398
+00:27:42,000 --> 00:27:46,000
+how we can do that. So back to our project, here in the playground folder
+
+399
+00:27:46,000 --> 00:27:50,000
+we're going to add a new file called URLs.py
+
+400
+00:27:50,000 --> 00:27:54,000
+you could call it anything, the name doesn't matter, but by convention we call it
+
+401
+00:27:54,000 --> 00:27:58,000
+URLs. Now in this module we're going to map our
+
+402
+00:27:58,000 --> 00:28:02,000
+URLs to our view functions. So on the top we're going to import
+
+403
+00:28:02,000 --> 00:28:06,000
+the path function from Django.URLs. So from
+
+404
+00:28:06,000 --> 00:28:10,000
+Django.URLs we're going to import the path function. Now don't worry about
+
+405
+00:28:10,000 --> 00:28:14,000
+memorizing any of these, as you practice all of this will become second nature.
+
+406
+00:28:14,000 --> 00:28:18,000
+Also, from the current folder we should import the
+
+407
+00:28:18,000 --> 00:28:22,000
+views module so we can reference our view function. Now we should define
+
+408
+00:28:22,000 --> 00:28:26,000
+a special variable called URL patterns. All in
+
+409
+00:28:26,000 --> 00:28:30,000
+lower case, make sure to spell it properly, because this is what Django looks for.
+
+410
+00:28:30,000 --> 00:28:34,000
+We should set this to an array of URL pattern
+
+411
+00:28:34,000 --> 00:28:38,000
+objects. We use the path function to create a URL pattern
+
+412
+00:28:38,000 --> 00:28:42,000
+object. So if we call this function, look at the signature of this function,
+
+413
+00:28:42,000 --> 00:28:46,000
+this function has a bunch of parameters, the first one is route, which is
+
+414
+00:28:46,000 --> 00:28:50,000
+a string, the notation you see here is called type annotation, which is kind of
+
+415
+00:28:50,000 --> 00:28:54,000
+a new feature in Python, with type annotation we can see the type of parameters
+
+416
+00:28:54,000 --> 00:28:58,000
+and the return value of a function. So the first parameter is route
+
+417
+00:28:58,000 --> 00:29:02,000
+which is a string, the second parameter is view, which is a function
+
+418
+00:29:02,000 --> 00:29:06,000
+that returns HTTP response object. Now look over here,
+
+419
+00:29:06,000 --> 00:29:10,000
+this notation represents the return type of this function.
+
+420
+00:29:10,000 --> 00:29:14,000
+So the path function returns a URL pattern object.
+
+421
+00:29:14,000 --> 00:29:18,000
+So I'm going to call this function and give it two arguments. A route or
+
+422
+00:29:18,000 --> 00:29:22,000
+a URL, which is playground slash hello, and
+
+423
+00:29:22,000 --> 00:29:26,000
+a view function. So from the views module we're going to get
+
+424
+00:29:26,000 --> 00:29:30,000
+say hello. Note that I'm not calling this function so here
+
+425
+00:29:30,000 --> 00:29:34,000
+we don't have a pair of parenthesis, we're just passing a reference to this function.
+
+426
+00:29:34,000 --> 00:29:38,000
+Okay, so what we have here is called
+
+427
+00:29:38,000 --> 00:29:42,000
+a URL conf module, that basically means URL configuration.
+
+428
+00:29:42,000 --> 00:29:46,000
+So every app can have its own URL configuration. But
+
+429
+00:29:46,000 --> 00:29:50,000
+now we need to import this URL configuration into the main URL configuration
+
+430
+00:29:50,000 --> 00:29:54,000
+for this project. Where is it? You saw it earlier.
+
+431
+00:29:54,000 --> 00:29:58,000
+So, back to the explorer panel, here in the store front folder,
+
+432
+00:29:58,000 --> 00:30:02,000
+we have another URLs module.
+
+433
+00:30:02,000 --> 00:30:06,000
+Up here we have a bunch of comments about how we should use this module,
+
+434
+00:30:06,000 --> 00:30:10,000
+now look over here. If you want to include another URL conf
+
+435
+00:30:10,000 --> 00:30:14,000
+there are two things we need to do. First we need to import the include function
+
+436
+00:30:14,000 --> 00:30:18,000
+from Django.URLs, so over here we have from Django.URLs
+
+437
+00:30:18,000 --> 00:30:22,000
+we're going to import the include function.
+
+438
+00:30:22,000 --> 00:30:26,000
+Next we need to add a URL to URL patterns.
+
+439
+00:30:26,000 --> 00:30:30,000
+So in this module, we also have a URL patterns object
+
+440
+00:30:30,000 --> 00:30:34,000
+which is an array of URL patterns object. So here we're going to call
+
+441
+00:30:34,000 --> 00:30:38,000
+paths, give it a route, and then we use
+
+442
+00:30:38,000 --> 00:30:42,000
+the include function to reference the URL configuration module
+
+443
+00:30:42,000 --> 00:30:46,000
+in this app. So
+
+444
+00:30:46,000 --> 00:30:50,000
+we're going to call paths and say any URLs
+
+445
+00:30:50,000 --> 00:30:54,000
+that start with playground, followed by a forward slash
+
+446
+00:30:54,000 --> 00:30:58,000
+should be routed to our playground app. So this is where we use
+
+447
+00:30:58,000 --> 00:31:02,000
+the include function. Now, the include function requires a parameter
+
+448
+00:31:02,000 --> 00:31:06,000
+that is a string, here we're going to reference playground.
+
+449
+00:31:06,000 --> 00:31:10,000
+URLs. So if we send a request
+
+450
+00:31:10,000 --> 00:31:14,000
+to playground slash hello, Django
+
+451
+00:31:14,000 --> 00:31:18,000
+knows that all requests that start with playground should be handled by this
+
+452
+00:31:18,000 --> 00:31:22,000
+app, so it's going to chop off the first part of this URL
+
+453
+00:31:22,000 --> 00:31:26,000
+and pass the rest to the URL configuration module
+
+454
+00:31:26,000 --> 00:31:30,000
+in the playground app. So back to this URLs module
+
+455
+00:31:30,000 --> 00:31:34,000
+we no longer need to add playground here because we added it once
+
+456
+00:31:34,000 --> 00:31:38,000
+in the main URL configuration module. So we simply
+
+457
+00:31:38,000 --> 00:31:42,000
+add hello, followed by a forward slash, I forgot to add that. We always
+
+458
+00:31:42,000 --> 00:31:46,000
+end our route with a forward slash. So let's save the changes
+
+459
+00:31:46,000 --> 00:31:50,000
+now, whenever we change our code, Django web server
+
+460
+00:31:50,000 --> 00:31:54,000
+automatically restores itself. So let's open up the terminal window
+
+461
+00:31:54,000 --> 00:31:58,000
+make sure we don't have any errors, good, so back to the
+
+462
+00:31:58,000 --> 00:32:02,000
+browser, let's send a request to this endpoint. Great, we see
+
+463
+00:32:02,000 --> 00:32:06,000
+hello world on the screen. So this is how we can map URLs to
+
+464
+00:32:06,000 --> 00:32:10,000
+view functions. Next we're going to talk about templates.
+
+465
+00:32:14,000 --> 00:32:18,000
+So I told you that views in Django are not really views
+
+466
+00:32:18,000 --> 00:32:22,000
+they're more like request handlers or actions. What we often call a view
+
+467
+00:32:22,000 --> 00:32:26,000
+in other frameworks is called a template in Django. So let's see how
+
+468
+00:32:26,000 --> 00:32:30,000
+we can use a template to return HTML content to the client.
+
+469
+00:32:30,000 --> 00:32:34,000
+So here in the playground app, we're going to add
+
+470
+00:32:34,000 --> 00:32:38,000
+a new folder called templates, and in this folder
+
+471
+00:32:38,000 --> 00:32:42,000
+we're going to add a new file called hello.html.
+
+472
+00:32:42,000 --> 00:32:46,000
+And of course we could call it anything. Here we can write some HTML markup
+
+473
+00:32:46,000 --> 00:32:50,000
+for example we can type h1 and press tab to add an h1
+
+474
+00:32:50,000 --> 00:32:54,000
+heading and say hello world. Don't worry if you don't know
+
+475
+00:32:54,000 --> 00:32:58,000
+HTML we're not going to use it in this course. I just want to show you how Django
+
+476
+00:32:58,000 --> 00:33:02,000
+templates work. So let's save the changes. Now
+
+477
+00:33:02,000 --> 00:33:06,000
+back to our view function, instead of returning a plain
+
+478
+00:33:06,000 --> 00:33:10,000
+HTTP response, we're going to use the render function to render a
+
+479
+00:33:10,000 --> 00:33:14,000
+template and return HTML markup to the client. So let's
+
+480
+00:33:14,000 --> 00:33:18,000
+remove this line and call the render function. Now
+
+481
+00:33:18,000 --> 00:33:22,000
+look at the return type of this function. It returns
+
+482
+00:33:22,000 --> 00:33:26,000
+an HTTP response object. So here we're going to
+
+483
+00:33:26,000 --> 00:33:30,000
+return the response. Now let's remove the brackets and type them again
+
+484
+00:33:30,000 --> 00:33:34,000
+so we can see the function signature. The first parameter here
+
+485
+00:33:34,000 --> 00:33:38,000
+is a request object and the type of this
+
+486
+00:33:38,000 --> 00:33:42,000
+is HTTP request. So we're going to pass this request
+
+487
+00:33:42,000 --> 00:33:46,000
+object right here. Now the second
+
+488
+00:33:46,000 --> 00:33:50,000
+parameter, that's the name of our template, which is a string.
+
+489
+00:33:50,000 --> 00:33:54,000
+So here I'm going to say hello.html
+
+490
+00:33:54,000 --> 00:33:58,000
+the other parameters are optional so don't worry about them at this point. Now
+
+491
+00:33:58,000 --> 00:34:02,000
+save the changes, let's make sure our project works up to this point.
+
+492
+00:34:02,000 --> 00:34:06,000
+So back in the browser, refresh, beautiful, now we see
+
+493
+00:34:06,000 --> 00:34:10,000
+HTML content. We can verify it by right clicking on this page and
+
+494
+00:34:10,000 --> 00:34:14,000
+looking at the page source, so look, we're returning
+
+495
+00:34:14,000 --> 00:34:18,000
+HTML content. Great. Now let's make this a bit more
+
+496
+00:34:18,000 --> 00:34:22,000
+interesting. So back to our template, instead of hello world
+
+497
+00:34:22,000 --> 00:34:26,000
+we can dynamically render some value. So back to our
+
+498
+00:34:26,000 --> 00:34:30,000
+view function, let's type a comma to see the next parameter.
+
+499
+00:34:30,000 --> 00:34:34,000
+That is a context object and the type of
+
+500
+00:34:34,000 --> 00:34:38,000
+this is a mapping of string to any. That means
+
+501
+00:34:38,000 --> 00:34:42,000
+we can pass any mapping object that maps a string value
+
+502
+00:34:42,000 --> 00:34:46,000
+to any other type of object. So here we can pass a dictionary.
+
+503
+00:34:46,000 --> 00:34:50,000
+So let's pass a dictionary, the type of the key
+
+504
+00:34:50,000 --> 00:34:54,000
+should be a string so we can call that name and we're going to set that to a value
+
+505
+00:34:54,000 --> 00:34:58,000
+like let's say mosh. Now back to our template
+
+506
+00:34:58,000 --> 00:35:02,000
+instead of hello world we can render
+
+507
+00:35:02,000 --> 00:35:06,000
+the name that we passed here. So we type two pairs of braces
+
+508
+00:35:06,000 --> 00:35:10,000
+and in between we type the name of the key.
+
+509
+00:35:10,000 --> 00:35:14,000
+Save, refresh, beautiful. Now
+
+510
+00:35:14,000 --> 00:35:18,000
+in this template we can also write some logic. So
+
+511
+00:35:18,000 --> 00:35:22,000
+we can type an if statement. So we type braces and in between them
+
+512
+00:35:22,000 --> 00:35:26,000
+we add two percentage signs, in between
+
+513
+00:35:26,000 --> 00:35:30,000
+them we can write an if statement. So we can say if name is set
+
+514
+00:35:30,000 --> 00:35:34,000
+we can render it here, otherwise
+
+515
+00:35:34,000 --> 00:35:38,000
+we can render hello
+
+516
+00:35:38,000 --> 00:35:42,000
+world. And of course we need an end if clause as well.
+
+517
+00:35:42,000 --> 00:35:46,000
+So end if. Now this syntax is kind of ugly
+
+518
+00:35:46,000 --> 00:35:50,000
+but the good thing about Django is that it's modular, so you can easily
+
+519
+00:35:50,000 --> 00:35:54,000
+replace Django's default template engine with your preferred template
+
+520
+00:35:54,000 --> 00:35:58,000
+engine. But once again, we don't really use templates in Django projects
+
+521
+00:35:58,000 --> 00:36:02,000
+that often these days. There are special cases for them, but for the most
+
+522
+00:36:02,000 --> 00:36:06,000
+part, we use Django to build APIs that return data, not
+
+523
+00:36:06,000 --> 00:36:10,000
+HTML content. So I just included this lesson so you know what
+
+524
+00:36:10,000 --> 00:36:14,000
+templates are and how they work. We're not going to spend any more time on templates for
+
+525
+00:36:14,000 --> 00:36:18,000
+now unless we encounter a situation where we really need them.
+
+526
+00:36:22,000 --> 00:36:26,000
+Let's talk about debugging Django
+
+527
+00:36:26,000 --> 00:36:30,000
+applications in vs code. This is particularly useful if our application
+
+528
+00:36:30,000 --> 00:36:34,000
+doesn't produce the right result and we want to run it line by line and see
+
+529
+00:36:34,000 --> 00:36:38,000
+where exactly something has gone wrong. So click on this icon
+
+530
+00:36:38,000 --> 00:36:42,000
+to open the run and debug panel. Now the first time you see
+
+531
+00:36:42,000 --> 00:36:46,000
+this message saying we should create a launch.json file.
+
+532
+00:36:46,000 --> 00:36:50,000
+Basically we need to create a launch profile so vs code knows how to run
+
+533
+00:36:50,000 --> 00:36:54,000
+or debug this application. So let's click on this,
+
+534
+00:36:54,000 --> 00:36:58,000
+now in this list, select Django,
+
+535
+00:36:58,000 --> 00:37:02,000
+alright, here's our launch.json file, what you see here is kind of like a dictionary
+
+536
+00:37:02,000 --> 00:37:06,000
+in Python. You have a bunch of key value pairs. These
+
+537
+00:37:06,000 --> 00:37:10,000
+key value pairs define a launch profile. So vs code knows
+
+538
+00:37:10,000 --> 00:37:14,000
+that to run this application, it should use the current Python
+
+539
+00:37:14,000 --> 00:37:18,000
+interpreter to run manage.py which exists
+
+540
+00:37:18,000 --> 00:37:22,000
+in our workspace folder and as an argument, it should
+
+541
+00:37:22,000 --> 00:37:26,000
+pass run server to it. Here we can add an additional
+
+542
+00:37:26,000 --> 00:37:30,000
+argument to specify the port so it doesn't
+
+543
+00:37:30,000 --> 00:37:34,000
+slash with port 8000 which is currently in use. Save the changes,
+
+544
+00:37:34,000 --> 00:37:38,000
+we're done with this file, so let's close it.
+
+545
+00:37:38,000 --> 00:37:42,000
+Now if you're curious, let me show you where this file exists.
+
+546
+00:37:42,000 --> 00:37:46,000
+It's added to our project up here inside
+
+547
+00:37:46,000 --> 00:37:50,000
+the vs code folder. So here's our launch profile. Now that we
+
+548
+00:37:50,000 --> 00:37:54,000
+have a launch profile, if we go to the run and debug panel,
+
+549
+00:37:54,000 --> 00:37:58,000
+we see something else. So here we can start our application for debugging,
+
+550
+00:37:58,000 --> 00:38:02,000
+but before doing so, I want to write some dummy code here in our view function.
+
+551
+00:38:02,000 --> 00:38:06,000
+So, let's set x to 1 and y to 2.
+
+552
+00:38:06,000 --> 00:38:10,000
+Now, I'm going to click on this line to insert a
+
+553
+00:38:10,000 --> 00:38:14,000
+breakpoint. When we add a breakpoint, vs code will execute
+
+554
+00:38:14,000 --> 00:38:18,000
+every line of code until it hits our breakpoint. From that point
+
+555
+00:38:18,000 --> 00:38:22,000
+onward, we can execute our code line by line. So
+
+556
+00:38:22,000 --> 00:38:26,000
+let's add a breakpoint, and then start the application for
+
+557
+00:38:26,000 --> 00:38:30,000
+debugging.
+
+558
+00:38:30,000 --> 00:38:34,000
+Alright, let me collapse this window, good. So
+
+559
+00:38:34,000 --> 00:38:38,000
+in this new terminal window, we have a development server listening
+
+560
+00:38:38,000 --> 00:38:42,000
+on port 9000, so let's hold down the command key on mac or
+
+561
+00:38:42,000 --> 00:38:46,000
+control on windows and click on this link. Alright, here's what we
+
+562
+00:38:46,000 --> 00:38:50,000
+get, the homepage of our project is gone because we have registered a custom
+
+563
+00:38:50,000 --> 00:38:54,000
+route, that is playground slash hello. So we see the homepage
+
+564
+00:38:54,000 --> 00:38:58,000
+only the first time we run our Django project. So, let's go to
+
+565
+00:38:58,000 --> 00:39:02,000
+playground slash hello. Alright, our breakpoint
+
+566
+00:39:02,000 --> 00:39:06,000
+is activated and we are on this line. Now on the left side
+
+567
+00:39:06,000 --> 00:39:10,000
+in the variable section, you can see the local variables, so
+
+568
+00:39:10,000 --> 00:39:14,000
+currently we have the request object, that is the request object that we receive
+
+569
+00:39:14,000 --> 00:39:18,000
+in this function, so we can expand it and inspect
+
+570
+00:39:18,000 --> 00:39:22,000
+its various attributes. We don't want to do that for now, so
+
+571
+00:39:22,000 --> 00:39:26,000
+let's close this, we want to execute our code line by line.
+
+572
+00:39:26,000 --> 00:39:30,000
+So here we have a bunch of functions, the first one is step over
+
+573
+00:39:30,000 --> 00:39:34,000
+and the shortcut for this is f10, with this we can step
+
+574
+00:39:34,000 --> 00:39:38,000
+over the current line, so if we press f10,
+
+575
+00:39:38,000 --> 00:39:42,000
+this line gets executed and now we are on the second line. Now look over
+
+576
+00:39:42,000 --> 00:39:46,000
+here, in the list of local variables we have x and its value
+
+577
+00:39:46,000 --> 00:39:50,000
+is 1. This is very useful when debugging applications, so
+
+578
+00:39:50,000 --> 00:39:54,000
+if something is not calculated properly, we can inspect it here.
+
+579
+00:39:54,000 --> 00:39:58,000
+Now most of the time you can see your local variables here, but if not
+
+580
+00:39:58,000 --> 00:40:02,000
+you can always add them in the watch window. So before recording this video
+
+581
+00:40:02,000 --> 00:40:06,000
+I was practicing, that's why you see x here, let me select
+
+582
+00:40:06,000 --> 00:40:10,000
+this and delete it. So in your watch section you're not going to have any
+
+583
+00:40:10,000 --> 00:40:14,000
+variables, to add one, simply click on this and then type
+
+584
+00:40:14,000 --> 00:40:18,000
+the name of our variable. So this is how
+
+585
+00:40:18,000 --> 00:40:22,000
+we can step over various lines, so we can press f10 again, and again
+
+586
+00:40:22,000 --> 00:40:26,000
+so this function is executed and now back in the browser
+
+587
+00:40:26,000 --> 00:40:30,000
+we see the final result. Now let's do something more interesting.
+
+588
+00:40:30,000 --> 00:40:34,000
+So back to our code, let's close the terminal window
+
+589
+00:40:34,000 --> 00:40:38,000
+so we have more space, I'm going to define a function here
+
+590
+00:40:38,000 --> 00:40:42,000
+called calculate, and here we're going to set x to 1
+
+591
+00:40:42,000 --> 00:40:46,000
+y to 2 and return x. Just some dummy code.
+
+592
+00:40:46,000 --> 00:40:50,000
+Now over here, we're going to call the calculate function.
+
+593
+00:40:50,000 --> 00:40:54,000
+Okay, now save the changes,
+
+594
+00:40:54,000 --> 00:40:58,000
+back in the browser, let's refresh, so our view function
+
+595
+00:40:58,000 --> 00:41:02,000
+gets called. Now we are right here. Now this time instead of stepping
+
+596
+00:41:02,000 --> 00:41:06,000
+over this line, we want to step into it. Because if you step over this line
+
+597
+00:41:06,000 --> 00:41:10,000
+we're not going to see what happened in the calculate function.
+
+598
+00:41:10,000 --> 00:41:14,000
+We see the final result, so we see x is set to 1
+
+599
+00:41:14,000 --> 00:41:18,000
+and we can verify that over here as well. But sometimes we need to
+
+600
+00:41:18,000 --> 00:41:22,000
+step into a function to see what is happening there. Maybe there is a bug
+
+601
+00:41:22,000 --> 00:41:26,000
+inside the calculate function. So, let's restart
+
+602
+00:41:26,000 --> 00:41:30,000
+the debugger, okay,
+
+603
+00:41:30,000 --> 00:41:34,000
+I'm going to close this, back in the browser, let's refresh this
+
+604
+00:41:34,000 --> 00:41:38,000
+page, okay, we're back
+
+605
+00:41:38,000 --> 00:41:42,000
+to this line, now this time we're going to step into this function. So look
+
+606
+00:41:42,000 --> 00:41:46,000
+over here, this is the icon for stepping into a function, and
+
+607
+00:41:46,000 --> 00:41:50,000
+as you can see the shortcut is f11. So if you press f11
+
+608
+00:41:50,000 --> 00:41:54,000
+we go inside the calculate function. Now
+
+609
+00:41:54,000 --> 00:41:58,000
+we can execute each line using f10 or step over
+
+610
+00:41:58,000 --> 00:42:02,000
+and see where something has gone wrong. Now let's imagine this calculate function
+
+611
+00:42:02,000 --> 00:42:06,000
+is a large function with a lot of code. At some point you want to step out of it
+
+612
+00:42:06,000 --> 00:42:10,000
+without having to execute every line of code in this function.
+
+613
+00:42:10,000 --> 00:42:14,000
+There's a shortcut for this. So, look over here,
+
+614
+00:42:14,000 --> 00:42:18,000
+that is step out. The shortcut is shift and f11.
+
+615
+00:42:18,000 --> 00:42:22,000
+So if you press shift and f11, we get back to the
+
+616
+00:42:22,000 --> 00:42:26,000
+previous function. So this is how we can debug Django applications in
+
+617
+00:42:26,000 --> 00:42:30,000
+vs code. Now, once we're done, it's always a good practice
+
+618
+00:42:30,000 --> 00:42:34,000
+to remove these breakpoints, otherwise they get in the way. So as you
+
+619
+00:42:34,000 --> 00:42:38,000
+debug your applications, you place various breakpoints in different parts of your code
+
+620
+00:42:38,000 --> 00:42:42,000
+and you'll hit them all the time. So always remove your breakpoints
+
+621
+00:42:42,000 --> 00:42:46,000
+once you're done with them. So we're done with this debugging session, now
+
+622
+00:42:46,000 --> 00:42:50,000
+we can disconnect by pressing shift and f5 or
+
+623
+00:42:50,000 --> 00:42:54,000
+click on this icon. Alright, now one last
+
+624
+00:42:54,000 --> 00:42:58,000
+tip before we finish this lesson. On the top, under the run menu,
+
+625
+00:42:58,000 --> 00:43:02,000
+look, we have a command called run without
+
+626
+00:43:02,000 --> 00:43:06,000
+debugging. The shortcut on Mac is control and f5.
+
+627
+00:43:06,000 --> 00:43:10,000
+So if we use this shortcut, we can start our application without having to
+
+628
+00:43:10,000 --> 00:43:14,000
+run python manage.py run server. Let me show you what
+
+629
+00:43:14,000 --> 00:43:18,000
+I mean. So, first let's bring up our terminal window.
+
+630
+00:43:18,000 --> 00:43:22,000
+Here's the second terminal window that we used for debugging. I'm going to
+
+631
+00:43:22,000 --> 00:43:26,000
+delete this. Here's the first terminal window where we started
+
+632
+00:43:26,000 --> 00:43:30,000
+our application by running python manage.py run server.
+
+633
+00:43:30,000 --> 00:43:34,000
+So let's press control and c to stop the server.
+
+634
+00:43:34,000 --> 00:43:38,000
+Good, I'm also going to delete this terminal window. Let's imagine we just
+
+635
+00:43:38,000 --> 00:43:42,000
+open this project in vs code. Day 1. Now to run this
+
+636
+00:43:42,000 --> 00:43:46,000
+application without debugging, we can press control and f5.
+
+637
+00:43:46,000 --> 00:43:50,000
+Now our application has started
+
+638
+00:43:50,000 --> 00:43:54,000
+on port 9000. So we can go to this address and
+
+639
+00:43:54,000 --> 00:43:58,000
+then hit playground slash hello.
+
+640
+00:43:58,000 --> 00:44:02,000
+So this is how we can run our application without debugging. Just remember that
+
+641
+00:44:02,000 --> 00:44:06,000
+if you use this command, your breakpoints are not going to get hit. So if you
+
+642
+00:44:06,000 --> 00:44:10,000
+want to debug your applications, you should start it in the debug mode.
+
+643
+00:44:14,000 --> 00:44:18,000
+There is another way to debug Django
+
+644
+00:44:18,000 --> 00:44:22,000
+applications using a powerful tool called Django debug toolbar.
+
+645
+00:44:22,000 --> 00:44:26,000
+So if you go to Google and search for Django debug toolbar,
+
+646
+00:44:26,000 --> 00:44:30,000
+you're going to find this page. Over here you're going to find
+
+647
+00:44:30,000 --> 00:44:34,000
+the installation instructions. So I highly encourage you to follow along with me
+
+648
+00:44:34,000 --> 00:44:38,000
+and repeat the same steps so we install this toolbar together.
+
+649
+00:44:38,000 --> 00:44:42,000
+So, first we have to use pip or pip env to install
+
+650
+00:44:42,000 --> 00:44:46,000
+Django debug toolbar. So back to vs code,
+
+651
+00:44:46,000 --> 00:44:50,000
+I'm going to open up a new terminal window, and
+
+652
+00:44:50,000 --> 00:44:54,000
+as you can see vs code used the source command to activate our virtual environment.
+
+653
+00:44:54,000 --> 00:44:58,000
+So now, let's run pip env install
+
+654
+00:44:58,000 --> 00:45:02,000
+Django dash debug dash toolbar.
+
+655
+00:45:02,000 --> 00:45:06,000
+Good.
+
+656
+00:45:06,000 --> 00:45:10,000
+Now, back to the documentation, the next step is to add
+
+657
+00:45:10,000 --> 00:45:14,000
+debug toolbar in the list of installed apps in our settings module.
+
+658
+00:45:14,000 --> 00:45:18,000
+So, back to vs code, we can press command
+
+659
+00:45:18,000 --> 00:45:22,000
+and p on mac or control and p on windows to bring up the search box.
+
+660
+00:45:22,000 --> 00:45:26,000
+Now we search for our settings module. Good.
+
+661
+00:45:26,000 --> 00:45:30,000
+Now in the list of installed apps, at the end we're going to add
+
+662
+00:45:30,000 --> 00:45:34,000
+debug underline toolbar. Good.
+
+663
+00:45:34,000 --> 00:45:38,000
+Now, the next step. The next step is to add a new
+
+664
+00:45:38,000 --> 00:45:42,000
+URL pattern in our main URL conf module. So I'm going to
+
+665
+00:45:42,000 --> 00:45:46,000
+copy this line and back to vs code,
+
+666
+00:45:46,000 --> 00:45:50,000
+let's bring up the URLs module, we're going to pick the one in the store front
+
+667
+00:45:50,000 --> 00:45:54,000
+folder. Okay, now we add a comma here and
+
+668
+00:45:54,000 --> 00:45:58,000
+paste that line. Now here we have a compilation error, because
+
+669
+00:45:58,000 --> 00:46:02,000
+debug toolbar is a module that we have to import on the top. So if you look at the
+
+670
+00:46:02,000 --> 00:46:06,000
+documentation, you can see that over here, import
+
+671
+00:46:06,000 --> 00:46:10,000
+debug toolbar. So copy this and paste it right here.
+
+672
+00:46:10,000 --> 00:46:14,000
+Good. Now back to the documentation. The next step is to
+
+673
+00:46:14,000 --> 00:46:18,000
+add a middleware. We use middleware to hook into Django's request
+
+674
+00:46:18,000 --> 00:46:22,000
+response processing. So in our settings module we have a setting
+
+675
+00:46:22,000 --> 00:46:26,000
+for middleware, we're going to add this line
+
+676
+00:46:26,000 --> 00:46:30,000
+in that file. So copy this, back to the settings module,
+
+677
+00:46:30,000 --> 00:46:34,000
+here we have the install apps, right after that you can see the middleware
+
+678
+00:46:34,000 --> 00:46:38,000
+setting. So we're going to add that on the top.
+
+679
+00:46:38,000 --> 00:46:42,000
+Now the final step is to add our IP address
+
+680
+00:46:42,000 --> 00:46:46,000
+in the internal IP setting. So for local development
+
+681
+00:46:46,000 --> 00:46:50,000
+we should use 127.0.0.1. So I'm going to copy this
+
+682
+00:46:50,000 --> 00:46:54,000
+entire setting, because by default this doesn't exist in a new Django project,
+
+683
+00:46:54,000 --> 00:46:58,000
+so copy this, and I'm going to paste it
+
+684
+00:46:58,000 --> 00:47:02,000
+anywhere in this settings file, it doesn't really matter. Okay, save,
+
+685
+00:47:02,000 --> 00:47:06,000
+so we have completed all the steps, now back in the browser, if you
+
+686
+00:47:06,000 --> 00:47:10,000
+go to this URL, playground slash hello, we don't see the toolbar
+
+687
+00:47:10,000 --> 00:47:14,000
+it should appear here, because the toolbar only appears when we return
+
+688
+00:47:14,000 --> 00:47:18,000
+a proper HTML document. If you right click here and look at the
+
+689
+00:47:18,000 --> 00:47:22,000
+page source, you can see that we are not returning a proper HTML document.
+
+690
+00:47:22,000 --> 00:47:26,000
+So we don't have the HTML head and body elements.
+
+691
+00:47:26,000 --> 00:47:30,000
+So let's open up hello.html, now on the top
+
+692
+00:47:30,000 --> 00:47:34,000
+we type HTML, press tab, inside these elements we're going to
+
+693
+00:47:34,000 --> 00:47:38,000
+add a body, and then inside the body
+
+694
+00:47:38,000 --> 00:47:42,000
+we're going to add the code that we had earlier. So let's move that right here,
+
+695
+00:47:42,000 --> 00:47:46,000
+good, now we have a proper HTML
+
+696
+00:47:46,000 --> 00:47:50,000
+document, of course the head element is missing but it doesn't really matter.
+
+697
+00:47:50,000 --> 00:47:54,000
+Now back to the browser, refresh, and here's Django debug toolbar.
+
+698
+00:47:54,000 --> 00:47:58,000
+Here we have different panels like history, we're seeing the URLs we have hit
+
+699
+00:47:58,000 --> 00:48:02,000
+so far, we have versions, to see the version of Django, Python
+
+700
+00:48:02,000 --> 00:48:06,000
+and debug toolbar we're running, we have processing time, we have
+
+701
+00:48:06,000 --> 00:48:10,000
+our settings, we have request headers and so on. Now my personal
+
+702
+00:48:10,000 --> 00:48:14,000
+favorite panel is the SQL or SQL panel.
+
+703
+00:48:14,000 --> 00:48:18,000
+Here we can see the queries that are sent to the database, so later in the course
+
+704
+00:48:18,000 --> 00:48:22,000
+where we talk about querying the database using Django's object relational
+
+705
+00:48:22,000 --> 00:48:26,000
+mapper, we're going to come back to this panel and see what queries Django
+
+706
+00:48:26,000 --> 00:48:30,000
+will generate and send to the database. So that's it for this lesson,
+
+707
+00:48:30,000 --> 00:48:34,000
+we're done with this section, in the next section we're going to talk about building
+
+708
+00:48:34,000 --> 00:48:38,000
+a data model. So I'll see you in the next section.
+
+709
+00:48:38,000 --> 00:48:42,000
+Welcome back to another section of the ultimate
+
+710
+00:48:42,000 --> 00:48:46,000
+Django course. In this section, we're going to talk about models
+
+711
+00:48:46,000 --> 00:48:50,000
+which are used to store and retrieve data. We'll start off by a quick
+
+712
+00:48:50,000 --> 00:48:54,000
+introduction to data modeling to make sure you know the essential concepts, then
+
+713
+00:48:54,000 --> 00:48:58,000
+we're going to design the data model for an ecommerce application, next we're going to
+
+714
+00:48:58,000 --> 00:49:02,000
+talk about organizing our models in apps to improve reusability,
+
+715
+00:49:02,000 --> 00:49:06,000
+this is one of the areas that is often misunderstood so I'm going to demystify
+
+716
+00:49:06,000 --> 00:49:10,000
+it once and for all. And then we'll spend the rest of this section in coding model
+
+717
+00:49:10,000 --> 00:49:14,000
+classes. We'll use these classes to store and retrieve data throughout
+
+718
+00:49:14,000 --> 00:49:18,000
+the course. So let's jump in and get started.
+
+719
+00:49:22,000 --> 00:49:26,000
+The first step in every Django project
+
+720
+00:49:26,000 --> 00:49:30,000
+is figuring out the pieces of data we want to store. So
+
+721
+00:49:30,000 --> 00:49:34,000
+what entities or concepts do we have in an ecommerce application?
+
+722
+00:49:34,000 --> 00:49:38,000
+Well, for starters we need the concept of a product with attributes like
+
+723
+00:49:38,000 --> 00:49:42,000
+title, description, price, and inventory. Now in a real
+
+724
+00:49:42,000 --> 00:49:46,000
+scenario, a product entity might have other attributes, it really depends
+
+725
+00:49:46,000 --> 00:49:50,000
+on the requirements of our application. For now, we just want to keep things simple.
+
+726
+00:49:50,000 --> 00:49:54,000
+Now, quite often our products are divided in different categories
+
+727
+00:49:54,000 --> 00:49:58,000
+like shoes, beauty products, fruits, and so on. So we need
+
+728
+00:49:58,000 --> 00:50:02,000
+another entity called collection or category with an attribute called
+
+729
+00:50:02,000 --> 00:50:06,000
+title. Now we need to add a relationship or an association
+
+730
+00:50:06,000 --> 00:50:10,000
+between these entities so we can start from one end and navigate to the other end.
+
+731
+00:50:10,000 --> 00:50:14,000
+For example, we can get a collection and find all the products in that
+
+732
+00:50:14,000 --> 00:50:18,000
+collection. Now let's assume that in our application, a
+
+733
+00:50:18,000 --> 00:50:22,000
+product can belong to one and only one collection, and a collection
+
+734
+00:50:22,000 --> 00:50:26,000
+can have multiple products. So an asterisk represents
+
+735
+00:50:26,000 --> 00:50:30,000
+many. We could also use an n here. Now we have a one to
+
+736
+00:50:30,000 --> 00:50:34,000
+many relationship between collection and product. So, relationships
+
+737
+00:50:34,000 --> 00:50:38,000
+can be one to one, one to many, and many to many. Back to our
+
+738
+00:50:38,000 --> 00:50:42,000
+diagram. Now over here we can add a label called products, and that means
+
+739
+00:50:42,000 --> 00:50:46,000
+when we code these entities or these classes in the collection class
+
+740
+00:50:46,000 --> 00:50:50,000
+we're going to have an attribute called products. For now, I just want to hide this
+
+741
+00:50:50,000 --> 00:50:54,000
+for simplicity. Now, sometimes we can have multiple relationships
+
+742
+00:50:54,000 --> 00:50:58,000
+or multiple associations between two entities. So let's
+
+743
+00:50:58,000 --> 00:51:02,000
+imagine that a collection can optionally have a featured product.
+
+744
+00:51:02,000 --> 00:51:06,000
+That is the product whose picture we want to show to the user.
+
+745
+00:51:06,000 --> 00:51:10,000
+So we can add a second relationship between these entities. Now look at this number here.
+
+746
+00:51:10,000 --> 00:51:14,000
+0 to 1 means a collection can have 0 to
+
+747
+00:51:14,000 --> 00:51:18,000
+1 product and we're going to call that attribute featured product.
+
+748
+00:51:18,000 --> 00:51:22,000
+So once again, that means in the collection class we're going to have an attribute
+
+749
+00:51:22,000 --> 00:51:26,000
+called featured product. Now you might ask, what about the
+
+750
+00:51:26,000 --> 00:51:30,000
+id attribute? Shouldn't every entity have an id attribute? Yes.
+
+751
+00:51:30,000 --> 00:51:34,000
+But Django is going to automatically create that for us, that's why I haven't shown it here.
+
+752
+00:51:34,000 --> 00:51:38,000
+Now a little exercise for you. Grab a piece of paper
+
+753
+00:51:38,000 --> 00:51:42,000
+and identify the other essential entities we need in an e-commerce
+
+754
+00:51:42,000 --> 00:51:46,000
+application. Just the bare minimum. Don't go ahead and create a complex
+
+755
+00:51:46,000 --> 00:51:50,000
+diagram like this, I don't want this. There are only 5 entities that I want you
+
+756
+00:51:50,000 --> 00:51:54,000
+to identify. So spend a couple minutes and identify these entities
+
+757
+00:51:54,000 --> 00:51:58,000
+along with the attributes and relationships. Then come back and see my solution.
+
+758
+00:51:58,000 --> 00:52:08,000
+Alright, so this is what we ended up with in the previous lesson.
+
+759
+00:52:08,000 --> 00:52:12,000
+We have a one to many relationship between collections and products.
+
+760
+00:52:12,000 --> 00:52:16,000
+Now don't take this as a hard and fast rule. Maybe in your
+
+761
+00:52:16,000 --> 00:52:20,000
+application, a product can belong to many collections. Then you're going to have
+
+762
+00:52:20,000 --> 00:52:24,000
+a many to many relationship between products and collections.
+
+763
+00:52:24,000 --> 00:52:28,000
+So, back to our model. I'm going to remove the collection from here, so
+
+764
+00:52:28,000 --> 00:52:32,000
+we have some free space on the screen. Now, what else do we need here?
+
+765
+00:52:32,000 --> 00:52:36,000
+Well, in every e-commerce application, we have the concept of a shopping
+
+766
+00:52:36,000 --> 00:52:40,000
+cart, right? So we're going to have an entity or a model or class called
+
+767
+00:52:40,000 --> 00:52:44,000
+cart with an attribute called created at. Let's assume
+
+768
+00:52:44,000 --> 00:52:48,000
+that we need to know when each cart is created, so every now and then we can
+
+769
+00:52:48,000 --> 00:52:52,000
+do a clean up and remove carts that are 30 days old. I just
+
+770
+00:52:52,000 --> 00:52:56,000
+made this up. But in a real scenario, you should always design your models
+
+771
+00:52:56,000 --> 00:53:00,000
+based on the requirements of your project. Don't make up your own rules.
+
+772
+00:53:00,000 --> 00:53:04,000
+Now, we need a relationship or an association between products
+
+773
+00:53:04,000 --> 00:53:08,000
+and carts. Because a cart can have multiple products, and a product might be
+
+774
+00:53:08,000 --> 00:53:12,000
+in different carts. So here we have a many to many relationship between
+
+775
+00:53:12,000 --> 00:53:16,000
+products and carts. Now, sometimes the relationship between two entities
+
+776
+00:53:16,000 --> 00:53:20,000
+can have attributes. For example, if a product is in a shopping cart,
+
+777
+00:53:20,000 --> 00:53:24,000
+we need to know how many instances of that product we have in the shopping cart.
+
+778
+00:53:24,000 --> 00:53:28,000
+So this relationship itself should have an attribute called
+
+779
+00:53:28,000 --> 00:53:32,000
+quantity. So we're going to add a new entity here called cart item.
+
+780
+00:53:32,000 --> 00:53:36,000
+Now look at the notation I've used to represent this concept. I've
+
+781
+00:53:36,000 --> 00:53:40,000
+connected cart item to the relationship using a dashed line. That means
+
+782
+00:53:40,000 --> 00:53:44,000
+cart item represents the relationship between these two entities.
+
+783
+00:53:44,000 --> 00:53:48,000
+Product and cart. This is what we call an association class.
+
+784
+00:53:48,000 --> 00:53:52,000
+So cart item is an association class.
+
+785
+00:53:52,000 --> 00:53:56,000
+Now there's another way to show this. Instead of using an association class,
+
+786
+00:53:56,000 --> 00:54:00,000
+we can add a relationship between cart and cart item, because a cart
+
+787
+00:54:00,000 --> 00:54:04,000
+might contain multiple items, and an item belongs to one
+
+788
+00:54:04,000 --> 00:54:08,000
+and only one cart. Similarly we can add a relationship
+
+789
+00:54:08,000 --> 00:54:12,000
+between product and cart item, because each cart item represents
+
+790
+00:54:12,000 --> 00:54:16,000
+a single product, and a product might be referenced by many
+
+791
+00:54:16,000 --> 00:54:20,000
+cart items. So here we have two one to many relationships
+
+792
+00:54:20,000 --> 00:54:24,000
+between these entities. Now compare this with the association class
+
+793
+00:54:24,000 --> 00:54:28,000
+notation. So we can either add a many to many relationship
+
+794
+00:54:28,000 --> 00:54:32,000
+with an association class, or two one to many relationships.
+
+795
+00:54:32,000 --> 00:54:36,000
+It's a matter of personal preference. So we're done with the shopping
+
+796
+00:54:36,000 --> 00:54:40,000
+cart, but you might ask, what about the user or the customer that owns
+
+797
+00:54:40,000 --> 00:54:44,000
+this cart? Where is that in the diagram? Well I haven't connected cart with
+
+798
+00:54:44,000 --> 00:54:48,000
+an entity like customer, because we don't want to force people to register and
+
+799
+00:54:48,000 --> 00:54:52,000
+log in before they can add products to their shopping cart, okay? So there is
+
+800
+00:54:52,000 --> 00:54:56,000
+no relationship between carts and customers. So carts are essentially
+
+801
+00:54:56,000 --> 00:55:00,000
+anonymous. Anyone can have a cart, whether they're anonymous users or
+
+802
+00:55:00,000 --> 00:55:04,000
+registered customers. So, we're done with the cart,
+
+803
+00:55:04,000 --> 00:55:08,000
+now let's talk about customers. So our customer entity can have attributes
+
+804
+00:55:08,000 --> 00:55:12,000
+like name, email, username, password, and so on. Now for
+
+805
+00:55:12,000 --> 00:55:16,000
+simplicity, I'm only showing name and email here. Now a customer
+
+806
+00:55:16,000 --> 00:55:20,000
+can have many orders, and each order belongs to one
+
+807
+00:55:20,000 --> 00:55:24,000
+and only one customer. So we need a one to many relationship between
+
+808
+00:55:24,000 --> 00:55:28,000
+customers and orders. Now once again, the order entity might have multiple
+
+809
+00:55:28,000 --> 00:55:32,000
+attributes, for now we just want to know when this order was placed.
+
+810
+00:55:32,000 --> 00:55:36,000
+Now an order can contain multiple products, and a product
+
+811
+00:55:36,000 --> 00:55:40,000
+can be in multiple orders. So we have a many to many relationship between orders
+
+812
+00:55:40,000 --> 00:55:44,000
+and products. And similar to the shopping cart example, this relationship
+
+813
+00:55:44,000 --> 00:55:48,000
+itself needs attributes. So here we need another entity called order item
+
+814
+00:55:48,000 --> 00:55:52,000
+with an attribute called quantity. That's our association class.
+
+815
+00:55:52,000 --> 00:55:56,000
+Alternatively, you could add a relationship between order and order
+
+816
+00:55:56,000 --> 00:56:00,000
+item, because each order may contain multiple items, and
+
+817
+00:56:00,000 --> 00:56:04,000
+each order item belongs to one and only one order.
+
+818
+00:56:04,000 --> 00:56:08,000
+Similarly, an order item references one and only one product,
+
+819
+00:56:08,000 --> 00:56:12,000
+while a given product might be referenced by multiple order items.
+
+820
+00:56:12,000 --> 00:56:16,000
+So two, one to many relationships. So these are the entities
+
+821
+00:56:16,000 --> 00:56:20,000
+that I wanted you to identify. But to make this project more interesting, I
+
+822
+00:56:20,000 --> 00:56:24,000
+decided to throw in one more entity, tag. Here we have a many to many
+
+823
+00:56:24,000 --> 00:56:28,000
+relationship between products and tags, because a product can have many
+
+824
+00:56:28,000 --> 00:56:32,000
+tags, and a tag might be referenced by different products. We'll come back to this
+
+825
+00:56:32,000 --> 00:56:36,000
+entity in the next lesson.
+
+826
+00:56:38,000 --> 00:56:42,000
+So I told you
+
+827
+00:56:42,000 --> 00:56:46,000
+that a Django project contains one or more apps, and just like the apps on your
+
+828
+00:56:46,000 --> 00:56:50,000
+phone, each app in a Django project provides a specific piece of
+
+829
+00:56:50,000 --> 00:56:54,000
+functionality. So that means each app is going to have its own
+
+830
+00:56:54,000 --> 00:56:58,000
+data model. So in this lesson, we're going to look at a few different ways to organize
+
+831
+00:56:58,000 --> 00:57:02,000
+our entities in different apps. One way is to have a single app called
+
+832
+00:57:02,000 --> 00:57:06,000
+the store, and drop all of our entities here. Now, we can bundle and
+
+833
+00:57:06,000 --> 00:57:10,000
+distribute this app via pip, and this way anyone can install this app
+
+834
+00:57:10,000 --> 00:57:14,000
+in their project and get all these models and the functionality around them.
+
+835
+00:57:14,000 --> 00:57:18,000
+So next time we're working on an ecommerce project, we don't have to rewrite the same
+
+836
+00:57:18,000 --> 00:57:22,000
+functionality over and over. We simply install this app in our project,
+
+837
+00:57:22,000 --> 00:57:26,000
+and write extra code for customization. Great. But there's a problem
+
+838
+00:57:26,000 --> 00:57:30,000
+here. As this application grows and gets more complex,
+
+839
+00:57:30,000 --> 00:57:34,000
+it gets bloated with too many things. Like too many models, too many
+
+840
+00:57:34,000 --> 00:57:38,000
+views and other stuff. This is what we call a monolith, like a large
+
+841
+00:57:38,000 --> 00:57:42,000
+heavy piece of stone. So at some point our application might become
+
+842
+00:57:42,000 --> 00:57:46,000
+hard to understand, hard to maintain, and hard to reuse. It becomes like one of
+
+843
+00:57:46,000 --> 00:57:50,000
+those remote controls with too many buttons. When designing these apps, we want
+
+844
+00:57:50,000 --> 00:57:54,000
+to follow the Unix philosophy. So each app should do one thing
+
+845
+00:57:54,000 --> 00:57:58,000
+and do it well. So here's another solution. We can break down
+
+846
+00:57:58,000 --> 00:58:02,000
+this project into four small apps. The products app, which represents
+
+847
+00:58:02,000 --> 00:58:06,000
+a product catalog. So here we're going to have three entities, product,
+
+848
+00:58:06,000 --> 00:58:10,000
+collection, and tag. Then we're going to have the customers app for
+
+849
+00:58:10,000 --> 00:58:14,000
+managing customers, we're going to have the shopping cart app for adding
+
+850
+00:58:14,000 --> 00:58:18,000
+the shopping cart functionality, and the orders app for adding the ordering
+
+851
+00:58:18,000 --> 00:58:22,000
+functionality. Not bad, right? Well, this is actually a poor
+
+852
+00:58:22,000 --> 00:58:26,000
+way of breaking down this project for a number of reasons. Look at the coupling
+
+853
+00:58:26,000 --> 00:58:30,000
+or dependency between these apps. The orders app is dependent on the
+
+854
+00:58:30,000 --> 00:58:34,000
+shopping cart app, which is dependent on the products app. So next time
+
+855
+00:58:34,000 --> 00:58:38,000
+we're working on an ecommerce project, we'll have to install all these apps one
+
+856
+00:58:38,000 --> 00:58:42,000
+by one. First we have to install the products app, followed by the shopping
+
+857
+00:58:42,000 --> 00:58:46,000
+cart app, the customers app, and the orders app. Ideally each app
+
+858
+00:58:46,000 --> 00:58:50,000
+should be self contained so we can easily drop it into a new project.
+
+859
+00:58:50,000 --> 00:58:54,000
+The other problem is that if we publish a new version of the products app,
+
+860
+00:58:54,000 --> 00:58:58,000
+that might cause a break and change in the shopping cart and subsequently
+
+861
+00:58:58,000 --> 00:59:02,000
+orders apps. So anyone using these apps have to upgrade all these apps
+
+862
+00:59:02,000 --> 00:59:06,000
+together. Again, more and more work. Also, it doesn't really make
+
+863
+00:59:06,000 --> 00:59:10,000
+sense to have the shopping cart functionality without having a product catalog.
+
+864
+00:59:10,000 --> 00:59:14,000
+Right? Why would we ever want to add the shopping cart functionality to a project
+
+865
+00:59:14,000 --> 00:59:18,000
+without a product catalog. So shopping cart functionality
+
+866
+00:59:18,000 --> 00:59:22,000
+and product catalog always go together. By the same token,
+
+867
+00:59:22,000 --> 00:59:26,000
+why would we ever want to add the shopping cart functionality to a project without
+
+868
+00:59:26,000 --> 00:59:30,000
+the ability to place an order? Just to allow people to add something to their
+
+869
+00:59:30,000 --> 00:59:34,000
+shopping cart? Then what? Again, it doesn't really make sense.
+
+870
+00:59:34,000 --> 00:59:38,000
+So these concepts are highly related and should be bundled together.
+
+871
+00:59:38,000 --> 00:59:42,000
+If we separate them, we increase coupling between apps and we end up with the
+
+872
+00:59:42,000 --> 00:59:46,000
+problems I just talked about. So does it mean we have to go back to the monolithic
+
+873
+00:59:46,000 --> 00:59:50,000
+design? No. There is a middle ground here. Look at the tag entity.
+
+874
+00:59:50,000 --> 00:59:54,000
+The ability to tag products is optional. We don't necessarily need it
+
+875
+00:59:54,000 --> 00:59:58,000
+in every ecommerce application. In fact, we might need it in other
+
+876
+00:59:58,000 --> 01:00:02,000
+types of applications like a blog or video platform and so on.
+
+877
+01:00:02,000 --> 01:00:06,000
+So tagging is not specific to products or an ecommerce application.
+
+878
+01:00:06,000 --> 01:00:10,000
+It's a separate piece of functionality. So I'm going to move
+
+879
+01:00:10,000 --> 01:00:14,000
+the tag entity to a separate app called tags. And here we're going to have
+
+880
+01:00:14,000 --> 01:00:18,000
+another entity called tagged item which represents an item
+
+881
+01:00:18,000 --> 01:00:22,000
+that is tagged. It can be a product, an article, a video and so on.
+
+882
+01:00:22,000 --> 01:00:26,000
+It's an abstract concept. Now with this separation, each
+
+883
+01:00:26,000 --> 01:00:30,000
+app is self contained and provides a specific piece of functionality.
+
+884
+01:00:30,000 --> 01:00:34,000
+So we can use either or both of them in a new project depending on
+
+885
+01:00:34,000 --> 01:00:38,000
+what we're going to build. Plus we have zero coupling between these apps,
+
+886
+01:00:38,000 --> 01:00:42,000
+so we can independently change and deploy them without affecting other
+
+887
+01:00:42,000 --> 01:00:46,000
+apps. This is the proper way to break down this project into multiple
+
+888
+01:00:46,000 --> 01:00:50,000
+apps. So here's the take away. If our app boundary is so
+
+889
+01:00:50,000 --> 01:00:54,000
+large, we'll end up with a monolith that gets bloated and becomes hard to
+
+890
+01:00:54,000 --> 01:00:58,000
+reuse. On the other hand, if our app boundaries are so small and
+
+891
+01:00:58,000 --> 01:01:02,000
+fine grained, we'll end up with a lot of coupling between them. A good
+
+892
+01:01:02,000 --> 01:01:06,000
+design is one with minimal coupling and high cohesion meaning high
+
+893
+01:01:06,000 --> 01:01:10,000
+focus. So each app is focused on a specific piece of functionality and
+
+894
+01:01:10,000 --> 01:01:14,000
+includes everything needed to fulfill that piece of functionality.
+
+895
+01:01:14,000 --> 01:01:18,000
+So back to vs code, we're going to create two new apps.
+
+896
+01:01:18,000 --> 01:01:22,000
+So we run python manage.py start
+
+897
+01:01:22,000 --> 01:01:26,000
+app, the first app is store, and the
+
+898
+01:01:26,000 --> 01:01:30,000
+second one is tags. Okay, now
+
+899
+01:01:30,000 --> 01:01:34,000
+as I told you before, every time we create a new app, we should add it in the list
+
+900
+01:01:34,000 --> 01:01:38,000
+of installed apps. So let's close this window and
+
+901
+01:01:38,000 --> 01:01:42,000
+go to our settings module, here's the list of installed apps,
+
+902
+01:01:42,000 --> 01:01:46,000
+I'm going to add those apps right here. So store and
+
+903
+01:01:46,000 --> 01:01:50,000
+tags. Alright, we're done with this step, starting from
+
+904
+01:01:50,000 --> 01:01:54,000
+the next lesson, we're going to create the model classes for these apps.
+
+905
+01:01:54,000 --> 01:01:58,000
+Hey guys, Mosh here. I just wanted to let you know that
+
+906
+01:01:58,000 --> 01:02:02,000
+this tutorial you've been watching is actually the first hour of my ultimate
+
+907
+01:02:02,000 --> 01:02:06,000
+Django course. The complete course is about 10 hours and goes
+
+908
+01:02:06,000 --> 01:02:10,000
+way beyond this tutorial. So if you're serious about learning Django and
+
+909
+01:02:10,000 --> 01:02:14,000
+are looking for a job as a backend developer, I highly encourage you to enroll in the course.
+
+910
+01:02:14,000 --> 01:02:18,000
+The course comes with tons of exercises and solutions, a full
+
+911
+01:02:18,000 --> 01:02:22,000
+e-commerce project that you will eventually deploy to the cloud, plus a
+
+912
+01:02:22,000 --> 01:02:26,000
+30 day money back guarantee and a certificate of completion you can add to your resume.
+
+913
+01:02:26,000 --> 01:02:30,000
+In case you're interested, I've put the link down below. So thank you for
+
+914
+01:02:30,000 --> 01:02:34,000
+watching and I hope to see you in the course.
+
