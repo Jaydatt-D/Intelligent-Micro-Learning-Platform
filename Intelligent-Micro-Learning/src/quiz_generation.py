@@ -7,7 +7,7 @@
 # CORS(app)  # Enable CORS for all routes
 
 # # API Key for Google Generative AI
-# GOOGLE_API_KEY = 'AIzaSyB1tpMueN_3bPbnQGsNOYP7s_NvzrUEtcM'
+# GOOGLE_API_KEY = ''
 # genai.configure(api_key=GOOGLE_API_KEY)
 
 # @app.route('/generate-quiz', methods=['POST'])
@@ -71,7 +71,7 @@ app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
 
 # API Key for Google Generative AI
-GOOGLE_API_KEY = 'AIzaSyB1tpMueN_3bPbnQGsNOYP7s_NvzrUEtcM'
+GOOGLE_API_KEY = ''
 genai.configure(api_key=GOOGLE_API_KEY)
 
 @app.route('/generate-quiz', methods=['POST'])
